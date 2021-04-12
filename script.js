@@ -6,14 +6,16 @@ var employees = {
       "name": "Stephanie Burcombe",
       "timezone": "PST",
       "currenttime": "6:18pm",
-      "workinghours": "8:00am-5:00pm"
+      "workinghours": "8:00am-5:00pm",
+      "email": "sburcombe@gmail.com"
     },
     {
       "id": 2,
       "name": "Dustin Burcombe",
       "timezone": "EST",
       "currenttime": "9:18pm",
-      "workinghours": "7:00am-12:00pm"
+      "workinghours": "7:00am-12:00pm",
+      "email": "dburcombe@yahoo.com"
     }
   ]
 }
