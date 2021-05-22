@@ -53,6 +53,15 @@ var employeeOneWorkingHours = document.querySelector("#working-hours-1");
 var employeeTwoWorkingHours = document.querySelector("#working-hours-2");
   employeeTwoWorkingHours.innerHTML += employeeTwo["workinghours"];
 
+  //Connect Email Addresses to Message Button
+
+  var employeeOneEmailElement = document.querySelector("#email1");
+  var employeeOneEmail = "mailto:" + employeeOne['email'];
+  $(employeeOneEmailElement).attr("href", employeeOneEmail);
+
+  var employeeTwoEmailElement = document.querySelector("#email2");
+  var employeeTwoEmail = "mailto:" + employeeTwo['email'];
+  $(employeeTwoEmailElement).attr("href", employeeTwoEmail);
 
 });
 
