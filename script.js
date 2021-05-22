@@ -64,7 +64,7 @@ function getCurrentTimes() {
   var ASTdate = date.toLocaleString("en-US", { timeZone: "America/Anguilla" });
 
   //EST
-  var ESTdate = date.toLocaleString("en-US", { timeZone: "America/Cayman" });
+  var ESTdate = date.toLocaleString("en-US", { timeZone: "America/New_York" });
 
   //CST
   var CSTdate = date.toLocaleString("en-US", { timeZone: "America/Belize" });
