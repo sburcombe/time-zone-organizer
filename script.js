@@ -52,6 +52,8 @@ var employeeOneWorkingHours = document.querySelector("#working-hours-1");
   employeeOneWorkingHours.innerHTML += employeeOne["workinghours"];
 var employeeTwoWorkingHours = document.querySelector("#working-hours-2");
   employeeTwoWorkingHours.innerHTML += employeeTwo["workinghours"];
+  var employeeThreeWorkingHours = document.querySelector("#working-hours-3");
+  employeeThreeWorkingHours.innerHTML += employeeThree['workinghours'];
 
   //Connect Email Addresses to Message Button
 
