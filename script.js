@@ -1,4 +1,13 @@
 
+//This function is called when a user clicks to edit user information from the details list
+
+
+function send_user_id(clicked_id) {
+  alert(clicked_id);
+
+}
+
+
 var employees = {
   "employees": [
     {
@@ -27,63 +36,89 @@ var employees = {
     }
   ]
 }
+
+
 const employeeOne = employees["employees"][0];
 const employeeTwo = employees["employees"][1];
 const employeeThree = employees["employees"][2];
 
 
+
 window.addEventListener('load', function (event) {
 
 //Display employee Details
+
+if (employeeOne) {
 //Display Employee names
   var employeeOneNameSpace = document.querySelector("#first-employee-name");
   employeeOneNameSpace.innerHTML += employeeOne["name"];
 
-  var employeeTwoNameSpace = document.querySelector("#second-employee-name");
-  employeeTwoNameSpace.innerHTML += employeeTwo["name"];
-
-  var employeeThreeNameSpace = document.querySelector("#third-employee-name");
-  employeeThreeNameSpace.innerHTML += employeeThree["name"];
-
   //Display Employee TimeZones
-var employeeOneTimeZone = document.querySelector("#time-zone-1");
+  var employeeOneTimeZone = document.querySelector("#time-zone-1");
   employeeOneTimeZone.innerHTML += employeeOne["timezone"];
-  var employeeTwoTimeZone = document.querySelector("#time-zone-2");
-  employeeTwoTimeZone.innerHTML += employeeTwo["timezone"];
-
-  var employeeThreeTimeZone = document.querySelector("#time-zone-3");
-  employeeThreeTimeZone.innerHTML += employeeThree["timezone"];
 
   //Display Employee Current Times
   getCurrentTimes();
-var employeeOneCurrentTime = document.querySelector("#current-time-1");
+
+  var employeeOneCurrentTime = document.querySelector("#current-time-1");
   employeeOneCurrentTime.innerHTML += employeeOne["currenttime"];
-var employeeTwoCurrentTime = document.querySelector("#current-time-2");
-  employeeTwoCurrentTime.innerHTML += employeeTwo["currenttime"];
-  var employeeThreeCurrentTime = document.querySelector("#current-time-3");
-  employeeThreeCurrentTime.innerHTML += employeeThree["currenttime"];
 
   //Display Employee Working Hours
-var employeeOneWorkingHours = document.querySelector("#working-hours-1");
+  var employeeOneWorkingHours = document.querySelector("#working-hours-1");
   employeeOneWorkingHours.innerHTML += employeeOne["workinghours"];
-var employeeTwoWorkingHours = document.querySelector("#working-hours-2");
-  employeeTwoWorkingHours.innerHTML += employeeTwo["workinghours"];
-  var employeeThreeWorkingHours = document.querySelector("#working-hours-3");
-  employeeThreeWorkingHours.innerHTML += employeeThree['workinghours'];
 
   //Connect Email Addresses to Message Button
-
   var employeeOneEmailElement = document.querySelector("#email1");
   var employeeOneEmail = "mailto:" + employeeOne['email'];
   $(employeeOneEmailElement).attr("href", employeeOneEmail);
 
-  var employeeTwoEmailElement = document.querySelector("#email2");
-  var employeeTwoEmail = "mailto:" + employeeTwo['email'];
-  $(employeeTwoEmailElement).attr("href", employeeTwoEmail);
+}
+  if (document.querySelector("#second-employee-name")) {
+      //Display Employee names
+    var employeeTwoNameSpace = document.querySelector("#second-employee-name");
+    employeeTwoNameSpace.innerHTML += employeeTwo["name"];
+  //Display Employee TimeZones
+    var employeeTwoTimeZone = document.querySelector("#time-zone-2");
+    employeeTwoTimeZone.innerHTML += employeeTwo["timezone"];
+  //Display Employee Current Times
+    getCurrentTimes();
 
-  var employeeThreeEmailElement = document.querySelector("#email3");
-  var employeeThreeEmail = "mailto:" + employeeThree['email'];
-  $(employeeThreeEmailElement).attr("href", employeeThreeEmail);
+    var employeeTwoCurrentTime = document.querySelector("#current-time-2");
+    employeeTwoCurrentTime.innerHTML += employeeTwo["currenttime"];
+  //Display Employee Working Hours
+    var employeeTwoWorkingHours = document.querySelector("#working-hours-2");
+    employeeTwoWorkingHours.innerHTML += employeeTwo["workinghours"];
+  //Connect Email Addresses to Message Button
+    var employeeTwoEmailElement = document.querySelector("#email2");
+    var employeeTwoEmail = "mailto:" + employeeTwo['email'];
+    $(employeeTwoEmailElement).attr("href", employeeTwoEmail);
+
+  }
+
+  if (document.querySelector("#third-employee-name")) {
+    //Display Employee Name
+    var employeeThreeNameSpace = document.querySelector("#third-employee-name");
+    employeeThreeNameSpace.innerHTML += employeeThree["name"];
+
+    //Display Employee TimeZones
+    var employeeThreeTimeZone = document.querySelector("#time-zone-3");
+    employeeThreeTimeZone.innerHTML += employeeThree["timezone"];
+
+    //Display Employee Current Times
+    getCurrentTimes();
+    var employeeThreeCurrentTime = document.querySelector("#current-time-3");
+    employeeThreeCurrentTime.innerHTML += employeeThree["currenttime"];
+
+    //Display Employee Working Hours
+    var employeeThreeWorkingHours = document.querySelector("#working-hours-3");
+    employeeThreeWorkingHours.innerHTML += employeeThree['workinghours'];
+
+    //Connect Email Addresses to Message Button
+    var employeeThreeEmailElement = document.querySelector("#email3");
+    var employeeThreeEmail = "mailto:" + employeeThree['email'];
+    $(employeeThreeEmailElement).attr("href", employeeThreeEmail);
+  }
+
 });
 
 function getCurrentTimes() {
@@ -123,5 +158,9 @@ function getCurrentTimes() {
   if (employeeThree['timezone'] == "MST") {
     employeeThree["currenttime"] = MSTdate;
   }
+
+
+
+
 
 }
