@@ -10,5 +10,11 @@
       "name": "Dustin Burcombe",
       "timezone": "EST"
     }
+    ,
+    {
+      "id": 3,
+      "name": "Ava Burcombe",
+      "timezone": "MST"
+    }
   ]
 }
