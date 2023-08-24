@@ -120,8 +120,8 @@ function getCurrentTimes() {
   if (employeeTwo['timezone'] == "EST") {
     employeeTwo["currenttime"] = ESTdate;
   }
-  if (employeeTwo['timezone'] == "MST") {
-    employeeTwo["currenttime"] = MSTdate;
+  if (employeeThree['timezone'] == "MST") {
+    employeeThree["currenttime"] = MSTdate;
   }
 
 }
