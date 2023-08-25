@@ -4,6 +4,7 @@
 
 function send_user_id(clicked_id) {
   alert(clicked_id);
+  localStorage.setItem('clickedId', clicked_id)
 
 }
 
@@ -16,7 +17,8 @@ var employees = {
       "timezone": "PST",
       "currenttime": "",
       "workinghours": "8:00am-5:00pm",
-      "email": "sburcombe@gmail.com"
+      "email": "sburcombe@gmail.com",
+      "image": "_assets/employee1.jpg"
     },
     {
       "id": 2,
@@ -24,7 +26,8 @@ var employees = {
       "timezone": "EST",
       "currenttime": "",
       "workinghours": "7:00am-12:00pm",
-      "email": "dburcombe@yahoo.com"
+      "email": "dburcombe@yahoo.com",
+      "image": "_assets/employee2.jpg"
     },
     {
       "id": 3,
@@ -32,7 +35,8 @@ var employees = {
       "timezone": "MST",
       "currenttime": "",
       "workinghours": "9:00am-1:00pm",
-      "email": "aburcombe@toddlertime.com"
+      "email": "aburcombe@toddlertime.com",
+      "image": "_assets/employee3.jpg"
     }
   ]
 }
@@ -43,12 +47,63 @@ const employeeTwo = employees["employees"][1];
 const employeeThree = employees["employees"][2];
 
 
-
 window.addEventListener('load', function (event) {
+
+  //display only the user that you've selected
+  if (window.location.href.includes('editUser')) {
+
+    var clickedId = localStorage.getItem('clickedId');
+
+    var employeeNameSpace = document.querySelector("#employee-name");
+    var employeeTimeZone = document.querySelector("#time-zone");
+    var employeeCurrentTime = document.querySelector("#current-time");
+    var employeeWorkingHours = document.querySelector("#working-hours");
+    var employeeImage = document.querySelector("#employee-image");
+    console.log(clickedId);
+    if (clickedId == 'edit-user-1'){
+
+    employeeNameSpace.innerHTML += employeeOne["name"];
+    //Display Employee TimeZones
+    employeeTimeZone.innerHTML += employeeOne["timezone"];
+    //Display Employee Current Times
+    getCurrentTimes();
+    employeeCurrentTime.innerHTML += employeeOne["currenttime"];
+    //Display Employee Working Hours
+    employeeWorkingHours.innerHTML += employeeOne["workinghours"];
+
+    employeeImage.src = employeeOne["image"];
+
+  } else if (clickedId == 'edit-user-2') {
+
+    employeeNameSpace.innerHTML += employeeTwo["name"];
+    //Display Employee TimeZones
+    employeeTimeZone.innerHTML += employeeTwo["timezone"];
+    //Display Employee Current Times
+    getCurrentTimes();
+    employeeCurrentTime.innerHTML += employeeTwo["currenttime"];
+    //Display Employee Working Hours
+    employeeWorkingHours.innerHTML += employeeTwo["workinghours"];
+
+      employeeImage.src = employeeTwo["image"];
+
+  } else if (clickedId == 'edit-user-3') {
+
+    employeeNameSpace.innerHTML += employeeThree["name"];
+    //Display Employee TimeZones
+    employeeTimeZone.innerHTML += employeeThree["timezone"];
+    //Display Employee Current Times
+    getCurrentTimes();
+    employeeCurrentTime.innerHTML += employeeThree["currenttime"];
+    //Display Employee Working Hours
+    employeeWorkingHours.innerHTML += employeeThree["workinghours"];
+      employeeImage.src = employeeThree["image"];
+
+  }
+}
 
 //Display employee Details
 
-if (employeeOne) {
+  if (employeeOne && document.querySelector("#first-employee-name")) {
 //Display Employee names
   var employeeOneNameSpace = document.querySelector("#first-employee-name");
   employeeOneNameSpace.innerHTML += employeeOne["name"];
@@ -158,6 +213,7 @@ function getCurrentTimes() {
   if (employeeThree['timezone'] == "MST") {
     employeeThree["currenttime"] = MSTdate;
   }
+
 
 
 
