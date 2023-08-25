@@ -7,7 +7,9 @@ function send_user_id(clicked_id) {
 
 }
 
-
+if (window.location.href.includes('editUser')){
+  alert('hi');
+}
 var employees = {
   "employees": [
     {
