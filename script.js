@@ -75,14 +75,14 @@ window.addEventListener('load', function (event) {
 
   } else if (clickedId == 'edit-user-2') {
 
-    employeeNameSpace.innerHTML += employeeTwo["name"];
+      $('#employee-name').attr('placeholder', employeeTwo["name"]);
     //Display Employee TimeZones
-    employeeTimeZone.innerHTML += employeeTwo["timezone"];
+      $('#time-zone').attr('placeholder', employeeTwo["timezone"]);
     //Display Employee Current Times
     getCurrentTimes();
-    employeeCurrentTime.innerHTML += employeeTwo["currenttime"];
+    $('#current-time').attr('placeholder', employeeTwo["currenttime"]);
     //Display Employee Working Hours
-    employeeWorkingHours.innerHTML += employeeTwo["workinghours"];
+    $('#working-hours').attr('placeholder', employeeTwo["workinghours"]);
 
       employeeImage.src = employeeTwo["image"];
 
