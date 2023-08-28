@@ -88,14 +88,15 @@ window.addEventListener('load', function (event) {
 
   } else if (clickedId == 'edit-user-3') {
 
-    employeeNameSpace.innerHTML += employeeThree["name"];
-    //Display Employee TimeZones
-    employeeTimeZone.innerHTML += employeeThree["timezone"];
-    //Display Employee Current Times
-    getCurrentTimes();
-    employeeCurrentTime.innerHTML += employeeThree["currenttime"];
-    //Display Employee Working Hours
-    employeeWorkingHours.innerHTML += employeeThree["workinghours"];
+      $('#employee-name').attr('placeholder', employeeThree["name"]);
+      //Display Employee TimeZones
+      $('#time-zone').attr('placeholder', employeeThree["timezone"]);
+      //Display Employee Current Times
+      getCurrentTimes();
+      $('#current-time').attr('placeholder', employeeThree["currenttime"]);
+      //Display Employee Working Hours
+      $('#working-hours').attr('placeholder', employeeThree["workinghours"]);
+
       employeeImage.src = employeeThree["image"];
 
   }
