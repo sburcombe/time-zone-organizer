@@ -59,23 +59,28 @@
         <div class="card-body">
           <h5 class="card-title">Edit Employee <span id="employee-number"> </span>:</h5>
           <form action="" id="edit-employee-form">
+            <div class="form-group">
             <label>Name: </label>
-          <input id="employee-name" class="card-text">
+          <input id="employee-name" class="form-control">
           </input>
-        </div>
+
 
           <label>Time Zone: </label>
-          <input id="time-zone"> </input>
+          <input id="time-zone" class="form-control"> </input>
           <label>Current Time: </label>
-          <input id="current-time"></input>
+          <input id="current-time" class="form-control"></input>
           <label> Typical Working Hours: </label>
-          <input id="working-hours"></input>
+          <input id="working-hours" class="form-control"></input>
+          <label> Employee Image: </label>
+          <input type="file" class="form-control-file" id="employee-image">
 
         <div class="card-body">
-          <a href="/time-zone-organizer/editUser.html" id="cancel" class="card-link">Cancel</a>
-          <a href="" class="card-link" id="save">Save</a>
+          <button href="/time-zone-organizer/editUser.html" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
         </div>
         </form>
+        </div>
       </div>
     </div>
     </div>
