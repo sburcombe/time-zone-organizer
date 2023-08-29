@@ -50,7 +50,7 @@ const employeeThree = employees["employees"][2];
 window.addEventListener('load', function (event) {
 
   //display only the user that you've selected
-  if (window.location.href.includes('editUser')) {
+  if (window.location.href.includes('editEmployee')) {
 
     var clickedId = localStorage.getItem('clickedId');
 
