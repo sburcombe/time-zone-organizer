@@ -30,7 +30,7 @@
               <!-- <a class="nav-link" href="#">Employee List</a> -->
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/time-zone-organizer/addUser.html">Add Employee</a>
+              <a class="nav-link" href="/time-zone-organizer/addEmployee.html">Add Employee</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Schedule a Meeting</a>
@@ -47,6 +47,23 @@
       <h1 class="mb-3">Time Zone Organizer</h1>
       <h4 class="mb-3">Remember your colleagues time zone without the mental calculations</h4>
       <a class="btn btn-primary" href="" role="button">Try it now!</a>
+        <div id="time-wrapper">
+          <h2>The World Clock</h2>
+          <div id="time-holder">
+            <div>
+              <span>GMT: </span>
+              <span id="gmt"></span>
+            </div>
+            <div>
+              <span>CET: </span>
+              <span id="cet"></span>
+            </div>
+            <div>
+              <span>EST: </span>
+              <span id="est"></span>
+            </div>
+          </div>
+        </div>
     </div>
     <!-- Jumbotron -->
   </header>
@@ -75,7 +92,7 @@
           <input type="file" class="form-control-file" id="employee-image">
 
         <div class="card-body">
-          <button href="/time-zone-organizer/editUser.html" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
+          <button href="/time-zone-organizer/index.html" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
           <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </div>
         </div>
@@ -84,6 +101,7 @@
       </div>
     </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
