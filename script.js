@@ -1,4 +1,27 @@
 
+//Times
+//get Date time and save in specific time zones
+var date = new Date();
+
+//AST
+var ASTdate = date.toLocaleString("en-US", { timeZone: "America/Anguilla" });
+
+//EST
+var ESTdate = date.toLocaleString("en-US", { timeZone: "America/New_York" });
+
+//CST
+var CSTdate = date.toLocaleString("en-US", { timeZone: "America/Belize" });
+
+//MST
+var MSTdate = date.toLocaleString("en-US", { timeZone: "America/Phoenix" });
+
+//PST
+var PSTdate = date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+
+//AKST
+var AKSTdate = date.toLocaleString("en-US", { timeZone: "America/Adak" });
+
+
 //This function is called when a user clicks to edit user information from the details list
 
 
@@ -179,25 +202,6 @@ window.addEventListener('load', function (event) {
 
 function getCurrentTimes() {
   //get Date time and save in specific time zones
-  var date = new Date();
-
-  //AST
-  var ASTdate = date.toLocaleString("en-US", { timeZone: "America/Anguilla" });
-
-  //EST
-  var ESTdate = date.toLocaleString("en-US", { timeZone: "America/New_York" });
-
-  //CST
-  var CSTdate = date.toLocaleString("en-US", { timeZone: "America/Belize" });
-
-  //MST
-  var MSTdate = date.toLocaleString("en-US", { timeZone: "America/Phoenix" });
-
-  //PST
-  var PSTdate = date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-
-  //AKST
-  var AKSTdate = date.toLocaleString("en-US", { timeZone: "America/Adak" });
 
   //HST
 
@@ -219,12 +223,15 @@ function getCurrentTimes() {
   //sample code for clock display
   function updateClock() {
     const gmtTime = new Date().toUTCString();
-    const cetTime = new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Berlin' });
-    const estTime = new Date().toLocaleString('nl-NL', { timeZone: 'America/New_York' });
+    // const cetTime = new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Berlin' });
+    // const estTime = new Date().toLocaleString('nl-NL', { timeZone: 'America/New_York' });
+    // const mstTime = new Date().toLocaleString('nl-NL', { timeZone: 'America/Phoenix' });
+
 
     document.getElementById('gmt').innerHTML = gmtTime;
-    document.getElementById('cet').innerHTML = cetTime;
-    document.getElementById('est').innerHTML = estTime;
+    document.getElementById('cst').innerHTML = CSTdate;
+    document.getElementById('est').innerHTML = ESTdate;
+    document.getElementById('mst').innerHTML = MSTdate;
   }
 
   setInterval(updateClock, 1000);
