@@ -4,7 +4,9 @@
   text-align: center;
   align-content: center;;
 } */
-
+* {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
 .user-image {
    height:250px;
     width:100%;
