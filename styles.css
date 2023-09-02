@@ -50,5 +50,12 @@ body {
   margin-top: -60px;
   overflow: hidden;
   border: 5px solid #fff;
-  border-radius: 50%;
+}
+
+.avatar {
+ border-radius: 50%;
+}
+
+.testimonial-card {
+  border-radius: 3.25rem;
 }
