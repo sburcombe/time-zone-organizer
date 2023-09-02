@@ -30,7 +30,6 @@
 }
 
 
-/* example card css */
 body {
 	background-color: #f5f7fa;
 }
@@ -38,8 +37,8 @@ body {
 .testimonial-card .card-up {
   height: 120px;
   overflow: hidden;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
+  border-top-left-radius: 3.25rem;
+  border-top-right-radius: 3.25rem;
 }
 
 .aqua-gradient {
