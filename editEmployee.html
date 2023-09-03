@@ -52,22 +52,34 @@
       <h1 class="mb-3">Time Zone Organizer</h1>
       <h4 class="mb-3">Remember your colleagues time zone without the mental calculations</h4>
       <a class="btn btn-primary" href="" role="button">Try it now!</a>
-        <div id="time-wrapper">
+        <div id="time-wrapper" class="container">
           <h2>The World Clock</h2>
-          <div id="time-holder">
-            <div>
+          <div class="clock">
+            <div class="outer-clock-face">
+              <div class="marking marking-one"></div>
+              <div class="marking marking-two"></div>
+              <div class="marking marking-three"></div>
+              <div class="marking marking-four"></div>
+              <div class="inner-clock-face"></div>
+              <div class="hand hour-hand"></div>
+              <div class="hand min-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+          </div>
+          <div id="time-holder" class = "row">
+            <div class="col-sm">
               <span>GMT: </span>
               <span id="gmt"></span>
             </div>
-            <div>
+            <div class = "col-sm">
               <span>CST: </span>
               <span id="cst"></span>
             </div>
-            <div>
+            <div class="col-sm">
               <span>EST: </span>
               <span id="est"></span>
             </div>
-            <div>
+            <div class="col-sm">
               <span>MST: </span>
               <span id="mst"></span>
             </div>
@@ -77,7 +89,7 @@
     <!-- Jumbotron -->
   </header>
 
-  <div class="container employee-info-container">
+  <div class="container">
     <section class="mx-auto my-5" style="max-width: 35rem;">
       <div class="card testimonial-card mt-2 mb-3">
         <div class="card-up aqua-gradient"></div>
