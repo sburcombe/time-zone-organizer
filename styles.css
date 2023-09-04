@@ -175,7 +175,7 @@ body {
   width: 50%;
   right: 50%;
   height: 6px;
-  background: #e8d752;
+  background: #52e86b;
   position: absolute;
   top: 50%;
   border-radius: 6px;
@@ -196,7 +196,7 @@ body {
 }
 
 .hand.second-hand {
-  background: #ee791a;
+  background: #ee7917;
   width: 45%;
   height: 2px;
 }
