@@ -262,5 +262,7 @@ function setDate() {
 }
 
 setInterval(setDate, 1000);
-
-setDate();
+document.addEventListener("DOMContentLoaded", function () {
+  // your code here
+  setDate();
+});
