@@ -26,7 +26,7 @@ var AKSTdate = date.toLocaleString("en-US", { timeZone: "America/Adak" });
 
 
 function send_user_id(clicked_id) {
-  alert(clicked_id);
+  // alert(clicked_id);
   localStorage.setItem('clickedId', clicked_id)
 
 }
@@ -83,18 +83,29 @@ window.addEventListener('load', function (event) {
     var employeeWorkingHours = document.querySelector("#working-hours");
     var employeeImage = document.querySelector("#employee-image");
     console.log(clickedId);
+    //need to come back and adjust for dynamic retrieval of id and timezone
     if (clickedId == 'edit-user-1'){
 
-    employeeNameSpace.innerHTML += employeeOne["name"];
-    //Display Employee TimeZones
-    employeeTimeZone.innerHTML += employeeOne["timezone"];
-    //Display Employee Current Times
-    getCurrentTimes();
-    employeeCurrentTime.innerHTML += employeeOne["currenttime"];
-    //Display Employee Working Hours
-    employeeWorkingHours.innerHTML += employeeOne["workinghours"];
+      $('#employee-name').attr('placeholder', employeeOne["name"]);
+      //Display Employee TimeZones
+      $('#time-zone').attr('placeholder', employeeOne["timezone"]);
+      //Display Employee Current Times
+      getCurrentTimes();
+      $('#current-time').attr('placeholder', employeeOne["currenttime"]);
+      //Display Employee Working Hours
+      $('#working-hours').attr('placeholder', employeeOne["workinghours"]);
 
-    employeeImage.src = employeeOne["image"];
+      employeeImage.src = employeeOne["image"];
+    // employeeNameSpace.innerHTML += employeeOne["name"];
+    // //Display Employee TimeZones
+    // employeeTimeZone.innerHTML += employeeOne["timezone"];
+    // //Display Employee Current Times
+    // getCurrentTimes();
+    // employeeCurrentTime.innerHTML += employeeOne["currenttime"];
+    // //Display Employee Working Hours
+    // employeeWorkingHours.innerHTML += employeeOne["workinghours"];
+
+    // employeeImage.src = employeeOne["image"];
 
   } else if (clickedId == 'edit-user-2') {
 
@@ -241,15 +252,36 @@ function getCurrentTimes() {
 }
 
 //code for visual clock
-// const secondHand = document.querySelector('.second-hand');
-// const minsHand = document.querySelector('.min-hand');
-// const hourHand = document.querySelector('.hour-hand');
+
 
 function setDate() {
-  const now = new Date();
+  //need to come back and adjust for dynamic retrieval of id and timezone
+  // var clickedId = localStorage.getItem('clickedId');
+
+  // const now = new Date();
+
+
+
+
+
   const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
+  //need to come back and adjust for dynamic retrieval of id and timezone
+  const clickedId = localStorage.getItem('clickedId');
+  //  alert(clickedId);
+
+  if (clickedId && clickedId === 'edit-user-1') {
+    var now = new Date(PSTdate);
+  }
+
+  if (clickedId && clickedId === 'edit-user-2') {
+    const now = new Date(ESTdate);
+  }
+
+  if (clickedId && clickedId === 'edit-user-3') {
+    const now = new Date(MSTdate);
+  }
   const seconds = now.getSeconds();
   const secondsDegrees = ((seconds / 60) * 360) + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -264,7 +296,5 @@ function setDate() {
 }
 
 setInterval(setDate, 1000);
-document.addEventListener("DOMContentLoaded", function () {
-  // your code here
+
   setDate();
-});
