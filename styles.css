@@ -111,7 +111,7 @@ body {
   position: absolute;
   width: 5px;
   height: 100%;
-  background: #c8444a;
+  background: #44c89c;
   z-index: 0;
   left: 49%;
 }
@@ -168,14 +168,14 @@ body {
   margin-top: -6px;
   background: #4d4b63;
   z-index: 11;
-  border: 2px solid #d9701b;
+  border: 2px solid #1b7dd9;
 }
 
 .hand {
   width: 50%;
   right: 50%;
   height: 6px;
-  background: #52e86b;
+  background: #52d7e8;
   position: absolute;
   top: 50%;
   border-radius: 6px;
@@ -196,7 +196,7 @@ body {
 }
 
 .hand.second-hand {
-  background: #ee7917;
+  background: #e717ee;
   width: 45%;
   height: 2px;
 }
