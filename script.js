@@ -273,12 +273,17 @@ function setDate() {
 
   if (clickedId && clickedId === 'edit-user-1') {
     getCurrentTimes();
-    var now = new Date(PSTdate);
+    var now = new Date().toLocaleTimeString("en-US", { timeZone: "America/Los_Angeles" }).now();
   }
 
   if (clickedId && clickedId === 'edit-user-2') {
     getCurrentTimes();
-    var now = new Date(ESTdate);
+    var now = new Date();
+    var nowTime = new Date().getTime();
+    var nowTimeZoneAdjusted = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" });
+    var timeZoneDate = new Date(nowTime);
+    console.log("timeZoneDate: ", timeZoneDate);
+    console.log("nowTimeZoneAdjusted: ", nowTimeZoneAdjusted);
   }
 
   if (clickedId && clickedId === 'edit-user-3') {
