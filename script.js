@@ -4,22 +4,22 @@
 var date = new Date();
 
 //AST
-var ASTdate = date.toLocaleString("en-US", { timeZone: "America/Anguilla" });
+var ASTdate = new Date().toLocaleString("en-US", { timeZone: "America/Anguilla" });
 
 //EST
-var ESTdate = date.toLocaleString("en-US", { timeZone: "America/New_York" });
+var ESTdate = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
 
 //CST
-var CSTdate = date.toLocaleString("en-US", { timeZone: "America/Belize" });
+var CSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Belize" });
 
 //MST
-var MSTdate = date.toLocaleString("en-US", { timeZone: "America/Phoenix" });
+var MSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Phoenix" });
 
 //PST
-var PSTdate = date.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+var PSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
 
 //AKST
-var AKSTdate = date.toLocaleString("en-US", { timeZone: "America/Adak" });
+var AKSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Adak" });
 
 
 //This function is called when a user clicks to edit user information from the details list
@@ -234,15 +234,16 @@ function getCurrentTimes() {
   //sample code for clock display
   function updateClock() {
     const gmtTime = new Date().toUTCString();
-    // const cetTime = new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Berlin' });
-    // const estTime = new Date().toLocaleString('nl-NL', { timeZone: 'America/New_York' });
-    // const mstTime = new Date().toLocaleString('nl-NL', { timeZone: 'America/Phoenix' });
+    const cetTime = new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Berlin' });
+    const cstTime = new Date().toLocaleString("en-US", { timeZone: "America/Belize" });
+    const estTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+    const mstTime = new Date().toLocaleString('en-US', { timeZone: 'America/Phoenix' });
 
 
     document.getElementById('gmt').innerHTML = gmtTime;
-    document.getElementById('cst').innerHTML = CSTdate;
-    document.getElementById('est').innerHTML = ESTdate;
-    document.getElementById('mst').innerHTML = MSTdate;
+    document.getElementById('cst').innerHTML = cstTime;
+    document.getElementById('est').innerHTML = estTime;
+    document.getElementById('mst').innerHTML = mstTime;
   }
 
   setInterval(updateClock, 1000);
@@ -258,50 +259,54 @@ function setDate() {
   //need to come back and adjust for dynamic retrieval of id and timezone
   // var clickedId = localStorage.getItem('clickedId');
 
-  // const now = new Date();
+  const now = new Date();
 
 
 
 
 
-  let secondHand = document.querySelector('.second-hand');
-  let minsHand = document.querySelector('.min-hand');
-  let hourHand = document.querySelector('.hour-hand');
+  // let secondHand = document.querySelector('.second-hand');
+  // let minsHand = document.querySelector('.min-hand');
+  // let hourHand = document.querySelector('.hour-hand');
   //need to come back and adjust for dynamic retrieval of id and timezone
   let clickedId = localStorage.getItem('clickedId');
   //  alert(clickedId);
 
-  if (clickedId && clickedId === 'edit-user-1') {
-    getCurrentTimes();
-    var now = new Date().toLocaleTimeString("en-US", { timeZone: "America/Los_Angeles" }).now();
-  }
+  //possible logic for analog clock changes
+  // if (clickedId && clickedId === 'edit-user-1') {
+  //   getCurrentTimes();
+  //   var now = new Date().toLocaleTimeString("en-US", { timeZone: "America/Los_Angeles" });
+  // }
 
-  if (clickedId && clickedId === 'edit-user-2') {
-    getCurrentTimes();
-    var now = new Date();
-    var nowTime = new Date().getTime();
-    var nowTimeZoneAdjusted = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" });
-    var timeZoneDate = new Date(nowTime);
-    console.log("timeZoneDate: ", timeZoneDate);
-    console.log("nowTimeZoneAdjusted: ", nowTimeZoneAdjusted);
-  }
 
-  if (clickedId && clickedId === 'edit-user-3') {
-    getCurrentTimes();
-    var now = new Date(MSTdate);
-  }
+  // if (clickedId && clickedId === 'edit-user-2') {
+  //   getCurrentTimes();
+  //   var now = new Date();
+
+  //   // var now = new Date().toLocaleTimeString("nl-NL", { timeZone: "America/New_York" });
+  //   var nowTime = new Date().getTime();
+  //   var nowTimeZoneAdjusted = new Date().toLocaleTimeString("en-US", { timeZone: "America/New_York" });
+  //   var timeZoneDate = new Date(nowTime);
+  //   console.log("timeZoneDate: ", timeZoneDate);
+  //   console.log("nowTimeZoneAdjusted: ", nowTimeZoneAdjusted);
+  // }
+
+  // if (clickedId && clickedId === 'edit-user-3') {
+  //   getCurrentTimes();
+  //   var now = new Date(MSTdate);
+  // }
   console.log("now: ",now);
-  let seconds = now.getSeconds();
-  let secondsDegrees = ((seconds / 60) * 360) + 90;
-  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+  // let seconds = now.getSeconds();
+  // let secondsDegrees = ((seconds / 60) * 360) + 90;
+  // secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-  let mins = now.getMinutes();
-  let minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
-  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+  // let mins = now.getMinutes();
+  // let minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
+  // minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
-  let hour = now.getHours();
-  let hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
-  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+  // let hour = now.getHours();
+  // let hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
+  // hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
 
 setInterval(setDate, 1000);

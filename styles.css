@@ -1,9 +1,9 @@
-/* .header {
+.header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem;
   text-align: center;
   align-content: center;;
-} */
+}
 * {
   font-family: 'Hanken Grotesk', sans-serif;
 }
@@ -60,7 +60,10 @@ body {
 }
 
 
-html {
+
+
+/*
+ html {
 
   text-align: center;
   font-size: 10px;
@@ -73,8 +76,8 @@ body {
   flex: 1;
   min-height: 100vh;
   align-items: center;
-}
-
+} */
+/*
 .clock {
     background: #2d5171;
   width: 20rem;
@@ -199,4 +202,4 @@ body {
   background: #e717ee;
   width: 45%;
   height: 2px;
-}
+} */
