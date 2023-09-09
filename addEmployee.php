@@ -25,13 +25,13 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/time-zone-organizer/index.html">Home/Employee List</a>
+            <a class="nav-link" aria-current="page" href="/index.php">Home/Employee List</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Employee List</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/time-zone-organizer/addEmployee.html">Add Employee</a>
+            <a class="nav-link" href="/addEmployee.php">Add Employee</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Schedule a Meeting</a>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include('head.php') ?>
+<?php include 'head.php'; ?>
 <body>
 
 <header>
@@ -14,13 +14,13 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/time-zone-organizer/index.php">Home/Employee List</a>
+            <a class="nav-link" aria-current="page" href="/index.php">Home/Employee List</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Employee List</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/time-zone-organizer/addEmployee.php">Add Employee</a>
+            <a class="nav-link" href="/addEmployee.php">Add Employee</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Schedule a Meeting</a>
@@ -58,7 +58,7 @@
           <li id="working-hours-1" class="list-group-item">Typical Working Hours:</li>
         </ul>
         <div class="card-body">
-            <a href="/time-zone-organizer/editEmployee.php" id="edit-user-1" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
+            <a href="/editEmployee.php" id="edit-user-1" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
             <a href="" class="card-link" id="email1">Message User</a>
         </div>
       </div>
@@ -79,7 +79,7 @@
         <li id="working-hours-2" class="list-group-item">Typical Working Hours:</li>
         </ul>
         <div class="card-body">
-          <a href="/time-zone-organizer/editEmployee.php" id="edit-user-2" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
+          <a href="/editEmployee.php" id="edit-user-2" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
           <a href="" class="card-link" id="email2">Message User</a>
 
         </div>
@@ -101,7 +101,7 @@
               <li id="working-hours-3" class="list-group-item">Typical Working Hours:</li>
             </ul>
             <div class="card-body">
-              <a href="/time-zone-organizer/editEmployee.php" id="edit-user-3" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
+              <a href="/editEmployee.php" id="edit-user-3" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
               <a href="" class="card-link" id="email3">Message User</a>
 
             </div>
