@@ -59,7 +59,9 @@ body {
   border-radius: 3.25rem;
 }
 
-
+#mst-time, #est-time, #cst-time {
+  font-weight: 700;
+}
 
 
 /*
