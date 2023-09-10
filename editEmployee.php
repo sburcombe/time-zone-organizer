@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="eng">
- <?php include('head.php') ?>
+ <?php include 'head.php'; ?>
 
   <header>
     <!-- Navbar -->
