@@ -46,15 +46,18 @@
             </div>
             <div class = "col-sm">
               <h3>CST: </h3>
-              <span id="cst"></span>
+              <span id="cst-date"></span>
+              <span id="cst-time"></span>
             </div>
             <div class="col-sm">
               <h3>EST: </h3>
-              <span id="est"></span>
+              <span id="est-date"></span>
+              <span id="est-time"></span>
             </div>
             <div class="col-sm">
               <h3>MST: </h3>
-              <span id="mst"></span>
+              <span id="mst-date"></span>
+              <span id="mst-time"></span>
             </div>
           </div>
         </div>
