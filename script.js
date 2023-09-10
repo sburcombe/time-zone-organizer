@@ -96,16 +96,6 @@ window.addEventListener('load', function (event) {
       $('#working-hours').attr('placeholder', employeeOne["workinghours"]);
 
       employeeImage.src = employeeOne["image"];
-    // employeeNameSpace.innerHTML += employeeOne["name"];
-    // //Display Employee TimeZones
-    // employeeTimeZone.innerHTML += employeeOne["timezone"];
-    // //Display Employee Current Times
-    // getCurrentTimes();
-    // employeeCurrentTime.innerHTML += employeeOne["currenttime"];
-    // //Display Employee Working Hours
-    // employeeWorkingHours.innerHTML += employeeOne["workinghours"];
-
-    // employeeImage.src = employeeOne["image"];
 
   } else if (clickedId == 'edit-user-2') {
 
@@ -234,16 +224,28 @@ function getCurrentTimes() {
   //sample code for clock display
   function updateClock() {
     const gmtTime = new Date().toUTCString();
-    const cetTime = new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Berlin' });
-    const cstTime = new Date().toLocaleString("en-US", { timeZone: "America/Belize" });
-    const estTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
-    const mstTime = new Date().toLocaleString('en-US', { timeZone: 'America/Phoenix' });
 
+    //Dates
+    const cetDate = new Date().toLocaleDateString('nl-NL', { timeZone: 'Europe/Berlin' });
+    const cstDate = new Date().toLocaleDateString("en-US", { timeZone: "America/Belize" });
+    const estDate = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' });
+    const mstDate = new Date().toLocaleDateString('en-US', { timeZone: 'America/Phoenix' });
+
+    //Times
+    const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
+    const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize" });
+    const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
+    const mstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
 
     document.getElementById('gmt').innerHTML = gmtTime;
-    document.getElementById('cst').innerHTML = cstTime;
-    document.getElementById('est').innerHTML = estTime;
-    document.getElementById('mst').innerHTML = mstTime;
+    document.getElementById('cst-date').innerHTML = cstDate;
+    document.getElementById('est-date').innerHTML = estDate;
+    document.getElementById('mst-date').innerHTML = mstDate;
+
+
+    document.getElementById('cst-time').innerHTML = cstTime;
+    document.getElementById('est-time').innerHTML = estTime;
+    document.getElementById('mst-time').innerHTML = mstTime;
   }
 
   setInterval(updateClock, 1000);
