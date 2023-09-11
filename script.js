@@ -246,6 +246,10 @@ function getCurrentTimes() {
     document.getElementById('cst-time').innerHTML = cstTime;
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
+    console.log(cstTime.getHours());
+    if (cstTime > 1 && cstTime < 5){
+      $('#cst-time').css('background-color','#6C5B7B');
+    }
   }
 
   setInterval(updateClock, 1000);
