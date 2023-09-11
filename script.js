@@ -226,14 +226,30 @@ function getCurrentTimes() {
     // const gmtTime = new Date().toUTCString();
 
     //Dates
-    const cetDate = new Date().toLocaleDateString('nl-NL', { timeZone: 'Europe/Berlin' });
-    const cstDate = new Date().toLocaleDateString("en-US", { timeZone: "America/Belize" });
-    const estDate = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' });
-    const mstDate = new Date().toLocaleDateString('en-US', { timeZone: 'America/Phoenix' });
+    const cetDate = new Date().toLocaleDateString('nl-NL', {
+      timeZone: 'Europe/Berlin', weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"  });
+    const cstDate = new Date().toLocaleDateString("en-US", {
+      timeZone: "America/Belize", weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"  });
+    const estDate = new Date().toLocaleDateString('en-US', {
+      timeZone: 'America/New_York', weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"  });
+    const mstDate = new Date().toLocaleDateString('en-US', {
+      timeZone: 'America/Phoenix', weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"  });
 
     //Times
     const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
-    const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize" });
+    const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize"});
     const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
     const mstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
 
@@ -246,10 +262,10 @@ function getCurrentTimes() {
     document.getElementById('cst-time').innerHTML = cstTime;
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
-    console.log(cstTime.getHours());
-    if (cstTime > 1 && cstTime < 5){
+
+    // if (cstTime > 1 && cstTime < 5){
       $('#cst-time').css('background-color','#6C5B7B');
-    }
+    // }
   }
 
   setInterval(updateClock, 1000);
