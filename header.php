@@ -35,24 +35,24 @@
         <div id="time-wrapper" class="container">
           <h2>Current Date and Time</h2>
           <div id="time-holder" class = "row">
-            <div class="col-sm">
-              <h3>GMT: </h3>
-              <span id="gmt"></span>
+            <!-- <div class="col-sm container">
+              <h3 class= "row justify-content-md-center">GMT: </h3>
+              <div class = "row justify-content-md-center"id="gmt"></div>
+            </div> -->
+            <div class = "col-sm container">
+              <h3 class = "row justify-content-md-center">CST: </h3>
+              <div class ="row justify-content-md-center"id="cst-date"></div>
+              <div class = "row justify-content-md-center " id="cst-time"></div>
             </div>
-            <div class = "col-sm">
-              <h3>CST: </h3>
-              <span id="cst-date"></span>
-              <span id="cst-time"></span>
+            <div class="col-sm container">
+              <h3 class="row justify-content-md-center">EST: </h3>
+              <div class="row justify-content-md-center" id="est-date"></div>
+              <div class="row justify-content-md-center" id="est-time"></div>
             </div>
-            <div class="col-sm">
-              <h3>EST: </h3>
-              <span id="est-date"></span>
-              <span id="est-time"></span>
-            </div>
-            <div class="col-sm">
-              <h3>MST: </h3>
-              <span id="mst-date"></span>
-              <span id="mst-time"></span>
+            <div class="col-sm container">
+              <h3 class="row justify-content-md-center">MST: </h3>
+              <div class="row justify-content-md-center" id="mst-date"></div>
+              <div class="row justify-content-md-center" id="mst-time"></div>
             </div>
           </div>
         </div>
