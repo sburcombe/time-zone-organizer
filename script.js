@@ -223,7 +223,7 @@ function getCurrentTimes() {
 
   //sample code for clock display
   function updateClock() {
-    const gmtTime = new Date().toUTCString();
+    // const gmtTime = new Date().toUTCString();
 
     //Dates
     const cetDate = new Date().toLocaleDateString('nl-NL', { timeZone: 'Europe/Berlin' });
@@ -237,7 +237,7 @@ function getCurrentTimes() {
     const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
     const mstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
 
-    document.getElementById('gmt').innerHTML = gmtTime;
+    // document.getElementById('gmt').innerHTML = gmtTime;
     document.getElementById('cst-date').innerHTML = cstDate;
     document.getElementById('est-date').innerHTML = estDate;
     document.getElementById('mst-date').innerHTML = mstDate;
