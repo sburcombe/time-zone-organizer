@@ -12,10 +12,7 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top user-image" src="_assets/employee1.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Employee 1:</h5>
-          <p id="first-employee-name" class="card-text">
-            Name:
-          </p>
+          <h5 id="first-employee-name" class="card-title text-center"></h5>
         </div>
         <ul class="list-group list-group-flush">
           <li id="time-zone-1" class="list-group-item">Time Zone: </li>
@@ -33,10 +30,7 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top user-image" src="_assets/employee2.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Employee 2:</h5>
-          <p id="second-employee-name" class="card-text">
-            Name:
-          </p>
+        <h5 id="second-employee-name" class="card-title text-center"></h5>
         </div>
         <ul class="list-group list-group-flush">
         <li id="time-zone-2" class="list-group-item">Time Zone: </li>
@@ -55,10 +49,7 @@
           <div class="card" style="width: 18rem;">
             <img class="card-img-top user-image" src="_assets/employee3.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Employee 3:</h5>
-              <p id="third-employee-name" class="card-text">
-                Name:
-              </p>
+          <h5 id="third-employee-name" class="card-title text-center"></h5>
             </div>
             <ul class="list-group list-group-flush">
               <li id="time-zone-3" class="list-group-item">Time Zone: </li>

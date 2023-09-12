@@ -8,7 +8,7 @@
   <div class="container">
     <section class="mx-auto my-5" style="max-width: 35rem;">
       <div class="card testimonial-card mt-2 mb-3">
-        <div class="card-up aqua-gradient"></div>
+        <div class="card-up day-to-night-gradient"></div>
         <div class="avatar mx-auto white">
         <img id="employee-image" class="img-fluid rounded-circle" src="" alt="Card image cap">
         </div>

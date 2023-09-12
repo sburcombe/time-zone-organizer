@@ -4,6 +4,10 @@
   text-align: center;
   align-content: center;;
 }
+.header-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
 * {
   font-family: 'Hanken Grotesk', sans-serif;
 }
@@ -45,7 +49,7 @@ body {
 
 }
 .day-to-night-gradient {
-   background: linear-gradient(40deg, #f8b195, #355C7D) !important;
+   background: linear-gradient(40deg, #f8B195, #f67280, #355C7D) !important;
 }
 
 .testimonial-card .avatar {
@@ -65,5 +69,11 @@ body {
 
 #mst-time, #est-time, #cst-time {
   font-weight: 700;
+  font-size: 2.5rem;
   background-color: #c06C84;
+}
+
+#mst-date, #est-date, #cst-date {
+  font-weight: 300;
+  font-size: 1.25rem;
 }
