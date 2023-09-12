@@ -54,7 +54,7 @@ var employees = {
     },
     {
       "id": 3,
-      "name": "Ava Burcombe",
+      "name": "The Best Burcombe",
       "timezone": "MST",
       "currenttime": "",
       "workinghours": "9:00am-1:00pm",
