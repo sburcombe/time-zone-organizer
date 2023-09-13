@@ -70,7 +70,9 @@ body {
 #mst-time, #est-time, #cst-time {
   font-weight: 700;
   font-size: 2.5rem;
-  background-color: #c06C84;
+  /*with 80 is including the alpha value to make the color opaque */
+  background-color: #C06C8480;
+  /* opacity: .5; */
 }
 
 #mst-date, #est-date, #cst-date {

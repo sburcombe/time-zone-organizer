@@ -32,7 +32,8 @@
       <h1 class="mb-3 header-title">SoLuna</h1>
       <h4 class="mb-3">Remember your colleagues time zone without the mental calculations</h4>
       <a class="btn btn-primary" href="" role="button">Try it now!</a>
-        <div id="time-wrapper" class="container">
+        <!-- <div id="time-wrapper" class="container"> -->
+          <div id="time-wrapper">
           <h2>Current Date and Time</h2>
           <div id="time-holder" class = "row">
             <!-- <div class="col-sm container">

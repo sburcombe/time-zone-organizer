@@ -264,7 +264,9 @@ function getCurrentTimes() {
     document.getElementById('mst-time').innerHTML = mstTime;
 
     // if (cstTime > 1 && cstTime < 5){
-      $('#cst-time').css('background-color','#6C5B7B');
+      //with 80 is including the alpha value to make the color opaque
+    // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#cst-time').css('background-color','#6C5B7B80');
     // }
   }
 
