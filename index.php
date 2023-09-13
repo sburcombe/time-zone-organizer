@@ -9,8 +9,12 @@
 <div class="container">
   <div class="row">
     <div class="col m-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top user-image" src="_assets/employee1.jpg" alt="Card image cap">
+      <section class="mx-auto my-5" style="max-width: 35rem;">
+      <div class="card testimonial-card mt-2 mb-3 ">
+        <div class="card-up day-to-night-gradient"></div>
+        <div class="avatar mx-auto white">
+        <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee1.jpg" alt="Card image cap">
+        </div>
         <div class="card-body">
           <h5 id="first-employee-name" class="card-title text-center"></h5>
         </div>
@@ -24,11 +28,16 @@
             <a href="" class="card-link" id="email1">Message User</a>
         </div>
       </div>
+      </section>
       </div>
 
     <div class="col m-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top user-image" src="_assets/employee2.jpg" alt="Card image cap">
+       <section class="mx-auto my-5" style="max-width: 35rem;">
+      <div class="card testimonial-card mt-2 mb-3 ">
+        <div class="card-up day-to-night-gradient"></div>
+        <div class="avatar mx-auto white">
+        <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee2.jpg" alt="Card image cap">
+        </div>
         <div class="card-body">
         <h5 id="second-employee-name" class="card-title text-center"></h5>
         </div>
@@ -43,12 +52,17 @@
 
         </div>
       </div>
+</section>
       </div>
 
         <div class="col m-3">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top user-image" src="_assets/employee3.jpg" alt="Card image cap">
-            <div class="card-body">
+           <section class="mx-auto my-5" style="max-width: 35rem;">
+            <div class="card testimonial-card mt-2 mb-3 ">
+              <div class="card-up day-to-night-gradient"></div>
+              <div class="avatar mx-auto white">
+               <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee3.jpg" alt="Card image cap">
+              </div>
+               <div class="card-body">
           <h5 id="third-employee-name" class="card-title text-center"></h5>
             </div>
             <ul class="list-group list-group-flush">
@@ -62,6 +76,7 @@
 
             </div>
           </div>
+</section>
         </div>
 
       <!--End row-->
