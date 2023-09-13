@@ -262,12 +262,13 @@ function getCurrentTimes() {
     document.getElementById('cst-time').innerHTML = cstTime;
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
-
-    // if (cstTime > 1 && cstTime < 5){
+ console.log ("cst time PM: ", cstTime.includes('PM'));
+ console.log("cst first index: ", cstTime[0]);
+    if (cstTime[0] > 1 && cstTime[0] < 5 && cstTime.includes('PM') ){
       //with 80 is including the alpha value to make the color opaque
     // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cst-time').css('background-color','#6C5B7B80');
-    // }
+    }
   }
 
   setInterval(updateClock, 1000);
