@@ -55,6 +55,11 @@
               <div class="row justify-content-center" id="mst-date"></div>
               <div class="row justify-content-center" id="mst-time"></div>
             </div>
+              <div class = "col-sm container">
+              <h3 class = "row justify-content-center">PST: </h3>
+              <div class ="row justify-content-center"id="pst-date"></div>
+              <div class = "row justify-content-center " id="pst-time"></div>
+            </div>
           </div>
         </div>
     </div>
