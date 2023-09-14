@@ -275,7 +275,7 @@ function getCurrentTimes() {
  console.log("cst first index: ", cstTime[0]);
 
 
-    //color change for between 6 and 9 am
+    //color change for between 6 and 9:59 am
     if (cstTime[0] >= 6 && cstTime[0] <= 9 && cstTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
@@ -297,7 +297,7 @@ function getCurrentTimes() {
       $('#pst-time').css('background-color', '#F8B19580');
     }
 
-    //color change for between 10 a.m and 1 pm
+    //color change for between 10 a.m and 1:59 pm
     if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('AM')) ||
         (cstTime[0] == 12 || cstTime[0] == 1 && cstTime.includes('PM'))) {
       //with 80 is including the alpha value to make the color opaque
@@ -322,7 +322,29 @@ function getCurrentTimes() {
       // $('#cst-time').css('background-color', '#F6728080');
       $('#pst-time').css('background-color', '#F6728080');
     }
- //color change for between 6 and 9 pm
+
+    //color change for between 2 and 5:59 pm
+    if (cstTime[0] >= 2 && cstTime[0] <= 5 && cstTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#cst-time').css('background-color', '#C06C8480');
+    }
+    if (estTime[0] >= 2 && estTime[0] <= 5 && estTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#est-time').css('background-color', '#C06C8480');
+    }
+    if (mstTime[0] >= 2 && mstTime[0] <= 5 && mstTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#mst-time').css('background-color', '#C06C8480');
+    }
+    if (pstTime[0] >= 2 && pstTime[0] <= 5 && pstTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#pst-time').css('background-color', '#C06C8480');
+    }
+ //color change for between 6 and 9:59 pm
     if (cstTime[0] >= 6 && cstTime[0] <=9  && cstTime.includes('PM') ){
       //with 80 is including the alpha value to make the color opaque
     // $('#cst-time').css('background-color', '#6C5B7B');
@@ -345,26 +367,30 @@ function getCurrentTimes() {
     }
 
 
-    //color change for between 10pm and 5 am
-    if (cstTime[0] >= 6 && cstTime[0] <= 9 && cstTime.includes('PM')) {
+    //color change for between 10pm and 5:59 am
+    if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('PM')) ||
+      (cstTime[0] == 12 || cstTime[0] <= 5 && cstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#cst-time').css('background-color', '#6C5B7B80');
+      $('#cst-time').css('background-color', '#355C7D80');
     }
-    if (estTime[0] >= 6 && estTime[0] <= 9 && estTime.includes('PM')) {
+    if ((estTime[0] >= 10 && estTime[0] <= 11 && estTime.includes('PM')) ||
+      (estTime[0] == 12 || estTime[0] <= 5 && estTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#est-time').css('background-color', '#6C5B7B80');
+      $('#est-time').css('background-color', '#355C7D80');
     }
-    if (mstTime[0] >= 6 && mstTime[0] <= 9 && mstTime.includes('PM')) {
+    if ((mstTime[0] >= 10 && mstTime[0] <= 11 && mstTime.includes('PM')) ||
+      (mstTime[0] == 12 || mstTime[0] <= 5 && mstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#mst-time').css('background-color', '#6C5B7B80');
+      $('#mst-time').css('background-color', '#355C7D80');
     }
-    if (pstTime[0] >= 6 && pstTime[0] <= 9 && pstTime.includes('PM')) {
+    if ((pstTime[0] >= 10 && pstTime[0] <= 11 && pstTime.includes('PM')) ||
+      (pstTime[0] == 12 || pstTime[0] <= 5 && pstTime.includes('AM')))  {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#pst-time').css('background-color', '#6C5B7B80');
+      $('#pst-time').css('background-color', '#355C7D80');
     }
   }
 
