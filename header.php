@@ -40,6 +40,11 @@
               <h3 class= "row justify-content-md-center">GMT: </h3>
               <div class = "row justify-content-md-center"id="gmt"></div>
             </div> -->
+              <div class = "col-sm container">
+              <h3 class = "row justify-content-center">CET: </h3>
+              <div class ="row justify-content-center"id="cet-date"></div>
+              <div class = "row justify-content-center " id="cet-time"></div>
+            </div>
             <div class = "col-sm container">
               <h3 class = "row justify-content-center">CST: </h3>
               <div class ="row justify-content-center"id="cst-date"></div>

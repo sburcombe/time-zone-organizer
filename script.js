@@ -261,54 +261,67 @@ function getCurrentTimes() {
     const pstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
 
     // document.getElementById('gmt').innerHTML = gmtTime;
+    document.getElementById('cet-date').innerHTML = cstDate;
     document.getElementById('cst-date').innerHTML = cstDate;
     document.getElementById('est-date').innerHTML = estDate;
     document.getElementById('mst-date').innerHTML = mstDate;
     document.getElementById('pst-date').innerHTML = mstDate;
 
 
+    document.getElementById('cet-time').innerHTML = cetTime;
     document.getElementById('cst-time').innerHTML = cstTime;
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
     document.getElementById('pst-time').innerHTML = pstTime;
- console.log ("cst time PM: ", cstTime.includes('PM'));
- console.log("cst first index: ", cstTime[0]);
+ console.log ("cet time PM: ", cetTime.includes('PM'));
+ console.log("cet first index: ", cetTime[0]);
 
-
+    console.log("what line 279: ", cetTime);
     //color change for between 6 and 9:59 am
-    if (cstTime[0] >= 6 && cstTime[0] <= 9 && cstTime.includes('AM')) {
+    if (cetTime[0] == 0 && cetTime[1] >= 6 && cetTime[1] <= 9 ) {
+      console.log("what line 282: ", cetTime);
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
-      $('#cst-time').css('background-color', '#F8B19580');
+      $('#cet-time').css('background-color', '#F8B195');
+    }
+    if (cstTime[0] >= 6 && cstTime[0] <= 9 && cstTime.includes('AM')) {
+      //with 80 is including the alpha value to make the color opaque (i.e. #F8B19580)
+      // $('#cst-time').css('background-color', '#F8B195');
+      $('#cst-time').css('background-color', '#F8B195');
     }
     if (estTime[0] >= 6 && estTime[0] <= 9 && estTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
-      $('#est-time').css('background-color', '#F8B19580');
+      $('#est-time').css('background-color', '#F8B195');
     }
     if (mstTime[0] >= 6 && mstTime[0] <= 9 && mstTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
-      $('#mst-time').css('background-color', '#F8B19580');
+      $('#mst-time').css('background-color', '#F8B195');
     }
     if (pstTime[0] >= 6 && pstTime[0] <= 9 && pstTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
-      $('#pst-time').css('background-color', '#F8B19580');
+      $('#pst-time').css('background-color', '#F8B195');
     }
 
     //color change for between 10 a.m and 1:59 pm
+    if (cetTime[0] >= 10 && cetTime[0] < 14) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#F6728080');
+      $('#cet-time').css('background-color', '#F67280');
+    }
     if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('AM')) ||
         (cstTime[0] == 12 || cstTime[0] == 1 && cstTime.includes('PM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
-      $('#cst-time').css('background-color', '#F6728080');
+      $('#cst-time').css('background-color', '#F67280');
     }
     if ((estTime[0] >= 10 && estTime[0] <= 11 && estTime.includes('AM')) ||
       (estTime[0] == 12 || estTime[0] == 1 && estTime.includes('PM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
-      $('#est-time').css('background-color', '#F6728080');
+      $('#est-time').css('background-color', '#F67280');
     }
     if ((mstTime[0] >= 10 && mstTime[0] <= 11 && mstTime.includes('AM')) ||
       (mstTime[0] == 12 || mstTime[0] == 1 && mstTime.includes('PM'))) {
@@ -320,77 +333,93 @@ function getCurrentTimes() {
       (pstTime[0] == 12 || pstTime[0] == 1 && pstTime.includes('PM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
-      $('#pst-time').css('background-color', '#F6728080');
+      $('#pst-time').css('background-color', '#F67280');
     }
 
     //color change for between 2 and 5:59 pm
+    if (cetTime[0] >= 2 && cetTime[0] <= 5 && cetTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#cet-time').css('background-color', '#C06C84');
+    }
     if (cstTime[0] >= 2 && cstTime[0] <= 5 && cstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#cst-time').css('background-color', '#C06C8480');
+      $('#cst-time').css('background-color', '#C06C84');
     }
     if (estTime[0] >= 2 && estTime[0] <= 5 && estTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#est-time').css('background-color', '#C06C8480');
+      $('#est-time').css('background-color', '#C06C84');
     }
     if (mstTime[0] >= 2 && mstTime[0] <= 5 && mstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#mst-time').css('background-color', '#C06C8480');
+      $('#mst-time').css('background-color', '#C06C84');
     }
     if (pstTime[0] >= 2 && pstTime[0] <= 5 && pstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#pst-time').css('background-color', '#C06C8480');
+      $('#pst-time').css('background-color', '#C06C84');
     }
  //color change for between 6 and 9:59 pm
+    if (cetTime[0] >= 6 && cetTime[0] <= 9 && cetTime.includes('PM')) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#cet-time').css('background-color', '#6C5B7B');
+    }
     if (cstTime[0] >= 6 && cstTime[0] <=9  && cstTime.includes('PM') ){
       //with 80 is including the alpha value to make the color opaque
     // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#cst-time').css('background-color','#6C5B7B80');
+      $('#cst-time').css('background-color','#6C5B7B');
     }
     if (estTime[0] >= 6 && estTime[0] <= 9 && estTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#est-time').css('background-color', '#6C5B7B80');
+      $('#est-time').css('background-color', '#6C5B7B');
     }
     if (mstTime[0] >= 6 && mstTime[0] <= 9 && mstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#mst-time').css('background-color', '#6C5B7B80');
+      $('#mst-time').css('background-color', '#6C5B7B');
     }
     if (pstTime[0] >= 6 && pstTime[0] <= 9 && pstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#pst-time').css('background-color', '#6C5B7B80');
+      $('#pst-time').css('background-color', '#6C5B7B');
     }
 
 
     //color change for between 10pm and 5:59 am
+    if ((cetTime[0] >= 10 && cetTime[0] <= 11 && cetTime.includes('PM')) ||
+      (cetTime[0] == 12 || cetTime[0] <= 5 && cetTime.includes('AM'))) {
+      //with 80 is including the alpha value to make the color opaque
+      // $('#cst-time').css('background-color', '#6C5B7B');
+      $('#cet-time').css('background-color', '#355C7D');
+    }
     if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('PM')) ||
       (cstTime[0] == 12 || cstTime[0] <= 5 && cstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#cst-time').css('background-color', '#355C7D80');
+      $('#cst-time').css('background-color', '#355C7D');
     }
     if ((estTime[0] >= 10 && estTime[0] <= 11 && estTime.includes('PM')) ||
       (estTime[0] == 12 || estTime[0] <= 5 && estTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#est-time').css('background-color', '#355C7D80');
+      $('#est-time').css('background-color', '#355C7D');
     }
     if ((mstTime[0] >= 10 && mstTime[0] <= 11 && mstTime.includes('PM')) ||
       (mstTime[0] == 12 || mstTime[0] <= 5 && mstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#mst-time').css('background-color', '#355C7D80');
+      $('#mst-time').css('background-color', '#355C7D');
     }
     if ((pstTime[0] >= 10 && pstTime[0] <= 11 && pstTime.includes('PM')) ||
       (pstTime[0] == 12 || pstTime[0] <= 5 && pstTime.includes('AM')))  {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
-      $('#pst-time').css('background-color', '#355C7D80');
+      $('#pst-time').css('background-color', '#355C7D');
     }
   }
 

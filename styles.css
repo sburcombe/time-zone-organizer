@@ -67,15 +67,16 @@ body {
   border-radius: 3.25rem !important;
 }
 
-#mst-time, #est-time, #cst-time, #pst-time {
+#mst-time, #est-time, #cst-time, #pst-time, #cet-time {
   font-weight: 700;
   font-size: 2.5rem;
   /*with 80 is including the alpha value to make the color opaque */
   background-color: #C06C8480;
+  color: #fff;
   /* opacity: .5; */
 }
 
-#mst-date, #est-date, #cst-date, #pst-date {
+#mst-date, #est-date, #cst-date, #pst-date, #cet-date {
   font-weight: 300;
   font-size: 1.25rem;
 }
