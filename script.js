@@ -254,7 +254,9 @@ function getCurrentTimes() {
     });
 
     //Times
-    const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
+    const cetTime = "06:52";
+
+    // const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
     const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize"});
     const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
     const mstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
@@ -306,7 +308,7 @@ function getCurrentTimes() {
     }
 
     //color change for between 10 a.m and 1:59 pm
-    if (cetTime[0] >= 10 && cetTime[0] < 14) {
+    if (cetTime[0] == 1 && cetTime[1] <= 3) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#cet-time').css('background-color', '#F67280');
@@ -337,7 +339,8 @@ function getCurrentTimes() {
     }
 
     //color change for between 2 and 5:59 pm
-    if (cetTime[0] >= 2 && cetTime[0] <= 5 && cetTime.includes('PM')) {
+
+    if (cetTime[0] == 1 && cetTime[1] <= 7 && cetTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cet-time').css('background-color', '#C06C84');
@@ -388,11 +391,12 @@ function getCurrentTimes() {
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#pst-time').css('background-color', '#6C5B7B');
     }
-
+console.log("cetTime 1: ", cetTime[1]);
 
     //color change for between 10pm and 5:59 am
-    if ((cetTime[0] >= 10 && cetTime[0] <= 11 && cetTime.includes('PM')) ||
-      (cetTime[0] == 12 || cetTime[0] <= 5 && cetTime.includes('AM'))) {
+    //cetTime is in 22-24 and 01-05 format
+    if ((cetTime[0] == 2  && cetTime[1] <= 2) ||
+      (cetTime[0] == 0 && cetTime[1] <= 5 )) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cet-time').css('background-color', '#355C7D');
