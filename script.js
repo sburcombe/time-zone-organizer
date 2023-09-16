@@ -254,9 +254,9 @@ function getCurrentTimes() {
     });
 
     //Times
-    const cetTime = "06:52";
+    // const cetTime = "06:52";
 
-    // const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
+    const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
     const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize"});
     const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
     const mstTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
@@ -401,26 +401,26 @@ console.log("cetTime 1: ", cetTime[1]);
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cet-time').css('background-color', '#355C7D');
     }
-    if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('PM')) ||
-      (cstTime[0] == 12 || cstTime[0] <= 5 && cstTime.includes('AM'))) {
+    if ((cstTime[0] == 1  && cstTime[1] <=1 && cstTime.includes('PM')) ||
+      (cstTime[0] <= 5 || (cstTime[0] == 1 && cstTime[1] == 2) && cstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cst-time').css('background-color', '#355C7D');
     }
-    if ((estTime[0] >= 10 && estTime[0] <= 11 && estTime.includes('PM')) ||
-      (estTime[0] == 12 || estTime[0] <= 5 && estTime.includes('AM'))) {
+    if ((estTime[0] == 1 && estTime[1] <= 1 && estTime.includes('PM')) ||
+      (estTime[0] <= 5 || (estTime[0] == 1 && estTime[1] == 2) && estTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#est-time').css('background-color', '#355C7D');
     }
-    if ((mstTime[0] >= 10 && mstTime[0] <= 11 && mstTime.includes('PM')) ||
-      (mstTime[0] == 12 || mstTime[0] <= 5 && mstTime.includes('AM'))) {
+    if ((mstTime[0] == 1 && mstTime[1] <= 1 && mstTime.includes('PM')) ||
+      (mstTime[0] <= 5 || (mstTime[0] == 1 && mstTime[1] == 2) && mstTime.includes('AM'))) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#mst-time').css('background-color', '#355C7D');
     }
-    if ((pstTime[0] >= 10 && pstTime[0] <= 11 && pstTime.includes('PM')) ||
-      (pstTime[0] == 12 || pstTime[0] <= 5 && pstTime.includes('AM')))  {
+    if ((pstTime[0] == 1 && pstTime[1] <= 1 && pstTime.includes('PM')) ||
+      (pstTime[0] <= 5 || (pstTime[0] == 1 && pstTime[1] == 2) && pstTime.includes('AM')))  {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#pst-time').css('background-color', '#355C7D');
