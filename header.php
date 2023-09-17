@@ -69,7 +69,9 @@
         </div>
 
             <div class="day-cycle">
+              <div class="low-sunrise-container">
               <div class="low-sunrise"></div>
+</div>
               <div class="high-sunrise"></div>
               <div class="sun"></div>
               <div class="sunset"></div>

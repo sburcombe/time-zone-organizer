@@ -94,32 +94,42 @@ body {
     background-color: #FFD700; /* Default sun color */
     border-radius: 50%;
     position: absolute;
-    bottom: 20px;
-    left: 50%;
+    bottom: 39px;
+    left: 60%;
     transform: translateX(-55%);
 }
 
 
 .low-sunrise {
-    width: 50px;
-    height: 50px;
-    background-color: #FFD700; /* Default sun color */
-    border-radius: 50%;
-    position: absolute;
-    bottom: 183px;
-    left: 61%;
+    width: 30px;
+    height: 10px;
+    background-color: #f67280; /* Default sun color */
+    border-radius: 50% 50% 0 0;
+    border-bottom:#FFD700;
+    position: relative;
+    /* bottom: 183px; */
+    left: 54%;
     transform: translateX(-55%);
+}
+.low-sunrise-container {
+  width: 50px;
+  height: 10px;
+  border-bottom: 3px solid #FFD700;
+   bottom: 183px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 }
 
 .high-sunrise {
     width: 50px;
-    height: 50px;
+    height: 20px;
     background-color: #FFD700; /* Default sun color */
-    border-radius: 50%;
+    border-radius: 50% 50% 0 0;
     position: absolute;
-    bottom: 80px;
-    left: 48%;
-    transform: translateX(175%);
+    bottom: 120px;
+    left: 47%;
+    transform: translateX(100%);
 }
 
 .sunset {
@@ -128,8 +138,8 @@ body {
     background-color: #FFD700; /* Default sun color */
     border-radius: 50%;
     position: absolute;
-    bottom: 92px;
-    left: 46%;
+    bottom: 39px;
+    left: 53%;
     transform: translateX(-175%);
 }
 
@@ -139,7 +149,7 @@ body {
     background-color: #FFD700; /* Default sun color */
     border-radius: 50%;
     position: absolute;
-    bottom: 175px;
-    left: 55%;
+    bottom: 123px;
+    left: 50%;
     transform: translateX(-175%);
 }
