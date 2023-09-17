@@ -428,7 +428,26 @@ console.log("cetTime 1: ", cetTime[1]);
   }
 
   setInterval(updateClock, 1000);
-
-
-
 }
+
+function updateSkyColor() {
+  const now = new Date();
+  const hour = now.getHours();
+
+  const dayCycle = document.querySelector('.day-cycle');
+  const sun = document.querySelector('.sun');
+
+  if (hour >= 6 && hour < 18) {
+    // Daytime
+    dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
+    sun.style.backgroundColor = '#FFD700'; // Daytime sun color
+  } else {
+    // Nighttime
+    dayCycle.style.backgroundColor = '#000'; // Night sky color
+    sun.style.backgroundColor = 'transparent'; // No sun at night
+  }
+}
+
+// Update colors initially and every minute
+updateSkyColor();
+setInterval(updateSkyColor, 60000);
