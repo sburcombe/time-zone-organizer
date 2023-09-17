@@ -69,9 +69,13 @@
         </div>
 
             <div class="day-cycle">
-        <div class="sun"></div>
-        <div class="sky"></div>
-    </div>
+              <div class="low-sunrise"></div>
+              <div class="high-sunrise"></div>
+              <div class="sun"></div>
+              <div class="sunset"></div>
+              <div class="moon"></div>
+              <div class="sky"></div>
+            </div>
     <script src="script.js"></script>    </div>
     <!-- Jumbotron -->
   </header>

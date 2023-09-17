@@ -433,12 +433,13 @@ console.log("cetTime 1: ", cetTime[1]);
 function updateSkyColor() {
   const now = new Date();
   const hour = now.getHours();
-
+console.log("hour: ", hour);
   const dayCycle = document.querySelector('.day-cycle');
   const sun = document.querySelector('.sun');
 
-  if (hour >= 6 && hour < 18) {
+  if (hour >= 6 && hour < 24) {
     // Daytime
+    console.log("442");
     dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
     sun.style.backgroundColor = '#FFD700'; // Daytime sun color
   } else {
@@ -449,5 +450,9 @@ function updateSkyColor() {
 }
 
 // Update colors initially and every minute
-updateSkyColor();
-setInterval(updateSkyColor, 60000);
+window.addEventListener("load", (event) => {
+  updateSkyColor();
+  setInterval(updateSkyColor, 60000);
+});
+// updateSkyColor();
+// setInterval(updateSkyColor, 60000);
