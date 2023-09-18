@@ -68,11 +68,27 @@
           </div>
         </div>
 
+
+<!-- This example uses <i> element with:
+1. the `fa-solid` style class for solid style
+2. the `user` icon with the `fa-` prefix -->
+<i class="fa-regular fa-sun sun-icon"></i>
+<i class="fi fi-rr-square-right"></i>
+
+<!-- Or you can use a <span> element, with classes applied in the same way -->
+<span class="fa-regular fa-moon moon-icon"></span>
             <div class="day-cycle">
               <div class="low-sunrise-container">
-              <div class="low-sunrise"></div>
-</div>
-              <div class="high-sunrise"></div>
+                <div class="low-sunrise"></div>
+              </div>
+              <div class="high-sunrise-container">
+                <div class="high-sunrise"></div>
+                <div class="high-sunrise-ray-1"></div>
+                <div class="high-sunrise-ray-2"></div>
+                <div class="high-sunrise-ray-3"></div>
+                <div class="high-sunrise-ray-4"></div>
+                <div class="high-sunrise-ray-5"></div>
+              </div>
               <div class="sun"></div>
               <div class="sunset"></div>
               <div class="moon"></div>
