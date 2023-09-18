@@ -122,13 +122,23 @@ body {
 }
 
 .high-sunrise {
-    width: 50px;
-    height: 20px;
-    background-color: #FFD700; /* Default sun color */
+    width: 35px;
+    height: 17px;
+    background-color: #f67280; /* Default sun color */
     border-radius: 50% 50% 0 0;
+    position: relative;
+    /* bottom: 120px; */
+    left: -9%;
+    transform: translateX(34%);
+}
+
+.high-sunrise-container {
+  width: 50px;
+  height: 20px;
+  border-bottom: 3px solid #FFD700;
+   bottom: 120px;
+    left: 50%;
     position: absolute;
-    bottom: 120px;
-    left: 47%;
     transform: translateX(100%);
 }
 
@@ -152,4 +162,8 @@ body {
     bottom: 123px;
     left: 50%;
     transform: translateX(-175%);
+}
+
+.moon-icon{
+  color: #FFD700;
 }
