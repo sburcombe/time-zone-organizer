@@ -72,12 +72,17 @@
 <!-- This example uses <i> element with:
 1. the `fa-solid` style class for solid style
 2. the `user` icon with the `fa-` prefix -->
-<i class="fa-regular fa-sun sun-icon"></i>
+<div class="day-to-night-icon-container">
+<i class="fa-solid fa-mug-saucer early-morning"></i>
+<i class="fa-regular fa-sun mid-morning"></i>
+<i class="fa-solid fa-sun afternoon"></i>
+<i class="fa-solid fa-martini-glass evening"></i>
+<i class="fa-regular fa-moon night"></i>
 <i class="fi fi-rr-square-right"></i>
+</div>
 
 <!-- Or you can use a <span> element, with classes applied in the same way -->
-<span class="fa-regular fa-moon moon-icon"></span>
-            <div class="day-cycle">
+            <!-- <div class="day-cycle">
               <div class="low-sunrise-container">
                 <div class="low-sunrise"></div>
               </div>
@@ -93,7 +98,7 @@
               <div class="sunset"></div>
               <div class="moon"></div>
               <div class="sky"></div>
-            </div>
+            </div> -->
     <script src="script.js"></script>    </div>
     <!-- Jumbotron -->
   </header>

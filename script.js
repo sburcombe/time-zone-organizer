@@ -434,7 +434,7 @@ function updateSkyColor() {
   const now = new Date();
   const hour = now.getHours();
 console.log("hour: ", hour);
-  const dayCycle = document.querySelector('.day-cycle');
+  const dayCycle = document.querySelector('.day-to-night-icon-container');
   const sun = document.querySelector('.sun');
 
   if (hour >= 6 && hour < 24) {
