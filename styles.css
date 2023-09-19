@@ -82,8 +82,8 @@ body {
 }
 
 .day-to-night-icon-container {
-    width: 25%;
-    height: 25vh;
+    width: 15%;
+    height: 15vh;
     position: relative;
     background-color: #87CEEB; /* Default sky color */
 }
@@ -108,30 +108,30 @@ body {
 
 .mid-morning {
    position: absolute;
-    bottom: 120px;
+    /* bottom: 120rem; */
     /* left: -9%; */
-    transform: translateX(34%);
+    transform: translate(115%, 115%);
 }
 
 .afternoon {
    position: absolute;
-    bottom: 39px;
+    /* bottom: 39rem; */
     left: 60%;
-    transform: translateX(-55%);
+    transform: translate(-55%, 230%);
 }
 
 .evening {
  position: absolute;
-    bottom: 39px;
+    /* bottom: 39rem; */
     left: 53%;
-    transform: translateX(-175%);
+    transform: translate(-115%, 230%);
 }
 
 .night {
    position: absolute;
-    bottom: 123px;
+    /* bottom: 123rem; */
     left: 50%;
-    transform: translateX(-175%);
+    transform: translate(-115%, 115%);
 }
 
 
