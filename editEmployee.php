@@ -8,11 +8,28 @@
   <div class="container">
     <section class="mx-auto my-5" style="max-width: 35rem;">
       <div class="card testimonial-card mt-2 mb-3">
-        <div class="card-up day-to-night-gradient"></div>
+        <div class="card-up day-to-night-gradient">
+                            <div class="day-to-night-icon-container">
+<i class="fa-solid fa-mug-saucer early-morning"></i>
+<i class="fa-regular fa-sun mid-morning"></i>
+<i class="fa-solid fa-sun afternoon"></i>
+<i class="fa-solid fa-martini-glass evening"></i>
+<i class="fa-regular fa-moon night"></i>
+<i class="fi fi-rr-square-right"></i>
+</div>
+        </div>
         <div class="avatar mx-auto white">
         <img id="employee-image" class="img-fluid rounded-circle" src="" alt="Card image cap">
         </div>
         <div class="card-body ">
+                  <!-- <div class="day-to-night-icon-container">
+<i class="fa-solid fa-mug-saucer early-morning"></i>
+<i class="fa-regular fa-sun mid-morning"></i>
+<i class="fa-solid fa-sun afternoon"></i>
+<i class="fa-solid fa-martini-glass evening"></i>
+<i class="fa-regular fa-moon night"></i>
+<i class="fi fi-rr-square-right"></i>
+</div> -->
           <h4 class="card-title text-center">Edit Employee</h4>
           <form action="" id="edit-employee-form">
             <div class="form-group">

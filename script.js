@@ -255,7 +255,7 @@ function getCurrentTimes() {
 
     //Times
     // const cetTime = "06:52";
-
+// const cstTime = '6:30 PM';
     const cetTime = new Date().toLocaleTimeString('nl-NL', { timeZone: 'Europe/Berlin' });
     const cstTime = new Date().toLocaleTimeString("en-US", { timeZone: "America/Belize"});
     const estTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
@@ -275,10 +275,8 @@ function getCurrentTimes() {
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
     document.getElementById('pst-time').innerHTML = pstTime;
- console.log ("cet time PM: ", cetTime.includes('PM'));
- console.log("cet first index: ", cetTime[0]);
-
-    console.log("what line 279: ", cetTime);
+console.log("CST Time: ", cstTime);
+    console.log("you cant handle the: ", (cstTime[0] == 1 && cstTime[1] <= 1 && cstTime.includes('AM')));
     //color change for between 6 and 9:59 am
     if (cetTime[0] == 0 && cetTime[1] >= 6 && cetTime[1] <= 9 ) {
       console.log("what line 282: ", cetTime);
@@ -313,26 +311,27 @@ function getCurrentTimes() {
       // $('#cst-time').css('background-color', '#F6728080');
       $('#cet-time').css('background-color', '#F67280');
     }
-    if ((cstTime[0] >= 10 && cstTime[0] <= 11 && cstTime.includes('AM')) ||
-        (cstTime[0] == 12 || cstTime[0] == 1 && cstTime.includes('PM'))) {
-      //with 80 is including the alpha value to make the color opaque
+    if ((cstTime[0] == 1 && cstTime[1] <= 1 && cstTime.includes('AM')) ||
+      (cstTime[0] <= 5 && cstTime[1] == ":" && cstTime.includes('PM')) || (cstTime[0] == 1 && cstTime[1] == 2) && cstTime.includes('PM')) {
+      console.log('made it to 316');
+        //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#cst-time').css('background-color', '#F67280');
     }
-    if ((estTime[0] >= 10 && estTime[0] <= 11 && estTime.includes('AM')) ||
-      (estTime[0] == 12 || estTime[0] == 1 && estTime.includes('PM'))) {
+    if ((estTime[0] == 1 && estTime[1] <= 1 && estTime.includes('AM')) ||
+      (estTime[0] <= 5 && estTime[1] == ":" && estTime.includes('PM')) || (estTime[0] == 1 && estTime[1] == 2) && estTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#est-time').css('background-color', '#F67280');
     }
-    if ((mstTime[0] >= 10 && mstTime[0] <= 11 && mstTime.includes('AM')) ||
-      (mstTime[0] == 12 || mstTime[0] == 1 && mstTime.includes('PM'))) {
+    if ((mstTime[0] == 1 && mstTime[1] <= 1 && mstTime.includes('AM')) ||
+      (mstTime[0] <= 5 && mstTime[1] == ":" && mstTime.includes('PM')) || (mstTime[0] == 1 && mstTime[1] == 2) && mstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#mst-time').css('background-color', '#F6728080');
     }
-    if ((pstTime[0] >= 10 && pstTime[0] <= 11 && pstTime.includes('AM')) ||
-      (pstTime[0] == 12 || pstTime[0] == 1 && pstTime.includes('PM'))) {
+    if ((pstTime[0] == 1 && pstTime[1] <= 1 && pstTime.includes('AM')) ||
+      (pstTime[0] <= 5 && pstTime[1] == ":" && pstTime.includes('PM')) || (pstTime[0] == 1 && pstTime[1] == 2) && pstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#pst-time').css('background-color', '#F67280');
@@ -402,25 +401,25 @@ console.log("cetTime 1: ", cetTime[1]);
       $('#cet-time').css('background-color', '#355C7D');
     }
     if ((cstTime[0] == 1  && cstTime[1] <=1 && cstTime.includes('PM')) ||
-      (cstTime[0] <= 5 || (cstTime[0] == 1 && cstTime[1] == 2) && cstTime.includes('AM'))) {
+      (cstTime[0] <= 5 && cstTime[1] == ':' && cstTime.includes('AM')) || (cstTime[0] == 1 && cstTime[1] == 2) && cstTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cst-time').css('background-color', '#355C7D');
     }
     if ((estTime[0] == 1 && estTime[1] <= 1 && estTime.includes('PM')) ||
-      (estTime[0] <= 5 || (estTime[0] == 1 && estTime[1] == 2) && estTime.includes('AM'))) {
+      (estTime[0] <= 5 && estTime[1] == ':' && estTime.includes('AM')) || (estTime[0] == 1 && estTime[1] == 2) && estTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#est-time').css('background-color', '#355C7D');
     }
     if ((mstTime[0] == 1 && mstTime[1] <= 1 && mstTime.includes('PM')) ||
-      (mstTime[0] <= 5 || (mstTime[0] == 1 && mstTime[1] == 2) && mstTime.includes('AM'))) {
+      (mstTime[0] <= 5 && mstTime[1] == ':' && mstTime.includes('AM')) || (mstTime[0] == 1 && mstTime[1] == 2) && mstTime.includes('AM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#mst-time').css('background-color', '#355C7D');
     }
     if ((pstTime[0] == 1 && pstTime[1] <= 1 && pstTime.includes('PM')) ||
-      (pstTime[0] <= 5 || (pstTime[0] == 1 && pstTime[1] == 2) && pstTime.includes('AM')))  {
+      (pstTime[0] <= 5 && pstTime[1] == ':' && pstTime.includes('AM')) || (pstTime[0] == 1 && pstTime[1] == 2) && pstTime.includes('AM'))  {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#pst-time').css('background-color', '#355C7D');
@@ -433,20 +432,20 @@ console.log("cetTime 1: ", cetTime[1]);
 function updateSkyColor() {
   const now = new Date();
   const hour = now.getHours();
-console.log("hour: ", hour);
+
   const dayCycle = document.querySelector('.day-to-night-icon-container');
   const sun = document.querySelector('.sun');
 
   if (hour >= 6 && hour < 24) {
     // Daytime
     console.log("442");
-    dayCycle.style.backgroundColor = '#f67280';
+    // dayCycle.style.backgroundColor = '#f67280';
     // dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
-    sun.style.backgroundColor = '#FFD700'; // Daytime sun color
+    // sun.style.backgroundColor = '#FFD700'; // Daytime sun color
   } else {
     // Nighttime
-    dayCycle.style.backgroundColor = '#000'; // Night sky color
-    sun.style.backgroundColor = 'transparent'; // No sun at night
+    // dayCycle.style.backgroundColor = '#000'; // Night sky color
+    // sun.style.backgroundColor = 'transparent'; // No sun at night
   }
 }
 
