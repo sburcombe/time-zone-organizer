@@ -82,12 +82,20 @@ body {
 }
 
 .day-to-night-icon-container {
-    max-width: 6%;
+    width: 59px;
     height: 59px;
     position: relative;
+    display: inline-block;
+    left: 85%;
+    top: 24px;
+    /* left: 44%;  (for the white portion of employee card) */
     /* background-color: #87CEEB; Default sky color */
     border-radius: 50%;
+    /* background-color: #F8b195;
     background-color: #f67280;
+    background-color: #c06c84;
+    background-color: #6c5b7b;
+    background-color: #35537d; */
 }
 
 .sun {
@@ -107,21 +115,25 @@ body {
   left: 45%;
   transform: translate(-40%, 25%);
  opacity: .3;
+ color: white;
 }
 
 .mid-morning {
    position: absolute;
     /* bottom: 120rem; */
-    /* left: -9%; */
+    left: 48%;
     transform: translate(50%, 115%);
      opacity: .3;
+     color: white;
 }
 
 .afternoon {
    position: absolute;
     /* bottom: 39rem; */
     left: 60%;
-    transform: translate(-36%, 230%);
+    /* transform: translate(-36%, 230%); */
+    transform: translate(-29%, 230%);
+    color: white;
 }
 
 .evening {
@@ -130,6 +142,7 @@ body {
     left: 44%;
     transform: translate(-88%, 230%);
     opacity: .3;
+    color: white;
 }
 
 .night {
@@ -138,6 +151,7 @@ body {
     left: 50%;
     transform: translate(-188%, 115%);
      opacity: .3;
+     color: white;
 }
 
 
