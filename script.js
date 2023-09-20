@@ -440,7 +440,8 @@ console.log("hour: ", hour);
   if (hour >= 6 && hour < 24) {
     // Daytime
     console.log("442");
-    dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
+    dayCycle.style.backgroundColor = '#f67280';
+    // dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
     sun.style.backgroundColor = '#FFD700'; // Daytime sun color
   } else {
     // Nighttime
