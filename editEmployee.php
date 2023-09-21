@@ -15,7 +15,6 @@
 <i class="fa-solid fa-sun afternoon"></i>
 <i class="fa-solid fa-martini-glass evening"></i>
 <i class="fa-regular fa-moon night"></i>
-<i class="fi fi-rr-square-right"></i>
 </div>
         </div>
         <div class="avatar mx-auto white">
