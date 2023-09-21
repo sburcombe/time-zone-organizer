@@ -211,16 +211,30 @@ function getCurrentTimes() {
   //UTC+10 (Chamorro Standard Time)
 
   if (employeeOne['timezone'] == "PST") {
-    employeeOne["currenttime"] = PSTdate;
+
+    employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });;
+    if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('AM')){
+      $('#employee-one .early-morning').css('opacity', '100');
+      $('#employee-one .mid-morning').css('opacity', '0.3');
+      $('#employee-one .afternoon').css('opacity', '0.3');
+      $('#employee-one .evening').css('opacity', '0.3');
+      $('#employee-one .night').css('opacity', '0.3');
+}
+    var employeeOneCurrentTime = document.querySelector("#current-time-1");
+    employeeOneCurrentTime.innerHTML = "Current Time: " + employeeOne["currenttime"];
   }
   if (employeeTwo['timezone'] == "EST") {
-    employeeTwo["currenttime"] = ESTdate;
+    employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
+    var employeeTwoCurrentTime = document.querySelector("#current-time-2");
+    employeeTwoCurrentTime.innerHTML = "Current Time: " + employeeTwo["currenttime"];
   }
   if (employeeThree['timezone'] == "MST") {
-    employeeThree["currenttime"] = MSTdate;
+    employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
+    var employeeThreeCurrentTime = document.querySelector("#current-time-3");
+    employeeThreeCurrentTime.innerHTML = "Current Time: " + employeeThree["currenttime"];
   }
 
-
+setInterval(getCurrentTimes, 1000);
   //sample code for clock display
   function updateClock() {
     // const gmtTime = new Date().toUTCString();
@@ -328,7 +342,7 @@ console.log("CST Time: ", cstTime);
       (mstTime[0] <= 5 && mstTime[1] == ":" && mstTime.includes('PM')) || (mstTime[0] == 1 && mstTime[1] == 2) && mstTime.includes('PM')) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
-      $('#mst-time').css('background-color', '#F6728080');
+      $('#mst-time').css('background-color', '#F67280');
     }
     if ((pstTime[0] == 1 && pstTime[1] <= 1 && pstTime.includes('AM')) ||
       (pstTime[0] <= 5 && pstTime[1] == ":" && pstTime.includes('PM')) || (pstTime[0] == 1 && pstTime[1] == 2) && pstTime.includes('PM')) {

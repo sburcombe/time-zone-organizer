@@ -10,8 +10,16 @@
   <div class="row">
     <div class="col m-3">
       <section class="mx-auto my-5" style="max-width: 35rem;">
-      <div class="card testimonial-card mt-2 mb-3 ">
-        <div class="card-up day-to-night-gradient"></div>
+      <div id="employee-one" class="card testimonial-card mt-2 mb-3 ">
+        <div class="card-up day-to-night-gradient">
+            <div class="day-to-night-icon-container-list">
+              <i class="fa-solid fa-mug-saucer early-morning"></i>
+              <i class="fa-regular fa-sun mid-morning"></i>
+              <i class="fa-solid fa-sun afternoon"></i>
+              <i class="fa-solid fa-martini-glass evening"></i>
+              <i class="fa-regular fa-moon night"></i>
+            </div>
+        </div>
         <div class="avatar mx-auto white">
         <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee1.jpg" alt="Card image cap">
         </div>
@@ -33,8 +41,17 @@
 
     <div class="col m-3">
        <section class="mx-auto my-5" style="max-width: 35rem;">
-      <div class="card testimonial-card mt-2 mb-3 ">
-        <div class="card-up day-to-night-gradient"></div>
+      <div id="employee-two" class="card testimonial-card mt-2 mb-3 ">
+        <div class="card-up day-to-night-gradient">
+          <div class="day-to-night-icon-container-list">
+              <i class="fa-solid fa-mug-saucer early-morning"></i>
+              <i class="fa-regular fa-sun mid-morning"></i>
+              <i class="fa-solid fa-sun afternoon"></i>
+              <i class="fa-solid fa-martini-glass evening"></i>
+              <i class="fa-regular fa-moon night"></i>
+          </div>
+
+        </div>
         <div class="avatar mx-auto white">
         <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee2.jpg" alt="Card image cap">
         </div>
@@ -57,8 +74,16 @@
 
         <div class="col m-3">
            <section class="mx-auto my-5" style="max-width: 35rem;">
-            <div class="card testimonial-card mt-2 mb-3 ">
-              <div class="card-up day-to-night-gradient"></div>
+            <div id="employee-three" class="card testimonial-card mt-2 mb-3 ">
+              <div class="card-up day-to-night-gradient">
+                 <div class="day-to-night-icon-container-list">
+                  <i class="fa-solid fa-mug-saucer early-morning"></i>
+                  <i class="fa-regular fa-sun mid-morning"></i>
+                  <i class="fa-solid fa-sun afternoon"></i>
+                  <i class="fa-solid fa-martini-glass evening"></i>
+                  <i class="fa-regular fa-moon night"></i>
+                </div>
+              </div>
               <div class="avatar mx-auto white">
                <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee3.jpg" alt="Card image cap">
               </div>
