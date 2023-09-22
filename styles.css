@@ -174,14 +174,14 @@ body {
 
 
 
-.low-sunrise {
+/* .low-sunrise {
     width: 30px;
     height: 10px;
-    background-color: #f67280; /* Default sun color */
+    background-color: #f67280; comment out the comment to the right Default sun color
     border-radius: 50% 50% 0 0;
     border-bottom:#FFD700;
     position: relative;
-    /* bottom: 183px; */
+     bottom: 183px; comment out
     left: 54%;
     transform: translateX(-55%);
 }
@@ -198,10 +198,10 @@ body {
 .high-sunrise {
     width: 35px;
     height: 17px;
-    background-color: #f67280; /* Default sun color */
+    background-color: #f67280; comment out the comment to the right Default sun color
     border-radius: 50% 50% 0 0;
     position: relative;
-    /* bottom: 120px; */
+     bottom: 120px; comment out
     left: -9%;
     transform: translateX(34%);
 }
@@ -219,7 +219,7 @@ body {
 .sunset {
     width: 50px;
     height: 50px;
-    background-color: #FFD700; /* Default sun color */
+    background-color: #FFD700; comment out the comment to the right Default sun color
     border-radius: 50%;
     position: absolute;
     bottom: 39px;
@@ -230,7 +230,7 @@ body {
 .moon {
     width: 50px;
     height: 50px;
-    background-color: #FFD700; /* Default sun color */
+    background-color: #FFD700; comment out the comment to the right Default sun color
     border-radius: 50%;
     position: absolute;
     bottom: 123px;
@@ -240,4 +240,4 @@ body {
 
 .moon-icon{
   color: #FFD700;
-}
+} */
