@@ -1,20 +1,32 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Stephanie Burcombe",
-      "timezone": "PST"
+    "id": 1,
+    "name": "Stephanie Burcombe",
+    "timezone": "PST",
+    "currenttime": "",
+    "workinghours": "8:00am-5:00pm",
+    "email": "sburcombe@gmail.com",
+    "image": "_assets/employee1.jpg"
     },
     {
       "id": 2,
       "name": "Dustin Burcombe",
-      "timezone": "EST"
+      "timezone": "EST",
+      "currenttime": "",
+      "workinghours": "7:00am-12:00pm",
+      "email": "dburcombe@yahoo.com",
+      "image": "_assets/employee2.jpg"
     }
     ,
     {
       "id": 3,
       "name": "The Best Burcombe",
-      "timezone": "MST"
+      "timezone": "MST",
+      "currenttime": "",
+      "workinghours": "9:00am-1:00pm",
+      "email": "aburcombe@toddlertime.com",
+      "image": "_assets/employee3.jpg"
     }
   ]
 }

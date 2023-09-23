@@ -1,3 +1,7 @@
+@media only screen and (min-width : 1200px) {
+    .container { max-width: 1500px !important; }
+} /*Don't love this... need to keep looking into how to make the container wider within Bootstrap*/
+
 .header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem;
@@ -69,7 +73,7 @@ body {
 
 #mst-time, #est-time, #cst-time, #pst-time, #cet-time {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem; /*1.25rem for smaller size screens so the line break doesn't occur for 00:00:00 PM/AM format
   /*with 80 is including the alpha value to make the color opaque */
   background-color: #C06C8480;
   color: #fff;
