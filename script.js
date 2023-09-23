@@ -208,7 +208,8 @@ function getCurrentTimes() {
 
 
   ///need an array of the employee list to loop through and then dynamically generate these items (including the check for current time)
-
+ //logic needs to be consolidated for use (i.e. is mid-morning have one space where all the logic is worked out and then in these conditional checks
+ //just check for isMidMorning value);
   if (employeeOne['timezone'] == "PST" && document.querySelector("#first-employee-name")) {
 
     employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
@@ -259,11 +260,96 @@ function getCurrentTimes() {
   }
   if (employeeTwo['timezone'] == "EST" && document.querySelector("#second-employee-name")) {
     employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
+
+    if (employeeTwo["currenttime"][0] >= 6 && employeeTwo["currenttime"][0] <= 9 && employeeTwo["currenttime"].includes('AM')) {
+      //change icon opacity for 6am -9:59 am
+      $('#employee-two .early-morning').css('opacity', '100');
+      $('#employee-two .mid-morning').css('opacity', '0.3');
+      $('#employee-two .afternoon').css('opacity', '0.3');
+      $('#employee-two .evening').css('opacity', '0.3');
+      $('#employee-two .night').css('opacity', '0.3');
+    } if ((employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] <= 1 && employeeTwo["currenttime"].includes('AM')) ||
+      (employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"][1] == ":" && employeeTwo["currenttime"].includes('PM')) ||
+      (employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] == 2) && employeeTwo["currenttime"].includes('PM')) {
+      //change icon opacity for 10am-12:59 pm
+      $('#employee-two .early-morning').css('opacity', '0.3');
+      $('#employee-two .mid-morning').css('opacity', '100');
+      $('#employee-two .afternoon').css('opacity', '0.3');
+      $('#employee-two .evening').css('opacity', '0.3');
+      $('#employee-two .night').css('opacity', '0.3');
+    } if (employeeTwo["currenttime"][0] >= 2 && employeeTwo["currenttime"][0] <= 5 && cstTime.includes('PM')) {
+      //change icon opacity for 1pm-5:59 pm
+      $('#employee-two .early-morning').css('opacity', '0.3');
+      $('#employee-two .mid-morning').css('opacity', '0.3');
+      $('#employee-two .afternoon').css('opacity', '100');
+      $('#employee-two .evening').css('opacity', '0.3');
+      $('#employee-two .night').css('opacity', '0.3');
+    } if (employeeTwo["currenttime"][0] >= 6 && employeeTwo["currenttime"][0] <= 9 && employeeTwo["currenttime"].includes('PM')) {
+      //change icon opacity for 6pm-9:59 pm
+      $('#employee-two .early-morning').css('opacity', '0.3');
+      $('#employee-two .mid-morning').css('opacity', '0.3');
+      $('#employee-two .afternoon').css('opacity', '0.3');
+      $('#employee-two .evening').css('opacity', '100');
+      $('#employee-two .night').css('opacity', '0.3');
+    } if ((employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] <= 1 && employeeTwo["currenttime"].includes('PM')) ||
+      (employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"][1] == ':' && employeeTwo["currenttime"].includes('AM')) ||
+      (employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] == 2) && employeeTwo["currenttime"].includes('AM')) {
+      //change icon opacity for 10pm-5:59 am
+      $('#employee-two .early-morning').css('opacity', '0.3');
+      $('#employee-two .mid-morning').css('opacity', '0.3');
+      $('#employee-two .afternoon').css('opacity', '0.3');
+      $('#employee-two .evening').css('opacity', '0.3');
+      $('#employee-two .night').css('opacity', '100');
+    }
+
     var employeeTwoCurrentTime = document.querySelector("#current-time-2");
     employeeTwoCurrentTime.innerHTML = "Current Time: " + employeeTwo["currenttime"];
   }
   if (employeeThree['timezone'] == "MST" && document.querySelector("#third-employee-name")) {
     employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
+
+    if (employeeThree["currenttime"][0] >= 6 && employeeThree["currenttime"][0] <= 9 && employeeThree["currenttime"].includes('AM')) {
+      //change icon opacity for 6am -9:59 am
+      $('#employee-three .early-morning').css('opacity', '100');
+      $('#employee-three .mid-morning').css('opacity', '0.3');
+      $('#employee-three .afternoon').css('opacity', '0.3');
+      $('#employee-three .evening').css('opacity', '0.3');
+      $('#employee-three .night').css('opacity', '0.3');
+    } if ((employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] <= 1 && employeeThree["currenttime"].includes('AM')) ||
+      (employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"][1] == ":" && employeeThree["currenttime"].includes('PM')) ||
+      (employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] == 2) && employeeThree["currenttime"].includes('PM')) {
+      //change icon opacity for 10am-12:59 pm
+      $('#employee-three .early-morning').css('opacity', '0.3');
+      $('#employee-three .mid-morning').css('opacity', '100');
+      $('#employee-three .afternoon').css('opacity', '0.3');
+      $('#employee-three .evening').css('opacity', '0.3');
+      $('#employee-three .night').css('opacity', '0.3');
+    } if (employeeThree["currenttime"][0] >= 2 && employeeThree["currenttime"][0] <= 5 && cstTime.includes('PM')) {
+      //change icon opacity for 1pm-5:59 pm
+      $('#employee-three .early-morning').css('opacity', '0.3');
+      $('#employee-three .mid-morning').css('opacity', '0.3');
+      $('#employee-three .afternoon').css('opacity', '100');
+      $('#employee-three .evening').css('opacity', '0.3');
+      $('#employee-three .night').css('opacity', '0.3');
+    } if (employeeThree["currenttime"][0] >= 6 && employeeThree["currenttime"][0] <= 9 && employeeThree["currenttime"].includes('PM')) {
+      //change icon opacity for 6pm-9:59 pm
+      $('#employee-three .early-morning').css('opacity', '0.3');
+      $('#employee-three .mid-morning').css('opacity', '0.3');
+      $('#employee-three .afternoon').css('opacity', '0.3');
+      $('#employee-three .evening').css('opacity', '100');
+      $('#employee-three .night').css('opacity', '0.3');
+    } if ((employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] <= 1 && employeeThree["currenttime"].includes('PM')) ||
+      (employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"][1] == ':' && employeeThree["currenttime"].includes('AM')) ||
+      (employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] == 2) && employeeThree["currenttime"].includes('AM')) {
+      //change icon opacity for 10pm-5:59 am
+      $('#employee-three .early-morning').css('opacity', '0.3');
+      $('#employee-three .mid-morning').css('opacity', '0.3');
+      $('#employee-three .afternoon').css('opacity', '0.3');
+      $('#employee-three .evening').css('opacity', '0.3');
+      $('#employee-three .night').css('opacity', '100');
+    }
+
+
     var employeeThreeCurrentTime = document.querySelector("#current-time-3");
     employeeThreeCurrentTime.innerHTML = "Current Time: " + employeeThree["currenttime"];
   }
@@ -323,11 +409,10 @@ setInterval(getCurrentTimes, 1000);
     document.getElementById('est-time').innerHTML = estTime;
     document.getElementById('mst-time').innerHTML = mstTime;
     document.getElementById('pst-time').innerHTML = pstTime;
-console.log("CST Time: ", cstTime);
-    console.log("you cant handle the: ", (cstTime[0] == 1 && cstTime[1] <= 1 && cstTime.includes('AM')));
+
     //color change for between 6 and 9:59 am
     if (cetTime[0] == 0 && cetTime[1] >= 6 && cetTime[1] <= 9 ) {
-      console.log("what line 282: ", cetTime);
+
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F8B195');
       $('#cet-time').css('background-color', '#F8B195');
@@ -353,7 +438,7 @@ console.log("CST Time: ", cstTime);
       $('#pst-time').css('background-color', '#F8B195');
     }
 
-    //color change for between 10 a.m and 1:59 pm
+    //color change for between 10 a.m and 1:59 pm (cet 10, 11, 12, 13)
     if (cetTime[0] == 1 && cetTime[1] <= 3) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
@@ -385,9 +470,9 @@ console.log("CST Time: ", cstTime);
       $('#pst-time').css('background-color', '#F67280');
     }
 
-    //color change for between 2 and 5:59 pm
+    //color change for between 2 and 5:59 pm (cet 14 - 17)
 
-    if (cetTime[0] == 1 && cetTime[1] <= 7 && cetTime.includes('PM')) {
+    if (cetTime[0] == 1 && cetTime[1] > 3 && cetTime[1] <= 7) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cet-time').css('background-color', '#C06C84');
@@ -412,8 +497,8 @@ console.log("CST Time: ", cstTime);
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#pst-time').css('background-color', '#C06C84');
     }
- //color change for between 6 and 9:59 pm
-    if (cetTime[0] >= 6 && cetTime[0] <= 9 && cetTime.includes('PM')) {
+ //color change for between 6 and 9:59 pm  (cet 18-21)
+    if (cetTime[0] >= 1 && cetTime[1] <= 8 || cetTime[0] >= 2 && cetTime[1] <= 1 ) {
       //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#cet-time').css('background-color', '#6C5B7B');
@@ -438,7 +523,7 @@ console.log("CST Time: ", cstTime);
       // $('#cst-time').css('background-color', '#6C5B7B');
       $('#pst-time').css('background-color', '#6C5B7B');
     }
-console.log("cetTime 1: ", cetTime[1]);
+
 
     //color change for between 10pm and 5:59 am
     //cetTime is in 22-24 and 01-05 format
