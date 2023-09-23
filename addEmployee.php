@@ -17,7 +17,31 @@
 <?php include 'header.php' ?>
 
 <div class="container">
+ <div class="card-body ">
+          <h4 class="card-title text-center">Edit Employee</h4>
+          <form action="" id="add-employee-form">
+            <div class="form-group">
+              <label>Name: </label>
+              <input id="employee-name" class="form-control">
+              </input>
 
+
+              <label>Time Zone: </label>
+              <input id="time-zone" class="form-control"> </input>
+              <label>Current Time: </label>
+              <input id="current-time" class="form-control"></input>
+              <label> Typical Working Hours: </label>
+              <input id="working-hours" class="form-control"></input>
+              <label> Employee Image: </label>
+              <input type="file" class="form-control-file" id="employee-image">
+
+              <div class="card-body">
+                <button href="/index.php" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
   </div>
 
 
