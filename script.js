@@ -204,31 +204,65 @@ window.addEventListener('load', function (event) {
 function getCurrentTimes() {
   //get Date time and save in specific time zones
 
-  //HST
 
-  //UTC-11 (Samoa standard time)
 
-  //UTC+10 (Chamorro Standard Time)
 
-  if (employeeOne['timezone'] == "PST") {
+  ///need an array of the employee list to loop through and then dynamically generate these items (including the check for current time)
 
-    employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });;
+  if (employeeOne['timezone'] == "PST" && document.querySelector("#first-employee-name")) {
+
+    employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
     if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('AM')){
+      //change icon opacity for 6am -9:59 am
       $('#employee-one .early-morning').css('opacity', '100');
       $('#employee-one .mid-morning').css('opacity', '0.3');
       $('#employee-one .afternoon').css('opacity', '0.3');
       $('#employee-one .evening').css('opacity', '0.3');
       $('#employee-one .night').css('opacity', '0.3');
-}
+    } if ((employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] <= 1 && employeeOne["currenttime"].includes('AM')) ||
+      (employeeOne["currenttime"][0] <= 5 && employeeOne["currenttime"][1] == ":" && employeeOne["currenttime"].includes('PM')) ||
+      (employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] == 2) && employeeOne["currenttime"].includes('PM')) {
+        //change icon opacity for 10am-12:59 pm
+      $('#employee-one .early-morning').css('opacity', '0.3');
+      $('#employee-one .mid-morning').css('opacity', '100');
+      $('#employee-one .afternoon').css('opacity', '0.3');
+      $('#employee-one .evening').css('opacity', '0.3');
+      $('#employee-one .night').css('opacity', '0.3');
+    } if (employeeOne["currenttime"][0] >= 2 && employeeOne["currenttime"][0] <= 5 && cstTime.includes('PM')){
+      //change icon opacity for 1pm-5:59 pm
+      $('#employee-one .early-morning').css('opacity', '0.3');
+      $('#employee-one .mid-morning').css('opacity', '0.3');
+      $('#employee-one .afternoon').css('opacity', '100');
+      $('#employee-one .evening').css('opacity', '0.3');
+      $('#employee-one .night').css('opacity', '0.3');
+    } if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('PM')) {
+      //change icon opacity for 6pm-9:59 pm
+      $('#employee-one .early-morning').css('opacity', '0.3');
+      $('#employee-one .mid-morning').css('opacity', '0.3');
+      $('#employee-one .afternoon').css('opacity', '0.3');
+      $('#employee-one .evening').css('opacity', '100');
+      $('#employee-one .night').css('opacity', '0.3');
+    } if ((employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] <= 1 && employeeOne["currenttime"].includes('PM')) ||
+      (employeeOne["currenttime"][0] <= 5 && employeeOne["currenttime"][1] == ':' && employeeOne["currenttime"].includes('AM')) ||
+      (employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] == 2) && employeeOne["currenttime"].includes('AM')) {
+      //change icon opacity for 10pm-5:59 am
+      $('#employee-one .early-morning').css('opacity', '0.3');
+      $('#employee-one .mid-morning').css('opacity', '0.3');
+      $('#employee-one .afternoon').css('opacity', '0.3');
+      $('#employee-one .evening').css('opacity', '0.3');
+      $('#employee-one .night').css('opacity', '100');
+      }
+
+
     var employeeOneCurrentTime = document.querySelector("#current-time-1");
     employeeOneCurrentTime.innerHTML = "Current Time: " + employeeOne["currenttime"];
   }
-  if (employeeTwo['timezone'] == "EST") {
+  if (employeeTwo['timezone'] == "EST" && document.querySelector("#second-employee-name")) {
     employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
     var employeeTwoCurrentTime = document.querySelector("#current-time-2");
     employeeTwoCurrentTime.innerHTML = "Current Time: " + employeeTwo["currenttime"];
   }
-  if (employeeThree['timezone'] == "MST") {
+  if (employeeThree['timezone'] == "MST" && document.querySelector("#third-employee-name")) {
     employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
     var employeeThreeCurrentTime = document.querySelector("#current-time-3");
     employeeThreeCurrentTime.innerHTML = "Current Time: " + employeeThree["currenttime"];
