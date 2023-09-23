@@ -30,57 +30,35 @@ function send_user_id(clicked_id) {
   localStorage.setItem('clickedId', clicked_id)
 
 }
+getEmployees();
 
+var employees;
 
-var employees = {
-  "employees": [
-    {
-      "id": 1,
-      "name": "Stephanie Burcombe",
-      "timezone": "PST",
-      "currenttime": "",
-      "workinghours": "8:00am-5:00pm",
-      "email": "sburcombe@gmail.com",
-      "image": "_assets/employee1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Dustin Burcombe",
-      "timezone": "EST",
-      "currenttime": "",
-      "workinghours": "7:00am-12:00pm",
-      "email": "dburcombe@yahoo.com",
-      "image": "_assets/employee2.jpg"
-    },
-    {
-      "id": 3,
-      "name": "The Best Burcombe",
-      "timezone": "MST",
-      "currenttime": "",
-      "workinghours": "9:00am-1:00pm",
-      "email": "aburcombe@toddlertime.com",
-      "image": "_assets/employee3.jpg"
-    }
-  ]
-}
-
-function Func() {
+function getEmployees() {
+  console.log("line 68");
   fetch("./getEmployees.json")
     .then((res) => {
       return res.json();
     })
-    .then((data) => console.log(data));
+
+    .then((data) => employees = data);
+
 }
 
-Func();
 
-const employeeOne = employees["employees"][0];
-const employeeTwo = employees["employees"][1];
-const employeeThree = employees["employees"][2];
+
+// var employeeOne = employees["employees"][0];
+
+// var employeeTwo = employees["employees"][1];
+// var employeeThree = employees["employees"][2];
 
 
 window.addEventListener('load', function (event) {
+  console.log("employees 91: ", employees);
+  var employeeOne = employees["employees"][0];
 
+var employeeTwo = employees["employees"][1];
+var employeeThree = employees["employees"][2];
   //display only the user that you've selected
   if (window.location.href.includes('editEmployee')) {
 
@@ -213,7 +191,10 @@ window.addEventListener('load', function (event) {
 function getCurrentTimes() {
   //get Date time and save in specific time zones
 
+  var employeeOne = employees["employees"][0];
 
+  var employeeTwo = employees["employees"][1];
+  var employeeThree = employees["employees"][2];
 
 
   ///need an array of the employee list to loop through and then dynamically generate these items (including the check for current time)
@@ -286,7 +267,7 @@ function getCurrentTimes() {
       $('#employee-two .afternoon').css('opacity', '0.3');
       $('#employee-two .evening').css('opacity', '0.3');
       $('#employee-two .night').css('opacity', '0.3');
-    } if (employeeTwo["currenttime"][0] >= 2 && employeeTwo["currenttime"][0] <= 5 && cstTime.includes('PM')) {
+    } if (employeeTwo["currenttime"][0] >= 2 && employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"].includes('PM')) {
       //change icon opacity for 1pm-5:59 pm
       $('#employee-two .early-morning').css('opacity', '0.3');
       $('#employee-two .mid-morning').css('opacity', '0.3');
@@ -333,7 +314,7 @@ function getCurrentTimes() {
       $('#employee-three .afternoon').css('opacity', '0.3');
       $('#employee-three .evening').css('opacity', '0.3');
       $('#employee-three .night').css('opacity', '0.3');
-    } if (employeeThree["currenttime"][0] >= 2 && employeeThree["currenttime"][0] <= 5 && cstTime.includes('PM')) {
+    } if (employeeThree["currenttime"][0] >= 2 && employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"].includes('PM')) {
       //change icon opacity for 1pm-5:59 pm
       $('#employee-three .early-morning').css('opacity', '0.3');
       $('#employee-three .mid-morning').css('opacity', '0.3');
@@ -569,31 +550,3 @@ setInterval(getCurrentTimes, 1000);
 
   setInterval(updateClock, 1000);
 }
-
-function updateSkyColor() {
-  const now = new Date();
-  const hour = now.getHours();
-
-  const dayCycle = document.querySelector('.day-to-night-icon-container');
-  const sun = document.querySelector('.sun');
-
-  if (hour >= 6 && hour < 24) {
-    // Daytime
-    console.log("442");
-    // dayCycle.style.backgroundColor = '#f67280';
-    // dayCycle.style.backgroundColor = '#87CEEB'; // Daytime sky color
-    // sun.style.backgroundColor = '#FFD700'; // Daytime sun color
-  } else {
-    // Nighttime
-    // dayCycle.style.backgroundColor = '#000'; // Night sky color
-    // sun.style.backgroundColor = 'transparent'; // No sun at night
-  }
-}
-
-// Update colors initially and every minute
-window.addEventListener("load", (event) => {
-  updateSkyColor();
-  setInterval(updateSkyColor, 60000);
-});
-// updateSkyColor();
-// setInterval(updateSkyColor, 60000);
