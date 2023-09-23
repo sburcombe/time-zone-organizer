@@ -64,6 +64,15 @@ var employees = {
   ]
 }
 
+function Func() {
+  fetch("./getEmployees.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => console.log(data));
+}
+
+Func();
 
 const employeeOne = employees["employees"][0];
 const employeeTwo = employees["employees"][1];
@@ -446,7 +455,6 @@ setInterval(getCurrentTimes, 1000);
     }
     if ((cstTime[0] == 1 && cstTime[1] <= 1 && cstTime.includes('AM')) ||
       (cstTime[0] <= 5 && cstTime[1] == ":" && cstTime.includes('PM')) || (cstTime[0] == 1 && cstTime[1] == 2) && cstTime.includes('PM')) {
-      console.log('made it to 316');
         //with 80 is including the alpha value to make the color opaque
       // $('#cst-time').css('background-color', '#F6728080');
       $('#cst-time').css('background-color', '#F67280');
