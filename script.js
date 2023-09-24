@@ -192,7 +192,7 @@ var employeeThree = employees["employees"][2];
 
 function getCurrentTimes() {
   //get Date time and save in specific time zones
-
+// console.log("line 195");
   var employeeOne = employees["employees"][0];
 
   var employeeTwo = employees["employees"][1];
@@ -203,7 +203,7 @@ function getCurrentTimes() {
  //logic needs to be consolidated for use (i.e. is mid-morning have one space where all the logic is worked out and then in these conditional checks
  //just check for isMidMorning value);
   if (employeeOne['timezone'] == "PST" && document.querySelector("#first-employee-name") || employeeOne['timezone'] == "PST" && localStorage.getItem('clickedId') == 'edit-user-1') {
-
+// console.log("line 206");
     employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
     if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('AM')){
       //change icon opacity for 6am -9:59 am
@@ -245,13 +245,11 @@ function getCurrentTimes() {
       $('#employee-one .evening').css('opacity', '0.3');
       $('#employee-one .night').css('opacity', '100');
       }
-    var employeeOneCurrentTime = "";
-   if (document.querySelector("#current-time")){
-     employeeOneCurrentTime = document.querySelector("#current-time");
-   } else if (document.querySelector("#current-time-1")){
-      employeeOneCurrenTime = document.querySelector("#current-time-1");
-   }
-    employeeOneCurrentTime.innerHTML = "Current Time: " + employeeOne["currenttime"];
+    if (document.querySelector("#current-time")) {
+      document.getElementById('current-time').innerHTML = "Current Time: " + employeeOne["currenttime"];
+    } else if (document.querySelector("#current-time-1")) {
+      document.getElementById('current-time-1').innerHTML = "Current Time: " + employeeOne["currenttime"];
+    }
   }
   if (employeeTwo['timezone'] == "EST" && document.querySelector("#second-employee-name") || employeeTwo['timezone'] == "EST" && localStorage.getItem('clickedId') == 'edit-user-2') {
     employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
@@ -276,7 +274,7 @@ function getCurrentTimes() {
       //change icon opacity for 1pm-5:59 pm
       $('#employee-two .early-morning').css('opacity', '0.3');
       $('#employee-two .mid-morning').css('opacity', '0.3');
-      $('#employee-two .afternoon').css('opacity', '100');
+      $('#employee-two .afternoon').css('opacity', '200');
       $('#employee-two .evening').css('opacity', '0.3');
       $('#employee-two .night').css('opacity', '0.3');
     } if (employeeTwo["currenttime"][0] >= 6 && employeeTwo["currenttime"][0] <= 9 && employeeTwo["currenttime"].includes('PM')) {
@@ -297,13 +295,11 @@ function getCurrentTimes() {
       $('#employee-two .night').css('opacity', '100');
     }
 
-    var employeeTwoCurrentTime = "";
     if (document.querySelector("#current-time")) {
-      employeeTwoCurrentTime = document.querySelector("#current-time");
+      document.getElementById('current-time').innerHTML = "Current Time: " + employeeTwo["currenttime"];
     } else if (document.querySelector("#current-time-2")) {
-      employeeTwoCurrenTime = document.querySelector("#current-time-2");
+      document.getElementById('current-time-2').innerHTML = "Current Time: " + employeeTwo["currenttime"];
     }
-    employeeTwoCurrentTime.innerHTML = "Current Time: " + employeeTwo["currenttime"];
   }
   if (employeeThree['timezone'] == "MST" && document.querySelector("#third-employee-name") || employeeThree['timezone'] == "MST" && localStorage.getItem('clickedId') == 'edit-user-3') {
     employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
@@ -348,13 +344,13 @@ function getCurrentTimes() {
       $('#employee-three .evening').css('opacity', '0.3');
       $('#employee-three .night').css('opacity', '100');
     }
-    var employeeThreeCurrentTime = "";
+
     if (document.querySelector("#current-time")) {
-      employeeThreeCurrentTime = document.querySelector("#current-time");
+      document.getElementById('current-time').innerHTML = "Current Time: " + employeeThree["currenttime"];
     } else if (document.querySelector("#current-time-3")) {
-      employeeThreeCurrenTime = document.querySelector("#current-time-3");
+      document.getElementById('current-time-3').innerHTML = "Current Time: " + employeeThree["currenttime"];
     }
-    employeeThreeCurrentTime.innerHTML = "Current Time: " + employeeThree["currenttime"];
+
   }
 
 setInterval(getCurrentTimes, 1000);
