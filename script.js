@@ -245,11 +245,11 @@ function getCurrentTimes() {
       $('#employee-one .evening').css('opacity', '0.3');
       $('#employee-one .night').css('opacity', '100');
       }
-    if (document.querySelector("#current-time")) {
-      document.getElementById('current-time').innerHTML = "Current Time: " + employeeOne["currenttime"];
-    } else if (document.querySelector("#current-time-1")) {
-      document.getElementById('current-time-1').innerHTML = "Current Time: " + employeeOne["currenttime"];
-    }
+    // if (document.querySelector("#current-time")) {
+    //   document.getElementById('current-time').innerHTML = "Current Time: " + employeeOne["currenttime"];
+    // } else if (document.querySelector("#current-time-1")) {
+    //   document.getElementById('current-time-1').innerHTML = "Current Time: " + employeeOne["currenttime"];
+    // }
   }
   if (employeeTwo['timezone'] == "EST" && document.querySelector("#second-employee-name") || employeeTwo['timezone'] == "EST" && localStorage.getItem('clickedId') == 'edit-user-2') {
     employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
@@ -295,11 +295,12 @@ function getCurrentTimes() {
       $('#employee-two .night').css('opacity', '100');
     }
 
-    if (document.querySelector("#current-time")) {
-      document.getElementById('current-time').innerHTML = "Current Time: " + employeeTwo["currenttime"];
-    } else if (document.querySelector("#current-time-2")) {
-      document.getElementById('current-time-2').innerHTML = "Current Time: " + employeeTwo["currenttime"];
-    }
+    // if (document.querySelector("#current-time")) {
+    //   document.getElementById('current-time').innerHTML = employeeTwo["currenttime"];
+
+    // } else if (document.querySelector("#current-time-2")) {
+    //   document.getElementById('current-time-2').innerHTML = "Current Time: " + employeeTwo["currenttime"];
+    // }
   }
   if (employeeThree['timezone'] == "MST" && document.querySelector("#third-employee-name") || employeeThree['timezone'] == "MST" && localStorage.getItem('clickedId') == 'edit-user-3') {
     employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
@@ -345,11 +346,11 @@ function getCurrentTimes() {
       $('#employee-three .night').css('opacity', '100');
     }
 
-    if (document.querySelector("#current-time")) {
-      document.getElementById('current-time').innerHTML = "Current Time: " + employeeThree["currenttime"];
-    } else if (document.querySelector("#current-time-3")) {
-      document.getElementById('current-time-3').innerHTML = "Current Time: " + employeeThree["currenttime"];
-    }
+    // if (document.querySelector("#current-time")) {
+    //   document.getElementById('current-time').innerHTML= "Current Time: " + employeeThree["currenttime"];
+    // } else if (document.querySelector("#current-time-3")) {
+    //   document.getElementById('current-time-3').innerHTML = "Current Time: " + employeeThree["currenttime"];
+    // }
 
   }
 
