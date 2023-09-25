@@ -35,7 +35,7 @@ getEmployees();
 var employees;
 
 function getEmployees() {
-  console.log("line 68");
+  console.log("line 38");
   fetch("./getEmployees.json")
     .then((res) => {
       return res.json();
