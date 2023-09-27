@@ -9,19 +9,19 @@
 <div class="container">
  <div class="card-body ">
           <h4 class="card-title text-center">Add Employee</h4>
-          <form action="" id="add-employee-form">
+          <form action="saveEmployeeInfo.php" id="add-employee-form" method="POST">
             <div class="form-group">
               <label>Name: </label>
-              <input id="employee-name" class="form-control">
+              <input name="employee-name" id="employee-name" class="form-control">
               </input>
 
 
               <label>Time Zone: </label>
-              <input id="time-zone" class="form-control"> </input>
+              <input name="time-zone" id="time-zone" class="form-control"> </input>
               <!-- <label>Current Time: </label>
               <input id="current-time" class="form-control"></input> -->
               <label> Typical Working Hours: </label>
-              <input id="working-hours" class="form-control"></input>
+              <input name="working-hours" id="working-hours" class="form-control"></input>
               <label> Employee Image: </label>
               <input type="file" class="form-control-file" id="employee-image">
 

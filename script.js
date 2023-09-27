@@ -22,6 +22,17 @@ var PSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Los_Angele
 var AKSTdate = new Date().toLocaleString("en-US", { timeZone: "America/Adak" });
 
 
+//adding a new employee
+// var addEmployeeForm = document.getElementById("add-employee-form");
+
+// loginForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   // handle submit
+// });
+
+
+
 //This function is called when a user clicks to edit user information from the details list
 
 
