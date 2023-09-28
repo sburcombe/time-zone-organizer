@@ -24,23 +24,26 @@
             "email": "aburcombe@toddlertime.com",
             "image": "_assets\/employee3.jpg"
         },
-        {   "id": 4,
+        {
+            "id": 4,
             "name": "Sample",
             "timezone": "EST",
             "workinghours": "8:00am - 1:30 pm5"
         },
-        {   "id": 5,
+        {
+            "id": 5,
             "name": "Dustin",
             "timezone": "MST",
             "workinghours": "8:00am - 1:30 pm"
         },
-        { "id": 6,
+        {
+            "id": 6,
             "name": "Sample",
             "timezone": "PST",
             "workinghours": "12:00pm - 3:00pm"
         },
         {
-           "id": 7,
+            "id": 7,
             "name": "Stephanie",
             "timezone": "CET",
             "workinghours": "1300-1500"
@@ -50,6 +53,26 @@
             "name": "Ava",
             "timezone": "CET",
             "workinghours": "8:00am - 1:30 pm9"
+        },
+        {
+            "id": 9,
+            "name": "Ava",
+            "timezone": "PST",
+            "workinghours": "12:00pm - 3:00pm"
+        },
+        {
+            "id": 10,
+            "name": "Little One",
+            "timezone": "CET",
+            "workinghours": "12:00pm - 3:00pm",
+            "email": "sburcombe@gmail.com"
+        },
+        {
+            "id": 11,
+            "name": "Lucy",
+            "timezone": "CST",
+            "workinghours": "12:00pm - 3:00pm",
+            "email": "lucy@soluna.com"
         }
     ]
 }

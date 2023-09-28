@@ -3,7 +3,12 @@
 <?php include 'head.php'; ?>
 <body>
  <?php include 'header.php'; ?>
+<?php
+$json_data = file_get_contents("getEmployees.json");
+$decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
+$employees = $decoded_json_data['employees'];
 
+?>
 
   <main>
 <div class="container">
