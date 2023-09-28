@@ -18,10 +18,10 @@
 
               <label>Time Zone: </label>
               <input name="time-zone" id="time-zone" class="form-control"> </input>
-              <!-- <label>Current Time: </label>
-              <input id="current-time" class="form-control"></input> -->
               <label> Typical Working Hours: </label>
               <input name="working-hours" id="working-hours" class="form-control"></input>
+               <label> Email: </label>
+              <input name="email" id="email" class="form-control"></input>
               <label> Employee Image: </label>
               <input type="file" class="form-control-file" id="employee-image">
 

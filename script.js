@@ -65,6 +65,8 @@ function getEmployees() {
 
 
 window.addEventListener('load', function (event) {
+  //makes the call to display the currentTimes for the timezone clocks;
+  getCurrentTimes();
   console.log("employees 91: ", employees);
   // debugger;
   var employeeOne = employees["employees"][0];

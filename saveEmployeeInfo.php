@@ -2,14 +2,13 @@
 <?php
 // Append new form data in json string saved in text file
 
-var_dump($_POST);
 // path and name of the file
 $filetxt = 'getEmployees.json';
 
 // check if all form data are submited, else output error message
-if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST['working-hours']) ) {
+if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST['working-hours'] ) && isset($_POST['email'] ) ){
   // if form fields are empty, outputs message, else, gets their data
-  if (empty($_POST['employee-name']) || empty($_POST['time-zone']) || empty($_POST['working-hours']) ) {
+  if (empty($_POST['employee-name']) || empty($_POST['time-zone']) || empty($_POST['working-hours']) || empty($_POST['email']) ) {
     echo 'All fields are required';
   } else {
 
@@ -34,6 +33,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       'name' => $_POST['employee-name'],
       'timezone' => $_POST['time-zone'],
       'workinghours' => $_POST['working-hours'],
+      'email' => $_POST['email']
     );
 
     // appends the array with new form data

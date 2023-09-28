@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="eng">
- <?php include 'head.php'; ?>
+<?php include 'head.php'; ?>
 
  <?php include 'header.php'; ?>
 
@@ -39,8 +39,6 @@
 
               <label>Time Zone: </label>
               <input id="time-zone" class="form-control"> </input>
-              <!-- <label>Current Time: </label>
-              <input id="current-time" class="form-control"></input> -->
               <label> Typical Working Hours: </label>
               <input id="working-hours" class="form-control"></input>
               <label> Employee Image: </label>
