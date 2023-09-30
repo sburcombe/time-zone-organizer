@@ -130,9 +130,9 @@ var employeeThree = employees["employees"][2];
 
 //Display employee Details
 
-  if (employeeOne && document.querySelector("#first-employee-name")) {
+  if (employeeOne && document.querySelector("#employee-name-1")) {
 //Display Employee names
-  var employeeOneNameSpace = document.querySelector("#first-employee-name");
+  var employeeOneNameSpace = document.querySelector("#employee-name-1");
   employeeOneNameSpace.innerHTML = employeeOne["name"];
 
   //Display Employee TimeZones
@@ -155,9 +155,9 @@ var employeeThree = employees["employees"][2];
   $(employeeOneEmailElement).attr("href", employeeOneEmail);
 
 }
-  if (document.querySelector("#second-employee-name")) {
+  if (document.querySelector("#employee-name-2")) {
       //Display Employee names
-    var employeeTwoNameSpace = document.querySelector("#second-employee-name");
+    var employeeTwoNameSpace = document.querySelector("#employee-name-2");
     employeeTwoNameSpace.innerHTML = employeeTwo["name"];
   //Display Employee TimeZones
     var employeeTwoTimeZone = document.querySelector("#time-zone-2");
@@ -177,9 +177,9 @@ var employeeThree = employees["employees"][2];
 
   }
 
-  if (document.querySelector("#third-employee-name")) {
+  if (document.querySelector("#employee-name-3")) {
     //Display Employee Name
-    var employeeThreeNameSpace = document.querySelector("#third-employee-name");
+    var employeeThreeNameSpace = document.querySelector("#employee-name-3");
     employeeThreeNameSpace.innerHTML = employeeThree["name"];
 
     //Display Employee TimeZones

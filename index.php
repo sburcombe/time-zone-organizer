@@ -13,9 +13,12 @@ $employees = $decoded_json_data['employees'];
   <main>
 <div class="container">
   <div class="row">
+  <?php   if(count($employees) != 0){
+            foreach ($employees as $employee) {
+               ?>
     <div class="col m-3">
       <section class="mx-auto my-5" style="max-width: 35rem;">
-      <div id="employee-one" class="card testimonial-card mt-2 mb-3 ">
+      <div id="employee-<?php echo $employee['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
         <div class="card-up day-to-night-gradient">
             <div class="day-to-night-icon-container-list">
               <i class="fa-solid fa-mug-saucer early-morning"></i>
@@ -26,24 +29,28 @@ $employees = $decoded_json_data['employees'];
             </div>
         </div>
         <div class="avatar mx-auto white">
-        <img id="employee-image" class="img-fluid rounded-circle" src="_assets/employee1.jpg" alt="Card image cap">
-        </div>
-        <div class="card-body">
-          <h5 id="first-employee-name" class="card-title text-center"></h5>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li id="time-zone-1" class="list-group-item">Time Zone: </li>
-          <li id="current-time-1" class="list-group-item">Current Time:</li>
-          <li id="working-hours-1" class="list-group-item">Typical Working Hours:</li>
-        </ul>
-        <div class="card-body">
-            <a href="/editEmployee.php" id="edit-user-1" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
-            <a href="" class="card-link" id="email1">Message User</a>
-        </div>
-      </div>
-      </section>
-      </div>
-
+        <img id="employee-image-<?php echo $employee['id']; ?>" class="img-fluid rounded-circle" src="<?php echo $employee['image']; ?>" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <h5 id="employee-name-<?php echo $employee['id']; ?>" class="card-title text-center"></h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li id="time-zone-<?php echo $employee['id']; ?>" class="list-group-item">Time Zone: </li>
+              <li id="current-time-<?php echo $employee['id']; ?>" class="list-group-item">Current Time:</li>
+              <li id="working-hours-<?php echo $employee['id']; ?>" class="list-group-item">Typical Working Hours:</li>
+            </ul>
+            <div class="card-body">
+                <a href="/editEmployee.php" id="edit-user-<?php echo $employee['id']; ?>" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
+                <a href="" class="card-link" id="email1">Message User</a>
+            </div>
+          </div>
+          </section>
+          </div>
+              <?php
+    }
+  }
+  ?>
+<!--
     <div class="col m-3">
        <section class="mx-auto my-5" style="max-width: 35rem;">
       <div id="employee-two" class="card testimonial-card mt-2 mb-3 ">
@@ -107,7 +114,7 @@ $employees = $decoded_json_data['employees'];
             </div>
           </div>
 </section>
-        </div>
+        </div> -->
 
       <!--End row-->
       </div>
