@@ -211,6 +211,10 @@ function getCurrentTimes() {
   var employeeTwo = employees["employees"][1];
   var employeeThree = employees["employees"][2];
 
+  for (let i = 0; i < employees['employees'].length; i++) {
+    // Runs 5 times, with values of step 0 through 4.
+    // console.log(employees['employees'][i]['name']);
+  }
 
   ///need an array of the employee list to loop through and then dynamically generate these items (including the check for current time)
  //logic needs to be consolidated for use (i.e. is mid-morning have one space where all the logic is worked out and then in these conditional checks
@@ -367,7 +371,7 @@ function getCurrentTimes() {
 
   }
 
-setInterval(getCurrentTimes, 1000);
+setInterval(getCurrentTimes, 6000);
   //sample code for clock display
   function updateClock() {
     // const gmtTime = new Date().toUTCString();
