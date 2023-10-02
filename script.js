@@ -212,162 +212,67 @@ function getCurrentTimes() {
   var employeeThree = employees["employees"][2];
 
   for (let i = 0; i < employees['employees'].length; i++) {
-    // Runs 5 times, with values of step 0 through 4.
     // console.log(employees['employees'][i]['name']);
+
+
+    switch (employees['employees'][i]['timezone']) {
+        case 'EST' || 'EDT':
+        employees['employees'][i]["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
+          break;
+        case 'PST' || 'PDT':
+        employees['employees'][i]["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
+          break;
+        default:
+        employees['employees'][i]["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });
+
+      }
+
+    if (employees['employees'][i]["currenttime"][0] >= 6 && employees['employees'][i]["currenttime"][0] <= 9 && employees['employees'][i]["currenttime"].includes('AM')) {
+      //change icon opacity for 6am -9:59 am
+      $('#employee-' + employees['employees'][i]['id'] + ' .early-morning').css('opacity', '100');
+      $('#employee-' + employees['employees'][i]['id'] + ' .mid-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .afternoon').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .evening').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .night').css('opacity', '0.3');
+    } if ((employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] <= 1 && employees['employees'][i]["currenttime"].includes('AM')) ||
+      (employees['employees'][i]["currenttime"][0] <= 5 && employees['employees'][i]["currenttime"][1] == ":" && employees['employees'][i]["currenttime"].includes('PM')) ||
+      (employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] == 2) && employees['employees'][i]["currenttime"].includes('PM')) {
+      //change icon opacity for 10am-12:59 pm
+      $('#employee-' + employees['employees'][i]['id'] + ' .early-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .mid-morning').css('opacity', '100');
+      $('#employee-' + employees['employees'][i]['id'] + ' .afternoon').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .evening').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .night').css('opacity', '0.3');
+    } if (employees['employees'][i]["currenttime"][0] >= 2 && employees['employees'][i]["currenttime"][0] <= 5 && employees['employees'][i]["currenttime"].includes('PM')) {
+      //change icon opacity for 1pm-5:59 pm
+      $('#employee-' + employees['employees'][i]["currenttime"][0]['id'] + ' .early-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]["currenttime"][0]['id'] + ' .mid-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]["currenttime"][0]['id'] + ' .afternoon').css('opacity', '100');
+      $('#employee-' + employees['employees'][i]["currenttime"][0]['id'] + ' .evening').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]["currenttime"][0]['id'] + ' .night').css('opacity', '0.3');
+    } if (employees['employees'][i]["currenttime"][0] >= 6 && employees['employees'][i]["currenttime"][0] <= 9 && employees['employees'][i]["currenttime"].includes('PM')) {
+      //change icon opacity for 6pm-9:59 pm
+      $('#employee-' + employees['employees'][i]['id'] + ' .early-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .mid-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .afternoon').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .evening').css('opacity', '100');
+      $('#employee-' + employees['employees'][i]['id'] + ' .night').css('opacity', '0.3');
+    } if ((employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] <= 1 && employees['employees'][i]["currenttime"].includes('PM')) ||
+      (employees['employees'][i]["currenttime"][0] <= 5 && employees['employees'][i]["currenttime"][1] == ':' && employees['employees'][i]["currenttime"].includes('AM')) ||
+      (employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] == 2) && employees['employees'][i]["currenttime"].includes('AM')) {
+      //change icon opacity for 10pm-5:59 am
+      $('#employee-' + employees['employees'][i]['id'] + ' .early-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .mid-morning').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .afternoon').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .evening').css('opacity', '0.3');
+      $('#employee-' + employees['employees'][i]['id'] + ' .night').css('opacity', '100');
+    }
   }
 
   ///need an array of the employee list to loop through and then dynamically generate these items (including the check for current time)
  //logic needs to be consolidated for use (i.e. is mid-morning have one space where all the logic is worked out and then in these conditional checks
  //just check for isMidMorning value);
-  if (employeeOne['timezone'] == "PST" && document.querySelector("#first-employee-name") || employeeOne['timezone'] == "PST" && localStorage.getItem('clickedId') == 'edit-user-1') {
-// console.log("line 206");
-    employeeOne["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
-    if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('AM')){
-      //change icon opacity for 6am -9:59 am
-      $('#employee-one .early-morning').css('opacity', '100');
-      $('#employee-one .mid-morning').css('opacity', '0.3');
-      $('#employee-one .afternoon').css('opacity', '0.3');
-      $('#employee-one .evening').css('opacity', '0.3');
-      $('#employee-one .night').css('opacity', '0.3');
-    } if ((employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] <= 1 && employeeOne["currenttime"].includes('AM')) ||
-      (employeeOne["currenttime"][0] <= 5 && employeeOne["currenttime"][1] == ":" && employeeOne["currenttime"].includes('PM')) ||
-      (employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] == 2) && employeeOne["currenttime"].includes('PM')) {
-        //change icon opacity for 10am-12:59 pm
-      $('#employee-one .early-morning').css('opacity', '0.3');
-      $('#employee-one .mid-morning').css('opacity', '100');
-      $('#employee-one .afternoon').css('opacity', '0.3');
-      $('#employee-one .evening').css('opacity', '0.3');
-      $('#employee-one .night').css('opacity', '0.3');
-    } if (employeeOne["currenttime"][0] >= 2 && employeeOne["currenttime"][0] <= 5 && employeeOne["currenttime"].includes('PM')){
-      //change icon opacity for 1pm-5:59 pm
-      $('#employee-one .early-morning').css('opacity', '0.3');
-      $('#employee-one .mid-morning').css('opacity', '0.3');
-      $('#employee-one .afternoon').css('opacity', '100');
-      $('#employee-one .evening').css('opacity', '0.3');
-      $('#employee-one .night').css('opacity', '0.3');
-    } if (employeeOne["currenttime"][0] >= 6 && employeeOne["currenttime"][0] <= 9 && employeeOne["currenttime"].includes('PM')) {
-      //change icon opacity for 6pm-9:59 pm
-      $('#employee-one .early-morning').css('opacity', '0.3');
-      $('#employee-one .mid-morning').css('opacity', '0.3');
-      $('#employee-one .afternoon').css('opacity', '0.3');
-      $('#employee-one .evening').css('opacity', '100');
-      $('#employee-one .night').css('opacity', '0.3');
-    } if ((employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] <= 1 && employeeOne["currenttime"].includes('PM')) ||
-      (employeeOne["currenttime"][0] <= 5 && employeeOne["currenttime"][1] == ':' && employeeOne["currenttime"].includes('AM')) ||
-      (employeeOne["currenttime"][0] == 1 && employeeOne["currenttime"][1] == 2) && employeeOne["currenttime"].includes('AM')) {
-      //change icon opacity for 10pm-5:59 am
-      $('#employee-one .early-morning').css('opacity', '0.3');
-      $('#employee-one .mid-morning').css('opacity', '0.3');
-      $('#employee-one .afternoon').css('opacity', '0.3');
-      $('#employee-one .evening').css('opacity', '0.3');
-      $('#employee-one .night').css('opacity', '100');
-      }
-    // if (document.querySelector("#current-time")) {
-    //   document.getElementById('current-time').innerHTML = "Current Time: " + employeeOne["currenttime"];
-    // } else if (document.querySelector("#current-time-1")) {
-    //   document.getElementById('current-time-1').innerHTML = "Current Time: " + employeeOne["currenttime"];
-    // }
-  }
-  if (employeeTwo['timezone'] == "EST" && document.querySelector("#second-employee-name") || employeeTwo['timezone'] == "EST" && localStorage.getItem('clickedId') == 'edit-user-2') {
-    employeeTwo["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });;
 
-    if (employeeTwo["currenttime"][0] >= 6 && employeeTwo["currenttime"][0] <= 9 && employeeTwo["currenttime"].includes('AM')) {
-      //change icon opacity for 6am -9:59 am
-      $('#employee-two .early-morning').css('opacity', '100');
-      $('#employee-two .mid-morning').css('opacity', '0.3');
-      $('#employee-two .afternoon').css('opacity', '0.3');
-      $('#employee-two .evening').css('opacity', '0.3');
-      $('#employee-two .night').css('opacity', '0.3');
-    } if ((employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] <= 1 && employeeTwo["currenttime"].includes('AM')) ||
-      (employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"][1] == ":" && employeeTwo["currenttime"].includes('PM')) ||
-      (employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] == 2) && employeeTwo["currenttime"].includes('PM')) {
-      //change icon opacity for 10am-12:59 pm
-      $('#employee-two .early-morning').css('opacity', '0.3');
-      $('#employee-two .mid-morning').css('opacity', '100');
-      $('#employee-two .afternoon').css('opacity', '0.3');
-      $('#employee-two .evening').css('opacity', '0.3');
-      $('#employee-two .night').css('opacity', '0.3');
-    } if (employeeTwo["currenttime"][0] >= 2 && employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"].includes('PM')) {
-      //change icon opacity for 1pm-5:59 pm
-      $('#employee-two .early-morning').css('opacity', '0.3');
-      $('#employee-two .mid-morning').css('opacity', '0.3');
-      $('#employee-two .afternoon').css('opacity', '200');
-      $('#employee-two .evening').css('opacity', '0.3');
-      $('#employee-two .night').css('opacity', '0.3');
-    } if (employeeTwo["currenttime"][0] >= 6 && employeeTwo["currenttime"][0] <= 9 && employeeTwo["currenttime"].includes('PM')) {
-      //change icon opacity for 6pm-9:59 pm
-      $('#employee-two .early-morning').css('opacity', '0.3');
-      $('#employee-two .mid-morning').css('opacity', '0.3');
-      $('#employee-two .afternoon').css('opacity', '0.3');
-      $('#employee-two .evening').css('opacity', '100');
-      $('#employee-two .night').css('opacity', '0.3');
-    } if ((employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] <= 1 && employeeTwo["currenttime"].includes('PM')) ||
-      (employeeTwo["currenttime"][0] <= 5 && employeeTwo["currenttime"][1] == ':' && employeeTwo["currenttime"].includes('AM')) ||
-      (employeeTwo["currenttime"][0] == 1 && employeeTwo["currenttime"][1] == 2) && employeeTwo["currenttime"].includes('AM')) {
-      //change icon opacity for 10pm-5:59 am
-      $('#employee-two .early-morning').css('opacity', '0.3');
-      $('#employee-two .mid-morning').css('opacity', '0.3');
-      $('#employee-two .afternoon').css('opacity', '0.3');
-      $('#employee-two .evening').css('opacity', '0.3');
-      $('#employee-two .night').css('opacity', '100');
-    }
-
-    // if (document.querySelector("#current-time")) {
-    //   document.getElementById('current-time').innerHTML = employeeTwo["currenttime"];
-
-    // } else if (document.querySelector("#current-time-2")) {
-    //   document.getElementById('current-time-2').innerHTML = "Current Time: " + employeeTwo["currenttime"];
-    // }
-  }
-  if (employeeThree['timezone'] == "MST" && document.querySelector("#third-employee-name") || employeeThree['timezone'] == "MST" && localStorage.getItem('clickedId') == 'edit-user-3') {
-    employeeThree["currenttime"] = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Phoenix' });;
-
-    if (employeeThree["currenttime"][0] >= 6 && employeeThree["currenttime"][0] <= 9 && employeeThree["currenttime"].includes('AM')) {
-      //change icon opacity for 6am -9:59 am
-      $('#employee-three .early-morning').css('opacity', '100');
-      $('#employee-three .mid-morning').css('opacity', '0.3');
-      $('#employee-three .afternoon').css('opacity', '0.3');
-      $('#employee-three .evening').css('opacity', '0.3');
-      $('#employee-three .night').css('opacity', '0.3');
-    } if ((employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] <= 1 && employeeThree["currenttime"].includes('AM')) ||
-      (employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"][1] == ":" && employeeThree["currenttime"].includes('PM')) ||
-      (employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] == 2) && employeeThree["currenttime"].includes('PM')) {
-      //change icon opacity for 10am-12:59 pm
-      $('#employee-three .early-morning').css('opacity', '0.3');
-      $('#employee-three .mid-morning').css('opacity', '100');
-      $('#employee-three .afternoon').css('opacity', '0.3');
-      $('#employee-three .evening').css('opacity', '0.3');
-      $('#employee-three .night').css('opacity', '0.3');
-    } if (employeeThree["currenttime"][0] >= 2 && employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"].includes('PM')) {
-      //change icon opacity for 1pm-5:59 pm
-      $('#employee-three .early-morning').css('opacity', '0.3');
-      $('#employee-three .mid-morning').css('opacity', '0.3');
-      $('#employee-three .afternoon').css('opacity', '100');
-      $('#employee-three .evening').css('opacity', '0.3');
-      $('#employee-three .night').css('opacity', '0.3');
-    } if (employeeThree["currenttime"][0] >= 6 && employeeThree["currenttime"][0] <= 9 && employeeThree["currenttime"].includes('PM')) {
-      //change icon opacity for 6pm-9:59 pm
-      $('#employee-three .early-morning').css('opacity', '0.3');
-      $('#employee-three .mid-morning').css('opacity', '0.3');
-      $('#employee-three .afternoon').css('opacity', '0.3');
-      $('#employee-three .evening').css('opacity', '100');
-      $('#employee-three .night').css('opacity', '0.3');
-    } if ((employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] <= 1 && employeeThree["currenttime"].includes('PM')) ||
-      (employeeThree["currenttime"][0] <= 5 && employeeThree["currenttime"][1] == ':' && employeeThree["currenttime"].includes('AM')) ||
-      (employeeThree["currenttime"][0] == 1 && employeeThree["currenttime"][1] == 2) && employeeThree["currenttime"].includes('AM')) {
-      //change icon opacity for 10pm-5:59 am
-      $('#employee-three .early-morning').css('opacity', '0.3');
-      $('#employee-three .mid-morning').css('opacity', '0.3');
-      $('#employee-three .afternoon').css('opacity', '0.3');
-      $('#employee-three .evening').css('opacity', '0.3');
-      $('#employee-three .night').css('opacity', '100');
-    }
-
-    // if (document.querySelector("#current-time")) {
-    //   document.getElementById('current-time').innerHTML= "Current Time: " + employeeThree["currenttime"];
-    // } else if (document.querySelector("#current-time-3")) {
-    //   document.getElementById('current-time-3').innerHTML = "Current Time: " + employeeThree["currenttime"];
-    // }
 
   }
 
