@@ -130,7 +130,7 @@ var employeeThree = employees["employees"][2];
 
 //Display employee Details
 
-  if (employeeOne && document.querySelector("#employee-name-1")) {
+  if (employee && document.querySelector("#employee-name-1")) {
 //Display Employee names
   var employeeOneNameSpace = document.querySelector("#employee-name-1");
   employeeOneNameSpace.innerHTML = employeeOne["name"];
@@ -481,4 +481,3 @@ setInterval(getCurrentTimes, 6000);
   }
 
   setInterval(updateClock, 1000);
-}
