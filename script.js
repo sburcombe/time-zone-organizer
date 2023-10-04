@@ -263,7 +263,7 @@ function getCurrentTimes() {
 
   }
 
-setInterval(getCurrentTimes, 6000);
+setInterval(getCurrentTimes, 1000);
   //sample code for clock display
   function updateClock() {
     // const gmtTime = new Date().toUTCString();
