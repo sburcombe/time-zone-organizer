@@ -137,8 +137,9 @@ var employeeThree = employees["employees"][2];
 
     if (employees['employees'][i] && document.querySelector("#employee-name-" + employees['employees'][i]['id'])) {
       //Display Employee names
+      console.log("this is the name: ", employees['employees'][i]['id']);
       var employeeNameSpace = document.querySelector("#employee-name-" + employees['employees'][i]['id']);
-      employeeNameSpace = employees['employees'][i]['name'];
+      employeeNameSpace.innerHTML = employees['employees'][i]['name'];
 
       //Display Employee TimeZones
       var employeeTimeZone = document.querySelector("#time-zone-" + employees['employees'][i]['id']);
@@ -199,7 +200,7 @@ function getCurrentTimes() {
   var employeeThree = employees["employees"][2];
 
   for (let i = 0; i < employees['employees'].length; i++) {
-    console.log(employees['employees'][i]['name']);
+
 
 
     switch (employees['employees'][i]['timezone']) {
