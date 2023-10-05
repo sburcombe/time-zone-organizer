@@ -61,6 +61,7 @@ body {
   margin-top: -60px;
   overflow: hidden;
   border: 5px solid #fff;
+  background: linear-gradient(40deg, #f8B195, #f67280, #355C7D) !important;
 }
 
 .avatar {
