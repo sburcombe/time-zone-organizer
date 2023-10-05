@@ -29,7 +29,7 @@ $employees = $decoded_json_data['employees'];
             </div>
         </div>
         <div class="avatar mx-auto white">
-        <img id="employee-image-<?php echo $employee['id']; ?>" class="img-fluid rounded-circle" src="<?php echo $employee['image']; ?>" alt="Card image cap">
+        <img id="employee-image-<?php echo $employee['id']; ?>" class="img-fluid rounded-circle" src="<?php echo $employee['image'] ? $employee['image'] : '/_assets/default_avatar.png' ; ?>" alt="Card image cap">
             </div>
             <div class="card-body">
               <h5 id="employee-name-<?php echo $employee['id']; ?>" class="card-title text-center"></h5>

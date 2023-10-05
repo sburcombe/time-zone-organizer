@@ -194,10 +194,10 @@ var employeeThree = employees["employees"][2];
 function getCurrentTimes() {
   //get Date time and save in specific time zones
 // console.log("line 195");
-  var employeeOne = employees["employees"][0];
+  // var employeeOne = employees["employees"][0];
 
-  var employeeTwo = employees["employees"][1];
-  var employeeThree = employees["employees"][2];
+  // var employeeTwo = employees["employees"][1];
+  // var employeeThree = employees["employees"][2];
 
   for (let i = 0; i < employees['employees'].length; i++) {
 
@@ -223,7 +223,7 @@ function getCurrentTimes() {
       $('#employee-' + employees['employees'][i]['id'] + ' .evening').css('opacity', '0.3');
       $('#employee-' + employees['employees'][i]['id'] + ' .night').css('opacity', '0.3');
     } if ((employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] <= 1 && employees['employees'][i]["currenttime"].includes('AM')) ||
-      (employees['employees'][i]["currenttime"][0] <= 5 && employees['employees'][i]["currenttime"][1] == ":" && employees['employees'][i]["currenttime"].includes('PM')) ||
+      // (employees['employees'][i]["currenttime"][0] <= 5 && employees['employees'][i]["currenttime"][1] == ":" && employees['employees'][i]["currenttime"].includes('PM')) ||
       (employees['employees'][i]["currenttime"][0] == 1 && employees['employees'][i]["currenttime"][1] == 2) && employees['employees'][i]["currenttime"].includes('PM')) {
       //change icon opacity for 10am-12:59 pm
       $('#employee-' + employees['employees'][i]['id'] + ' .early-morning').css('opacity', '0.3');
