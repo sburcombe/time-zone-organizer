@@ -25,6 +25,29 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
 
+
+      $image = $_POST['employee-image'];
+      //Stores the filename as it was on the client computer.
+      $imagename = $_FILES['pic']['name'];
+      //Stores the filetype e.g image/jpeg
+      $imagetype = $_FILES['pic']['type'];
+      //Stores any error codes from the upload.
+      $imageerror = $_FILES['pic']['error'];
+      //Stores the tempname as it is given by the host when uploaded.
+      $imagetemp = $_FILES['pic']['tmp_name'];
+
+      //The path you wish to upload the image to
+      $imagePath = "_assets/".$imagename;
+
+      if (is_uploaded_file($imagetemp)) {
+        if (move_uploaded_file($imagetemp, $imagePath . $imagename)) {
+          echo "Successfully uploaded your image.";
+        } else {
+          echo "Failed to move your image.";
+        }
+      } else {
+        echo "Failed to upload your image.";
+      }
     }
 
     // gets and adds form data into an array
@@ -33,8 +56,13 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       'name' => $_POST['employee-name'],
       'timezone' => $_POST['time-zone'],
       'workinghours' => $_POST['working-hours'],
-      'email' => $_POST['email']
+      'email' => $_POST['email'],
+      'image' => $imagePath
     );
+
+    var_dump($formadata);
+
+
 
     // appends the array with new form data
     $arr_data['employees'][] = $formdata;
