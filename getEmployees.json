@@ -35,6 +35,22 @@
             "name": "Dustin",
             "timezone": "MST",
             "workinghours": "8:00am - 1:30 pm"
+        },
+        {
+            "id": 6,
+            "name": "Wanda",
+            "timezone": "CET",
+            "workinghours": "1300-1700",
+            "email": "wanda@gmail.com",
+            "image": "_assets\/"
+        },
+        {
+            "id": 7,
+            "name": "Hank",
+            "timezone": "CET",
+            "workinghours": "6:00-18:00",
+            "email": "hank@trashtruck.com",
+            "image": "_assets\/"
         }
     ]
 }
