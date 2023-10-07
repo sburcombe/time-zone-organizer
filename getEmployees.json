@@ -26,31 +26,19 @@
         },
         {
             "id": 4,
-            "name": "Sample",
-            "timezone": "EST",
-            "workinghours": "8:00am - 1:30 pm5"
+            "name": "Little",
+            "timezone": "CET",
+            "workinghours": "6:00-18:00",
+            "email": "little@little.dom",
+            "image": "_assets\/IMG_8391.jpeg"
         },
         {
             "id": 5,
-            "name": "Dustin",
-            "timezone": "MST",
-            "workinghours": "8:00am - 1:30 pm"
-        },
-        {
-            "id": 6,
-            "name": "Wanda",
-            "timezone": "CET",
-            "workinghours": "1300-1700",
-            "email": "wanda@gmail.com",
-            "image": "_assets\/"
-        },
-        {
-            "id": 7,
-            "name": "Hank",
-            "timezone": "CET",
-            "workinghours": "6:00-18:00",
-            "email": "hank@trashtruck.com",
-            "image": "_assets\/"
+            "name": "Sweet",
+            "timezone": "PST",
+            "workinghours": "8:00am - 1:30 pm4",
+            "email": "sburcombe@gmail.com",
+            "image": "_assets\/default_avatar.png"
         }
     ]
 }

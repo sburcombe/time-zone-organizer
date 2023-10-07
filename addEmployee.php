@@ -9,7 +9,7 @@
 <div class="container">
  <div class="card-body ">
           <h4 class="card-title text-center">Add Employee</h4>
-          <form action="saveEmployeeInfo.php" id="add-employee-form" method="POST">
+          <form enctype="multipart/form-data" action="saveEmployeeInfo.php" id="add-employee-form" method="POST">
             <div class="form-group">
               <label>Name: </label>
               <input name="employee-name" id="employee-name" class="form-control">
@@ -23,6 +23,7 @@
                <label> Email: </label>
               <input name="email" id="email" class="form-control"></input>
               <label> Employee Image: </label>
+              <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
               <input type="file" name="employee-image" class="form-control-file" id="employee-image">
 
               <div class="card-body">

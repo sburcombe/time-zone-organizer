@@ -26,20 +26,25 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       $arr_data = json_decode($jsondata, true);
 
 
-      $image = $_POST['employee-image'];
+      $image = $_FILES['employee-image'];
       //Stores the filename as it was on the client computer.
-      $imagename = $_FILES['pic']['name'];
+      $imagename = $_FILES['employee-image']['name'];
       //Stores the filetype e.g image/jpeg
-      $imagetype = $_FILES['pic']['type'];
+      $imagetype = $_FILES['employee-image']['type'];
       //Stores any error codes from the upload.
-      $imageerror = $_FILES['pic']['error'];
+      $imageerror = $_FILES['employee-image']['error'];
       //Stores the tempname as it is given by the host when uploaded.
-      $imagetemp = $_FILES['pic']['tmp_name'];
+      $imagetemp = $_FILES['employee-image']['tmp_name'];
 
+      if($imagename){
       //The path you wish to upload the image to
       $imagePath = "_assets/".$imagename;
+      } else {
+        $imagePath = "_assets/default_avatar.png";
+      }
 
       if (is_uploaded_file($imagetemp)) {
+
         if (move_uploaded_file($imagetemp, $imagePath . $imagename)) {
           echo "Successfully uploaded your image.";
         } else {
@@ -48,6 +53,11 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       } else {
         echo "Failed to upload your image.";
       }
+    }
+    if ($_FILES["uploadedfile"]["size"] > 10000) {
+
+      echo "Sorry, your file is too large.";
+      exit; // stop the PHP script
     }
 
     // gets and adds form data into an array
@@ -60,7 +70,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       'image' => $imagePath
     );
 
-    var_dump($formadata);
+
 
 
 
