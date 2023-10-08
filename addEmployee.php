@@ -23,8 +23,8 @@
                <label> Email: </label>
               <input name="email" id="email" class="form-control"></input>
               <label> Employee Image: </label>
-              <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-              <input type="file" name="employee-image" class="form-control-file" id="employee-image">
+              <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+              <input type="file" name="employee-image" class="form-control-file" id="employee-image" value="">
 
               <div class="card-body">
                 <button href="/index.php" id="cancel" class="btn btn-secondary mb-2">Cancel</button>

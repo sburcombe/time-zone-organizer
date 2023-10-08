@@ -26,19 +26,27 @@
         },
         {
             "id": 4,
-            "name": "Little",
-            "timezone": "CET",
-            "workinghours": "6:00-18:00",
-            "email": "little@little.dom",
-            "image": "_assets\/IMG_8391.jpeg"
+            "name": "Dallas",
+            "timezone": "5656",
+            "workinghours": "9:00am-6:00pm",
+            "email": "sburcombe@gmail.com",
+            "image": ""
         },
         {
             "id": 5,
-            "name": "Sweet",
-            "timezone": "PST",
-            "workinghours": "8:00am - 1:30 pm4",
+            "name": "New",
+            "timezone": "MST",
+            "workinghours": "9:00am-6:00pm",
             "email": "sburcombe@gmail.com",
-            "image": "_assets\/default_avatar.png"
+            "image": "_assets\/40572_1467304475146_683190_n.JPG"
+        },
+        {
+            "id": 6,
+            "name": "Dallas",
+            "timezone": "MST",
+            "workinghours": "6:00-18:00",
+            "email": "sburcombe@gmail.com",
+            "image": "_assets\/64558_483262301734791_582920320_n.JPG"
         }
     ]
 }

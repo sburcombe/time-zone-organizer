@@ -25,6 +25,14 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
 
+      $inipath = php_ini_loaded_file();
+
+      // if ($inipath) {
+      //   echo 'Loaded php.ini: ' . $inipath;
+      // } else {
+      //   echo 'A php.ini file is not loaded';
+      // }
+      // die();
 
       $image = $_FILES['employee-image'];
       //Stores the filename as it was on the client computer.
@@ -42,10 +50,11 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       } else {
         $imagePath = "_assets/default_avatar.png";
       }
+// var_dump($imagename);
 
       if (is_uploaded_file($imagetemp)) {
 
-        if (move_uploaded_file($imagetemp, $imagePath . $imagename)) {
+        if (move_uploaded_file($imagetemp, $imagePath)) {
           echo "Successfully uploaded your image.";
         } else {
           echo "Failed to move your image.";
