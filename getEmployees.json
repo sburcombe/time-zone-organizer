@@ -27,7 +27,7 @@
         {
             "id": 4,
             "name": "Dallas",
-            "timezone": "5656",
+            "timezone": "CET",
             "workinghours": "9:00am-6:00pm",
             "email": "sburcombe@gmail.com",
             "image": ""
@@ -42,11 +42,19 @@
         },
         {
             "id": 6,
-            "name": "Dallas",
+            "name": "Chance",
             "timezone": "MST",
+            "workinghours": "8:00am-10:00am",
+            "email": "chancetherapper@runner.com",
+            "image": "_assets\/1936369_1174433809219_5941980_n.JPG"
+        },
+        {
+            "id": 7,
+            "name": "Lil",
+            "timezone": "CET",
             "workinghours": "6:00-18:00",
-            "email": "sburcombe@gmail.com",
-            "image": "_assets\/64558_483262301734791_582920320_n.JPG"
+            "email": "lil@big.com",
+            "image": "_assets\/1BCA727A-343B-421D-AC8A-B1116992AE94.JPG"
         }
     ]
 }
