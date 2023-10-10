@@ -50,11 +50,19 @@
         },
         {
             "id": 7,
-            "name": "Lil",
+            "name": "Dallas",
+            "timezone": "EST",
+            "workinghours": "8:00am - 1:30 pm9",
+            "email": "dburcombe@yahoo.com",
+            "image": "_assets\/02090636-0296-443D-85A9-CFA9C5618F06.JPG"
+        },
+        {
+            "id": 8,
+            "name": "New",
             "timezone": "CET",
-            "workinghours": "6:00-18:00",
-            "email": "lil@big.com",
-            "image": "_assets\/1BCA727A-343B-421D-AC8A-B1116992AE94.JPG"
+            "workinghours": "8:00am - 1:30 pm",
+            "email": "sburcombe@gmail.com",
+            "image": "_assets\/47685661_911966371689_3206930330485260288_o.JPG"
         }
     ]
 }
