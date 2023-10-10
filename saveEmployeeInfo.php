@@ -25,15 +25,8 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
 
-      // $inipath = php_ini_loaded_file();
-      ini_set('upload_max_filesize', '10M');
-      // if ($inipath) {
-      //   echo 'Loaded php.ini: ' . $inipath;
-      // } else {
-      //   echo 'A php.ini file is not loaded';
-      // }
-      // die();
 
+// phpinfo();
       $image = $_FILES['employee-image'];
       //Stores the filename as it was on the client computer.
       $imagename = $_FILES['employee-image']['name'];
