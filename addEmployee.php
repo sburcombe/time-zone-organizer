@@ -23,7 +23,7 @@
                <label> Email: </label>
               <input name="email" id="email" class="form-control"></input>
               <label> Employee Image: </label>
-              <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
+              <!-- <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> -->
               <input type="file" name="employee-image" class="form-control-file" id="employee-image" value="">
 
               <div class="card-body">
