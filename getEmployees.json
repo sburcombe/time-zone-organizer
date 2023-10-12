@@ -63,6 +63,14 @@
             "workinghours": "8:00am - 1:30 pm",
             "email": "sburcombe@gmail.com",
             "image": "_assets\/47685661_911966371689_3206930330485260288_o.JPG"
+        },
+        {
+            "id": 9,
+            "name": "Dallas",
+            "timezone": "CST",
+            "workinghours": "6:00-18:00",
+            "email": "dburcombe@yahoo.com",
+            "image": "_assets\/1BCA727A-343B-421D-AC8A-B1116992AE94.JPG"
         }
     ]
 }
