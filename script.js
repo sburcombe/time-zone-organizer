@@ -69,10 +69,10 @@ window.addEventListener('load', function (event) {
   getCurrentTimes();
   console.log("employees 91: ", employees);
   // debugger;
-  var employeeOne = employees["employees"][0];
+//   var employeeOne = employees["employees"][0];
 
-var employeeTwo = employees["employees"][1];
-var employeeThree = employees["employees"][2];
+// var employeeTwo = employees["employees"][1];
+// var employeeThree = employees["employees"][2];
   //display only the user that you've selected
   if (window.location.href.includes('editEmployee')) {
 
@@ -80,51 +80,25 @@ var employeeThree = employees["employees"][2];
 
     var employeeNameSpace = document.querySelector("#employee-name");
     var employeeTimeZone = document.querySelector("#time-zone");
-    var employeeCurrentTime = document.querySelector("#current-time");
+    // var employeeCurrentTime = document.querySelector("#current-time");
     var employeeWorkingHours = document.querySelector("#working-hours");
     var employeeImage = document.querySelector("#employee-image");
     console.log(clickedId);
-    //need to come back and adjust for dynamic retrieval of id and timezone
-    if (clickedId == 'edit-user-1'){
-
-      $('#employee-name').attr('placeholder', employeeOne["name"]);
+    for (let i = 0; i < employees['employees'].length; i++) {
+      if (clickedId == employees['employees'][i]['id']){
+    console.log("hello hello");
+          $('#employee-name').attr('placeholder', employees['employees'][i]["name"]);
       //Display Employee TimeZones
-      $('#time-zone').attr('placeholder', employeeOne["timezone"]);
+      $('#time-zone').attr('placeholder', employees['employees'][i]["timezone"]);
       //Display Employee Current Times
-      getCurrentTimes();
-      console.log("user current time: ", employeeOne["currenttime"]);
-      $('#current-time').attr('placeholder', employeeOne["currenttime"]);
+      // getCurrentTimes();
+
+      // $('#current-time').attr('placeholder', employee["currenttime"]);
       //Display Employee Working Hours
-      $('#working-hours').attr('placeholder', employeeOne["workinghours"]);
+      $('#working-hours').attr('placeholder', employees['employees'][i]["workinghours"]);
 
-      employeeImage.src = employeeOne["image"];
-
-  } else if (clickedId == 'edit-user-2') {
-
-      $('#employee-name').attr('placeholder', employeeTwo["name"]);
-    //Display Employee TimeZones
-      $('#time-zone').attr('placeholder', employeeTwo["timezone"]);
-    //Display Employee Current Times
-    getCurrentTimes();
-    $('#current-time').attr('placeholder', employeeTwo["currenttime"]);
-    //Display Employee Working Hours
-    $('#working-hours').attr('placeholder', employeeTwo["workinghours"]);
-
-      employeeImage.src = employeeTwo["image"];
-
-  } else if (clickedId == 'edit-user-3') {
-
-      $('#employee-name').attr('placeholder', employeeThree["name"]);
-      //Display Employee TimeZones
-      $('#time-zone').attr('placeholder', employeeThree["timezone"]);
-      //Display Employee Current Times
-      getCurrentTimes();
-      $('#current-time').attr('placeholder', employeeThree["currenttime"]);
-      //Display Employee Working Hours
-      $('#working-hours').attr('placeholder', employeeThree["workinghours"]);
-
-      employeeImage.src = employeeThree["image"];
-
+      employeeImage.src = employees['employees'][i]["image"];
+      }
   }
 }
 

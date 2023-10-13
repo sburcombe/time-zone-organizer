@@ -40,7 +40,7 @@ $employees = $decoded_json_data['employees'];
               <li id="working-hours-<?php echo $employee['id']; ?>" class="list-group-item">Typical Working Hours:</li>
             </ul>
             <div class="card-body">
-                <a href="/editEmployee.php" id="edit-user-<?php echo $employee['id']; ?>" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
+                <a href="/editEmployee.php" id="<?php echo $employee['id']; ?>" class="card-link" onClick="send_user_id(this.id)">Edit User Information</a>
                 <a href="" class="card-link" id="email1">Message User</a>
             </div>
           </div>
