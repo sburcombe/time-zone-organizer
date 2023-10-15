@@ -4,6 +4,7 @@
 
 // path and name of the file
 $filetxt = 'getEmployees.json';
+$_POST['edit-employee-form'];
 
 // check if all form data are submited, else output error message
 if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST['working-hours'] ) && isset($_POST['email'] ) ){

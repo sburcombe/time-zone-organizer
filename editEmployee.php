@@ -22,19 +22,20 @@
         </div>
         <div class="card-body ">
           <h4 class="card-title text-center">Edit Employee</h4>
-          <form action="saveEmployeeInfo.php" id="edit-employee-form" method="POST">
+          <form enctype="multipart/form-data" action="saveEmployeeInfo.php" id="edit-employee-form" method="POST">
             <div class="form-group">
+                            <input type="hidden" name="edit-employee-form" value='true' />
               <label>Name: </label>
-              <input id="employee-name" class="form-control">
+              <input name="employee-name" id="employee-name" class="form-control">
               </input>
 
 
               <label>Time Zone: </label>
-              <input id="time-zone" class="form-control"> </input>
+              <input name="time-zone" id="time-zone" class="form-control"> </input>
               <label> Typical Working Hours: </label>
-              <input id="working-hours" class="form-control"></input>
+              <input name="working-hours" id="working-hours" class="form-control"></input>
               <label> Employee Image: </label>
-              <input type="file" class="form-control-file" id="employee-image">
+              <input name="employee-image"type="file" class="form-control-file" id="employee-image">
 
               <div class="card-body">
                 <button href="/index.php" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
