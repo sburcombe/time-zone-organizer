@@ -22,7 +22,7 @@
         </div>
         <div class="card-body ">
           <h4 class="card-title text-center">Edit Employee</h4>
-          <form action="" id="edit-employee-form">
+          <form action="saveEmployeeInfo.php" id="edit-employee-form" method="POST">
             <div class="form-group">
               <label>Name: </label>
               <input id="employee-name" class="form-control">
