@@ -25,7 +25,7 @@
           <form enctype="multipart/form-data" action="saveEmployeeInfo.php" id="edit-employee-form" method="POST">
             <div class="form-group">
                             <input type="hidden" name="edit-employee-form" value='true' />
-              <label>Name: </label>
+              <label>Employee Name: </label>
               <input name="employee-name" id="employee-name" class="form-control">
               </input>
 
