@@ -13,7 +13,6 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
     echo 'All fields are required';
   } else {
 
-
     // path and name of the file
     $filetxt = 'getEmployees.json';
     $arr_data = array(); // to store all form data
@@ -25,7 +24,11 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
 
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
-
+      if ($_POST['edit-employee-form']){
+        //get the employee from the existing array
+        //only update the items that have been updated
+        //use the existing data for the rest
+      }
 
 // phpinfo();
       $image = $_FILES['employee-image'];
