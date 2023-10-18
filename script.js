@@ -96,6 +96,8 @@ window.addEventListener('load', function (event) {
       // $('#current-time').attr('placeholder', employee["currenttime"]);
       //Display Employee Working Hours
       $('#working-hours').attr('placeholder', employees['employees'][i]["workinghours"]);
+        //Display Employee Working Hours
+        $('#email').attr('placeholder', employees['employees'][i]["email"]);
 
       employeeImage.src = employees['employees'][i]["image"];
       }
