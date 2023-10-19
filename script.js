@@ -98,8 +98,15 @@ window.addEventListener('load', function (event) {
       $('#working-hours').attr('placeholder', employees['employees'][i]["workinghours"]);
         //Display Employee Working Hours
         $('#email').attr('placeholder', employees['employees'][i]["email"]);
+        $('#employee-id').attr('value', employees['employees'][i]["id"]);
 
-      employeeImage.src = employees['employees'][i]["image"];
+        if (employees['employees'][i]["image"] == 'http://localhost:8888/editEmployee.php'){
+          //need to keep working on this part to get the emploiyees without images to display the default image
+        employeeImage.src = '/_assets/default_avatar.png';
+      } else {
+          employeeImage.src = employees['employees'][i]["image"];
+      }
+        console.log("image source: ", employeeImage.src);
       }
   }
 }
