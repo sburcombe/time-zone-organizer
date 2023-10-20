@@ -100,13 +100,13 @@ window.addEventListener('load', function (event) {
         $('#email').attr('placeholder', employees['employees'][i]["email"]);
         $('#employee-id').attr('value', employees['employees'][i]["id"]);
 
-        if (employees['employees'][i]["image"] == 'http://localhost:8888/editEmployee.php'){
+        if (!employees['employees'][i]["image"]){
           //need to keep working on this part to get the emploiyees without images to display the default image
         employeeImage.src = '/_assets/default_avatar.png';
       } else {
           employeeImage.src = employees['employees'][i]["image"];
       }
-        console.log("image source: ", employeeImage.src);
+        console.log("image source sgain: ", employees['employees'][i]["image"] );
       }
   }
 }
