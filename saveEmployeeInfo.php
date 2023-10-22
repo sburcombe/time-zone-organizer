@@ -24,10 +24,21 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
 
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
+
       if ($_POST['edit-employee-form']){
         //get the employee from the existing array
         //only update the items that have been updated
         //use the existing data for the rest
+        //need to loop through the employees (needs to be an for loop not foreach)
+       foreach ($arr_data as $employee){
+          var_dump('hello', $employee);
+          die();
+         if ($employee['id'] == $_POST["employee-id"]){
+          //  var_dump('hello', $$employee['id']);
+          //  die();
+         }
+       }
+
       }
 
 // phpinfo();

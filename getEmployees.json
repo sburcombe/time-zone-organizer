@@ -79,6 +79,14 @@
             "workinghours": "8:00am - 1:30 pm",
             "email": "dburcombe@yahoo.com",
             "image": "_assets\/2936_1132919331383_7721560_n.JPG"
+        },
+        {
+            "id": 11,
+            "name": "Dustin B",
+            "timezone": "EST",
+            "workinghours": "8:00am - 1:30 pm",
+            "email": "dburcombe@yahoo.com",
+            "image": "_assets\/default_avatar.png"
         }
     ]
 }
