@@ -25,21 +25,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       // converts json string into array
       $arr_data = json_decode($jsondata, true);
 
-      if ($_POST['edit-employee-form']){
-        //get the employee from the existing array
-        //only update the items that have been updated
-        //use the existing data for the rest
-        //need to loop through the employees (needs to be an for loop not foreach)
-       foreach ($arr_data as $employee){
-          var_dump('hello', $employee);
-          die();
-         if ($employee['id'] == $_POST["employee-id"]){
-          //  var_dump('hello', $$employee['id']);
-          //  die();
-         }
-       }
 
-      }
 
 // phpinfo();
       $image = $_FILES['employee-image'];
@@ -77,6 +63,28 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
       exit; // stop the PHP script
     }
 
+    if ($_POST['edit-employee-form']) {
+      //get the employee from the existing array
+      //only update the items that have been updated
+      //use the existing data for the rest
+      //need to loop through the employees (needs to be an for loop not foreach)
+      for ($i = 0; $i < count($arr_data['employees']); $i++) {
+
+
+        if ($arr_data['employees'][$i]['id'] == $_POST["employee-id"]) {
+
+
+          $arr_data['employees'][$i]['name'] = $_POST['employee-name'];
+          $arr_data['employees'][$i]['timezone'] = $_POST['time-zone'];
+          $arr_data['employees'][$i]['workinghours'] = $_POST['working-hours'];
+          $arr_data['employees'][$i]['email'] = $_POST['email'];
+
+        }
+      }
+
+
+
+    } else {
     // gets and adds form data into an array
     $formdata = array(
       'id' => count($arr_data['employees']) + 1,
@@ -93,7 +101,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
 
     // appends the array with new form data
     $arr_data['employees'][] = $formdata;
-
+  }
     // encodes the array into a string in JSON format (JSON_PRETTY_PRINT - uses whitespace in json-string, for human readable)
     $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
 

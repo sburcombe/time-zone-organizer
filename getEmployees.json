@@ -2,9 +2,9 @@
     "employees": [
         {
             "id": 1,
-            "name": "Stephanie Burcombe",
+            "name": "S Burcombe",
             "timezone": "PST",
-            "workinghours": "8:00am-5:00pm",
+            "workinghours": "8:00am - 1:30 pm",
             "email": "sburcombe@gmail.com",
             "image": "_assets\/employee1.jpg"
         },
@@ -83,6 +83,14 @@
         {
             "id": 11,
             "name": "Dustin B",
+            "timezone": "EST",
+            "workinghours": "8:00am - 1:30 pm",
+            "email": "dburcombe@yahoo.com",
+            "image": "_assets\/default_avatar.png"
+        },
+        {
+            "id": 12,
+            "name": "Dustin",
             "timezone": "EST",
             "workinghours": "8:00am - 1:30 pm",
             "email": "dburcombe@yahoo.com",
