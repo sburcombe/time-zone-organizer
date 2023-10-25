@@ -18,7 +18,7 @@
               <a class="nav-link" href="/addEmployee.php">Add Employee</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Schedule a Meeting</a>
+              <a class="nav-link" href="/scheduleMeeting.php">Schedule a Meeting</a>
             </li>
           </ul>
         </div>
