@@ -4,6 +4,7 @@
 // path and name of the file
 $filetxt = 'getEmployees.json';
 
+//update these with new form fields
 // check if all form data are submited, else output error message
 if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST['meeting-attendees']) && isset($_POST['description'])) {
   // if form fields are empty, outputs message, else, gets their data
