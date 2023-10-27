@@ -3,12 +3,11 @@
 
 // path and name of the file
 $filetxt = 'getEmployees.json';
-$_POST['edit-employee-form'];
 
 // check if all form data are submited, else output error message
-if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST['working-hours']) && isset($_POST['email'])) {
+if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST['meeting-attendees']) && isset($_POST['description'])) {
   // if form fields are empty, outputs message, else, gets their data
-  if (empty($_POST['employee-name']) || empty($_POST['time-zone']) || empty($_POST['working-hours']) || empty($_POST['email'])) {
+  if (empty($_POST['meeting-title']) || empty($_POST['date-time']) || empty($_POST['meeting-attendees']) || empty($_POST['description'])) {
     echo 'All fields are required';
   } else {
 
@@ -26,64 +25,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
 
 
 
-      // phpinfo();
-      $image = $_FILES['employee-image'];
-      //Stores the filename as it was on the client computer.
-      $imagename = $_FILES['employee-image']['name'];
-      //Stores the filetype e.g image/jpeg
-      $imagetype = $_FILES['employee-image']['type'];
-      //Stores any error codes from the upload.
-      $imageerror = $_FILES['employee-image']['error'];
-      //Stores the tempname as it is given by the host when uploaded.
-      $imagetemp = $_FILES['employee-image']['tmp_name'];
-
-      if ($imagename) {
-        //The path you wish to upload the image to
-        $imagePath = "_assets/" . $imagename;
-      } else {
-        $imagePath = "_assets/default_avatar.png";
-      }
-      // var_dump($imagename);
-
-      if (is_uploaded_file($imagetemp)) {
-
-        if (move_uploaded_file($imagetemp, $imagePath)) {
-          echo "Successfully uploaded your image.";
-        } else {
-          echo "Failed to move your image.";
-        }
-      } else {
-        echo "Failed to upload your image.";
-      }
-    }
-    if ($_FILES["uploadedfile"]["size"] > 10000) {
-
-      echo "Sorry, your file is too large.";
-      exit; // stop the PHP script
-    }
-
-    if ($_POST['edit-employee-form']) {
-      //get the employee from the existing array
-      //only update the items that have been updated
-      //use the existing data for the rest
-      //need to loop through the employees (needs to be an for loop not foreach)
-      for ($i = 0; $i < count($arr_data['employees']); $i++) {
-
-
-        if ($arr_data['employees'][$i]['id'] == $_POST["employee-id"]) {
-
-
-          $arr_data['employees'][$i]['name'] = $_POST['employee-name'];
-          $arr_data['employees'][$i]['timezone'] = $_POST['time-zone'];
-          $arr_data['employees'][$i]['workinghours'] = $_POST['working-hours'];
-          $arr_data['employees'][$i]['email'] = $_POST['email'];
-
-        }
-      }
-
-
-
-    } else {
+//definitely needs to change
       // gets and adds form data into an array
       $formdata = array(
         'id' => count($arr_data['employees']) + 1,
@@ -100,7 +42,7 @@ if (isset($_POST['employee-name']) && isset($_POST['time-zone']) && isset($_POST
 
       // appends the array with new form data
       $arr_data['employees'][] = $formdata;
-    }
+
     // encodes the array into a string in JSON format (JSON_PRETTY_PRINT - uses whitespace in json-string, for human readable)
     $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
 
