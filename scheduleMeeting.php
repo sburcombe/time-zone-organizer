@@ -22,6 +22,8 @@
         <input name="meeting-attendees" id="meeting-attendees" class="form-control"></input>
         <label> Description: </label>
         <input name="description" id="description" class="form-control"></input>
+         <label> Location: </label>
+        <input name="location" id="location" class="form-control"></input>
 
 
         <div class="card-body">
