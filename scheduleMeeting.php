@@ -24,7 +24,9 @@
         <input name="description" id="description" class="form-control"></input>
          <label> Location: </label>
         <input name="location" id="location" class="form-control"></input>
-
+<label> Attach File: </label>
+              <!-- <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> -->
+              <input type="file" name="meeting-attached-file" class="form-control-file" id="meeting-attached-file" value="">
 
         <div class="card-body">
           <button href="/index.php" id="cancel" class="btn btn-secondary mb-2">Cancel</button>
