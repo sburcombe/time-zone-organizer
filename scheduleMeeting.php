@@ -24,6 +24,8 @@
         <input name="description" id="description" class="form-control"></input>
          <label> Location: </label>
         <input name="location" id="location" class="form-control"></input>
+         <label> Alternate Location: </label>
+        <input name="alternate-location" id="alternate-location" class="form-control"></input>
 <label> Attach File (optional): </label>
               <!-- <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> -->
               <input type="file" name="meeting-attached-file" class="form-control-file" id="meeting-attached-file" value="">
