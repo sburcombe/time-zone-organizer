@@ -2,7 +2,8 @@
 //NEED TO UPDATE THIS FILE.... JUST A PLACEHOLDER
 
 // path and name of the file
-$filetxt = 'getEmployees.json';
+$employeefiletxt = 'getEmployees.json';
+$meetingfiletxt = 'getMeetings.json';
 
 //update these with new form fields
 // check if all form data are submited, else output error message
@@ -13,7 +14,10 @@ if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST[
   } else {
 
     // path and name of the file
-    $filetxt = 'getEmployees.json';
+    $employeefiletxt = 'getEmployees.json';
+    $meetingfiletxt = 'getMeetings.json';
+
+    ///need to adjusg for both files
     $arr_data = array(); // to store all form data
 
     // check if the file exists
