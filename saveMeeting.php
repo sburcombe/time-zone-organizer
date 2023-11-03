@@ -21,7 +21,7 @@ if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST[
     $arr_data = array(); // to store all form data
 
     // check if the file exists
-    if (file_exists($filetxt)) {
+    if (file_exists($employeefiletxt)) {
       // gets json-data from file
       $jsondata = file_get_contents($filetxt);
 
