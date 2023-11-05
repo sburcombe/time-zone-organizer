@@ -23,7 +23,18 @@
         <label> Description: </label>
         <input name="description" id="description" class="form-control"></input>
          <label> Location: </label>
-        <input name="location" id="location" class="form-control"></input>
+        <input name="location" id="location" class="form-control">
+     <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+</input>
 <label> Attach File (optional): </label>
               <!-- <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> -->
               <input type="file" name="meeting-attached-file" class="form-control-file" id="meeting-attached-file" value="">
