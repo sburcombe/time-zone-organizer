@@ -19,12 +19,8 @@
         <label>Date/Time: </label>
         <input name="date-time" id="date-time" class="form-control"> </input>
         <label> Attendees: </label>
-        <input name="meeting-attendees" id="meeting-attendees" class="form-control"></input>
-        <label> Description: </label>
-        <input name="description" id="description" class="form-control"></input>
-         <label> Location: </label>
-        <input name="location" id="location" class="form-control">
-     <div class="dropdown">
+        <input name="meeting-attendees" id="meeting-attendees" class="form-control">
+        <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Dropdown button
   </button>
@@ -34,7 +30,11 @@
     <a class="dropdown-item" href="#">Something else here</a>
   </div>
 </div>
-</input>
+      </input>
+        <label> Description: </label>
+        <input name="description" id="description" class="form-control"></input>
+         <label> Location: </label>
+        <input name="location" id="location" class="form-control"></input>
 <label> Attach File (optional): </label>
               <!-- <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> -->
               <input type="file" name="meeting-attached-file" class="form-control-file" id="meeting-attached-file" value="">
