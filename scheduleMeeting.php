@@ -18,8 +18,35 @@
 
         <label>Date/Time: </label>
         <input name="date-time" id="date-time" class="form-control"> </input>
-        <label> Attendees: </label>
-        <input name="meeting-attendees" id="meeting-attendees" class="form-control">
+        <dropdown>
+  <input id="toggle1" type="checkbox" checked>
+  <label for="toggle1" class="animate">Select Dates<i class="fa fa-bars float-right"></i></label>
+  <ul class="animate">
+
+<!-- calendar  -->
+<h1 class="center"></h1>
+<div class="calendar">
+  <div class="group">
+    <p class="left pointer minusmonth">&laquo;</p>
+    <p class="left monthname center pointer"></p>
+    <p class="right pointer addmonth">&raquo;</p>
+  </div>
+  <ul class="group">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+  </ul>
+</div>
+
+  </ul>
+</dropdown>
+
+        <!-- <label> Attendees: </label>
+        <input name="meeting-attendees" id="meeting-attendees" class="form-control"> -->
         <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Attendees
