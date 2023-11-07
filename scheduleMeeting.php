@@ -24,11 +24,11 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Attendees
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div name="meeting-attendees" id="meeting-attendees" class="dropdown-menu form-control" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="#">Name 1</a>
     <a class="dropdown-item" href="#">Name 2</a>
     <a class="dropdown-item" href="#">Name 3</a>
-  </div>
+</div>
 </div>
       </input>
         <label> Description: </label>
