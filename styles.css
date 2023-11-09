@@ -204,7 +204,8 @@ dropdown{
 dropdown label, dropdown ul li{
   display: block;
   width: px;
-  background: #191919;
+  /* background: #191919; */
+  /* background: linear-gradient(40deg, #f8B195, #f67280, #355C7D); */
   opacity: 0.9;
   padding: 15px 20px;
 }
