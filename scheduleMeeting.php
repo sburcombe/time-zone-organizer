@@ -16,8 +16,8 @@
         </input>
 
 
-        <label>Date/Time: </label>
-        <input name="date-time" id="date-time" class="form-control"> </input>
+        <!-- <label>Date/Time: </label>
+        <input name="date-time" id="date-time" class="form-control"> </input> -->
         <dropdown>
   <input id="toggle1" type="checkbox" checked>
   <label for="toggle1" class="animate">Select Dates<i class="fa fa-bars float-right"></i></label>
