@@ -179,73 +179,6 @@ body {
 
 
 
-/* .low-sunrise {
-    width: 30px;
-    height: 10px;
-    background-color: #f67280; comment out the comment to the right Default sun color
-    border-radius: 50% 50% 0 0;
-    border-bottom:#FFD700;
-    position: relative;
-     bottom: 183px; comment out
-    left: 54%;
-    transform: translateX(-55%);
-}
-.low-sunrise-container {
-  width: 50px;
-  height: 10px;
-  border-bottom: 3px solid #FFD700;
-   bottom: 183px;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-}
-
-.high-sunrise {
-    width: 35px;
-    height: 17px;
-    background-color: #f67280; comment out the comment to the right Default sun color
-    border-radius: 50% 50% 0 0;
-    position: relative;
-     bottom: 120px; comment out
-    left: -9%;
-    transform: translateX(34%);
-}
-
-.high-sunrise-container {
-  width: 50px;
-  height: 20px;
-  border-bottom: 3px solid #FFD700;
-   bottom: 120px;
-    left: 50%;
-    position: absolute;
-    transform: translateX(100%);
-}
-
-.sunset {
-    width: 50px;
-    height: 50px;
-    background-color: #FFD700; comment out the comment to the right Default sun color
-    border-radius: 50%;
-    position: absolute;
-    bottom: 39px;
-    left: 53%;
-    transform: translateX(-175%);
-}
-
-.moon {
-    width: 50px;
-    height: 50px;
-    background-color: #FFD700; comment out the comment to the right Default sun color
-    border-radius: 50%;
-    position: absolute;
-    bottom: 123px;
-    left: 50%;
-    transform: translateX(-175%);
-}
-
-.moon-icon{
-  color: #FFD700;
-} */
 
 /*Calendar Scheduling MEeting*/
 
@@ -393,7 +326,7 @@ body {
 	color: #FFFFFF;
 }
 .calendar {
-	background: #222;
+	background: linear-gradient(40deg, #f8B195, #f67280, #355C7D);
 	color: #ddd;
 	padding: .5em .5em 1em;
 	max-width: 20em;
