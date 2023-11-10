@@ -19,7 +19,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST
 
     ///need to adjusg for both files
     $employee_arr_data = array(); // to store all form data
-
+    $meeting_arr_data = array();
     // check if the file exists
     if (file_exists($employeefiletxt)) {
       // gets json-data from file
@@ -53,7 +53,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST
 
     // saves the json string in "formdata.txt" (in "dirdata" folder)
     // outputs error message if data cannot be saved
-    if (file_put_contents('getEmployees.json', $jsondata)) {
+    if (file_put_contents('getEmployees.json', $employeejsondata)) {
       echo 'Data successfully saved';
       header("Location:http://localhost:8888/index.php");
     } else{
@@ -68,9 +68,10 @@ if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST
 
       //gets and adds form data into an array
       $formdata = array(
+        'id' => count($employee_arr_data['employees']) + 1,
           'title' => $_POST['meeting-title'],
-          'datetime' => $_POST['date-time'],
-          'attendeees' => $_POST['meeting-attendees'],
+          'datetime' => '3:00',
+          'attendeees' => 'george and sara',
           'description' => $_POST['description'],
            'location' => $_POST['location']
       );
@@ -83,7 +84,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST
 
     // saves the json string in "formdata.txt" (in "dirdata" folder)
     // outputs error message if data cannot be saved
-    if (file_put_contents('getMeetings.json', $jsondata)) {
+    if (file_put_contents('getMeetings.json', $meetingjsondata)) {
       echo 'Data successfully saved';
       header("Location:http://localhost:8888/index.php");
     } else{
@@ -92,4 +93,5 @@ if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST
 }else{
   echo 'Form fields not submited';
 }
+  }
 ?>
