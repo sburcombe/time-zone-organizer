@@ -7,7 +7,7 @@ $meetingfiletxt = 'getMeetings.json';
 
 //update these with new form fields
 // check if all form data are submited, else output error message
-if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST['meeting-attendees']) && isset($_POST['description']) && isset($_POST['location'])) {
+if (isset($_POST['meeting-title']) && isset($_POST['date-time']) && isset($_POST['meeting-attendees']) && isset($_POST['description']) && isset($_POST['location'])) {
   // if form fields are empty, outputs message, else, gets their data
   if (empty($_POST['meeting-title']) || empty($_POST['date-time']) || empty($_POST['meeting-attendees']) || empty($_POST['description']) || empty($_POST['location'])) {
     echo 'All fields are required';
@@ -18,22 +18,22 @@ if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST[
     $meetingfiletxt = 'getMeetings.json';
 
     ///need to adjusg for both files
-    $arr_data = array(); // to store all form data
+    $employee_arr_data = array(); // to store all form data
 
     // check if the file exists
     if (file_exists($employeefiletxt)) {
       // gets json-data from file
-      $jsondata = file_get_contents($filetxt);
+      $employeejsondata = file_get_contents($employeefiletxt);
 
       // converts json string into array
-      $arr_data = json_decode($jsondata, true);
+      $employee_arr_data = json_decode($employeejsondata, true);
 
 
 
 //definitely needs to change
       // gets and adds form data into an array
       $formdata = array(
-        'id' => count($arr_data['employees']) + 1,
+        'id' => count($employee_arr_data['employees']) + 1,
         'name' => $_POST['employee-name'],
         'timezone' => $_POST['time-zone'],
         'workinghours' => $_POST['working-hours'],
@@ -46,19 +46,50 @@ if (isset($_POST['meeting-tile']) && isset($_POST['date-time']) && isset($_POST[
 
 
       // appends the array with new form data
-      $arr_data['employees'][] = $formdata;
+      $employee_arr_data['employees'][] = $formdata;
 
-    // encodes the array into a string in JSON format (JSON_PRETTY_PRINT - uses whitespace in json-string, for human readable)
-    $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
+    // encodes the array into  a string in JSON format (JSON_PRETTY_PRINT - uses whitespace in json-string, for human readable)
+    $employeejsondata = json_encode($employee_arr_data, JSON_PRETTY_PRINT);
 
     // saves the json string in "formdata.txt" (in "dirdata" folder)
     // outputs error message if data cannot be saved
     if (file_put_contents('getEmployees.json', $jsondata)) {
       echo 'Data successfully saved';
       header("Location:http://localhost:8888/index.php");
-    } else
+    } else{
       echo 'Unable to save data in "getEmployees.json"';
   }
-} else
+}elseif(file_exists($meetingfiletxt)) {
+     // gets json-data from file
+      $meetingjsondata = file_get_contents($meetingfiletxt);
+
+      // converts json string into array
+      $meeting_arr_data = json_decode($meetingjsondata, true);
+
+      //gets and adds form data into an array
+      $formdata = array(
+          'title' => $_POST['meeting-title'],
+          'datetime' => $_POST['date-time'],
+          'attendeees' => $_POST['meeting-attendees'],
+          'description' => $_POST['description'],
+           'location' => $_POST['location']
+      );
+
+          // appends the array with new form data
+      $meeting_arr_data['meetings'][] = $formdata;
+
+    // encodes the array into  a string in JSON format (JSON_PRETTY_PRINT - uses whitespace in json-string, for human readable)
+    $meetingjsondata = json_encode($meeting_arr_data, JSON_PRETTY_PRINT);
+
+    // saves the json string in "formdata.txt" (in "dirdata" folder)
+    // outputs error message if data cannot be saved
+    if (file_put_contents('getMeetings.json', $jsondata)) {
+      echo 'Data successfully saved';
+      header("Location:http://localhost:8888/index.php");
+    } else{
+      echo 'Unable to save data in "getMeetings.json"';
+  }
+}else{
   echo 'Form fields not submited';
+}
 ?>
