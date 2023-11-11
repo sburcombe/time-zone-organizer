@@ -1,13 +1,21 @@
 {
-  "meetings":[
-    {
-      "id": 1,
-      "title": "S Burcombe",
-      "datetime": "",
-      "attendees": "",
-      "description": "",
-      "location":"",
-      "attachedfiles":""
-    }
-  ]
+    "meetings": [
+        {
+            "id": 1,
+            "title": "S Burcombe",
+            "datetime": "",
+            "attendees": "",
+            "description": "",
+            "location": "",
+            "attachedfiles": ""
+        },
+        {
+            "id": 1,
+            "title": "Testing Meeting",
+            "datetime": "3:00",
+            "attendeees": "george and sara",
+            "description": "Testing description",
+            "location": "Testing location"
+        }
+    ]
 }
