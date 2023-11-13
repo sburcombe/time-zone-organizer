@@ -2,7 +2,7 @@
 //NEED TO UPDATE THIS FILE.... JUST A PLACEHOLDER
 
 // path and name of the file
-// $employeefiletxt = 'getEmployees.json';
+$employeefiletxt = 'getEmployees.json';
 $meetingfiletxt = "getMeetings.json";
 
 //update these with new form fields
@@ -16,7 +16,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_PO
   } else {
 
     // path and name of the file
-    // $employeefiletxt = 'getEmployees.json';
+    $employeefiletxt = 'getEmployees.json';
     $meetingfiletxt = "getMeetings.json";
 
     ///need to adjusg for both files
