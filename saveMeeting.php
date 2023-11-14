@@ -4,7 +4,8 @@
 // path and name of the file
 $employeefiletxt = 'getEmployees.json';
 $meetingfiletxt = "getMeetings.json";
-
+var_dump($_POST['meeting-attendees']);
+die();
 //update these with new form fields
 // check if all form data are submited, else output error
 //&& isset($_POST['date-time']) && isset($_POST['meeting-attendees']) for when I have these forms correctly connected
