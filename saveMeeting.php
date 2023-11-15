@@ -4,15 +4,14 @@
 // path and name of the file
 $employeefiletxt = 'getEmployees.json';
 $meetingfiletxt = "getMeetings.json";
-var_dump($_POST['meeting-attendees']);
-die();
+
 //update these with new form fields
 // check if all form data are submited, else output error
 //&& isset($_POST['date-time']) && isset($_POST['meeting-attendees']) for when I have these forms correctly connected
 // empty($_POST['date-time']) || empty($_POST['meeting-attendees']) ||
-if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_POST['location'])) {
+if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_POST['location']) && isset($_POST['meeting-attendees'])) {
   // if form fields are empty, outputs message, else, gets their data
-  if (empty($_POST['meeting-title']) || empty($_POST['description']) || empty($_POST['location'])) {
+  if (empty($_POST['meeting-title']) || empty($_POST['description']) || empty($_POST['location']) || empty($_POST['meeting-attendees'])) {
     echo 'All fields are required';
   } else {
 
@@ -74,7 +73,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_PO
             'id' => count($employee_arr_data['employees']) + 1,
               'title' => $_POST['meeting-title'],
               'datetime' => '3:00',
-              'attendeees' => 'george and sara',
+              'attendeees' => $_POST['meeting-attendees'],
               'description' => $_POST['description'],
               'location' => $_POST['location']
           );
