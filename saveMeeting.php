@@ -23,7 +23,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_PO
     $employee_arr_data = array(); // to store all form data
     $meeting_arr_data = array();
     // check if the file exists
-    if (file_exists($employeefiletxt)) {
+    if (file_exists($employeefiletxt) && !$_POST['schedule-meeting-form']) {
       // gets json-data from file
       $employeejsondata = file_get_contents($employeefiletxt);
 
@@ -70,7 +70,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_PO
 
           //gets and adds form data into an array
           $formdata = array(
-            'id' => count($employee_arr_data['employees']) + 1,
+            'id' => count($meeting_arr_data['meetings']) + 1,
               'title' => $_POST['meeting-title'],
               'datetime' => '3:00',
               'attendeees' => $_POST['meeting-attendees'],
