@@ -11,6 +11,7 @@
     <h4 class="card-title text-center">Schedule Meeting</h4>
     <form enctype="multipart/form-data" action="saveMeeting.php" id="schedule-meeting-form" method="POST">
       <div class="form-group">
+        <input type="hidden" name="schedule-meeting-form" value='true' />
         <label>Meeting Title: </label>
         <input name="meeting-title" id="meeting-title" class="form-control">
         </input>
