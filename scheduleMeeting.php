@@ -33,13 +33,13 @@
     <p class="right pointer addmonth">&raquo;</p>
   </div>
   <ul class="group">
-    <li>Mo</li>
-    <li>Tu</li>
-    <li>We</li>
-    <li>Th</li>
-    <li>Fr</li>
-    <li>Sa</li>
-    <li>Su</li>
+    <li value="">Mo</li>
+    <li value="">Tu</li>
+    <li value="">We</li>
+    <li value="">Th</li>
+    <li value="">Fr</li>
+    <li value="">Sa</li>
+    <li value="">Su</li>
   </ul>
 </div>
 
