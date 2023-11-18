@@ -227,7 +227,8 @@ window.addEventListener('load', function (event) {
       } else {
         clicker = 0;
         $(this).addClass('red');
-        $(this).setAttribute('value', 'hello');
+        console.log("this: ", $(this));
+        $(this).attr('value', 'hello');
         $('.calendar li.red').each(function () {
           max = $(this).text();
         });
