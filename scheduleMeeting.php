@@ -32,15 +32,17 @@
     <p class="left monthname center pointer"></p>
     <p class="right pointer addmonth">&raquo;</p>
   </div>
+  <select name="date">
   <ul class="group">
-    <li value="">Mo</li>
-    <li value="">Tu</li>
-    <li value="">We</li>
-    <li value="">Th</li>
-    <li value="">Fr</li>
-    <li value="">Sa</li>
-    <li value="">Su</li>
+    <option value="Monday"><li value="">Mo</li></option>
+    <option value="Tuesday"><li value="">Tu</li></option>
+    <option value="Wednesday"><li value="">We</li></option>
+    <option value="Thursday"><li value="">Th</li></option>
+    <option value="Friday"><li value="">Fr</li></option>
+    <option value="Saturday"><li value="">Sa</li></option>
+    <option value="Sunday"><li value="">Su</li></option>
   </ul>
+  <select>
 </div>
 
   </ul>
