@@ -72,7 +72,7 @@ if (isset($_POST['meeting-title']) && isset($_POST['description']) && isset($_PO
           $formdata = array(
             'id' => count($meeting_arr_data['meetings']) + 1,
               'title' => $_POST['meeting-title'],
-              'datetime' => '3:00',
+              'datetime' => $_POST['date'],
               'attendeees' => $_POST['meeting-attendees'],
               'description' => $_POST['description'],
               'location' => $_POST['location']
