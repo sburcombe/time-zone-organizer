@@ -35,8 +35,8 @@
   <select name="date">
   <ul class="group">
     <option value="Monday1st"><li value="">Mo</li></option>
-    <option value="Tuesday"><li value="">Tu</li></option>
-    <option value="Wednesday"><li value="">We</li></option>
+    <option value="Tuesday2nd"><li value="">Tu</li></option>
+    <option value="Wednesday3rd"><li value="">We</li></option>
     <option value="Thursday"><li value="">Th</li></option>
     <option value="Friday"><li value="">Fr</li></option>
     <option value="Saturday"><li value="">Sa</li></option>
