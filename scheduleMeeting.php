@@ -39,8 +39,8 @@
     <option value="Wednesday3rd"><li value="">We</li></option>
     <option value="Thursday4th"><li value="">Th</li></option>
     <option value="Friday5th"><li value="">Fr</li></option>
-    <option value="Saturday"><li value="">Sa</li></option>
-    <option value="Sunday"><li value="">Su</li></option>
+    <option value="Saturday6th"><li value="">Sa</li></option>
+    <option value="Sunday7th"><li value="">Su</li></option>
   </ul>
   <select>
 </div>
