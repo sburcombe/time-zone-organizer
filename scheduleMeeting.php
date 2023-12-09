@@ -32,8 +32,8 @@
     <p class="left monthname center pointer"></p>
     <p class="right pointer addmonth">&raquo;</p>
   </div>
-  <select name="date">
-  <ul class="group">
+  <!-- <select name="date"> -->
+  <ul name="date" id="date" class="group">
     <option value="Monday1st"><li value="">Monday</li></option>
     <option value="Tuesday2nd"><li value="">Tuesday</li></option>
     <option value="Wednesday3rd"><li value="">Wednesday3rd</li></option>
@@ -42,7 +42,7 @@
     <option value="Saturday6th"><li value="">Sa</li></option>
     <option value="Sunday7th"><li value="">Su</li></option>
   </ul>
-  <select>
+  <!-- <select> -->
 </div>
 
   </ul>
