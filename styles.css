@@ -201,7 +201,7 @@ dropdown{
    display: inline-block;
    margin: 20px 50px;
 }
-dropdown label, dropdown ul li{
+dropdown label, dropdown ul option li{
   display: block;
   width: px;
   /* background: #191919; */
@@ -209,7 +209,7 @@ dropdown label, dropdown ul li{
   opacity: 0.9;
   padding: 15px 20px;
 }
-dropdown label:hover, dropdown ul li:hover{
+dropdown label:hover, dropdown ul option li:hover{
   background: #4D4D4D;
   color: white;
   cursor: pointer;
@@ -244,7 +244,7 @@ dropdown input:checked ~ ul{
 $colors: #FFFFFF, #0072B5, #2C3E50;
 
 @for $i from 1 through length($colors) {
-  dropdown ul li:nth-child(#{$i}) {
+  dropdown ul option li:nth-child(#{$i}) {
     border-left: 4px solid nth($colors, $i);
     .fa{
       color: nth($colors, $i);
