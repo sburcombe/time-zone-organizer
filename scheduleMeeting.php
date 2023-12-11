@@ -36,7 +36,7 @@
   <ul name="date" id="date" class="group">
     <li value="">Monday</li>
    <li value="">Tuesday</li>
-    <option value="Wednesday3rd"><li value="">Wednesday3rd</li></option>
+    <li value="">Wednesday3rd</li>
     <option value="Thursday4th"><li value="">Thursday4th</li></option>
     <option value="Friday5th"><li value="">Fr</li></option>
     <option value="Saturday6th"><li value="">Sa</li></option>
