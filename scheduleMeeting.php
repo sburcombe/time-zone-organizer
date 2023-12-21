@@ -38,8 +38,8 @@
    <li value="">Tuesday</li>
     <li value="">Wednesday3rd</li>
     <option value="Thursday4th"><li value="">Thursday4th</li></option>
-    <option value="Friday5th"><li value="">Fr</li></option>
-    <option value="Saturday6th"><li value="">Sa</li></option>
+    <option value="Friday5th"><li value="">Friday5th</li></option>
+    <option value="Saturday6th"><li value="">Saturday6th</li></option>
     <option value="Sunday7th"><li value="">Su</li></option>
   </ul>
   <!-- <select> -->
