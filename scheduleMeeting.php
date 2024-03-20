@@ -40,7 +40,7 @@
     <option value="Thursday4th"><li value="">Thursday4th</li></option>
     <option value="Friday5th"><li value="">Friday5th</li></option>
     <option value="Saturday6th"><li value="">Saturday6th</li></option>
-    <option value="Sunday7th"><li value="">Su</li></option>
+    <option value="Sunday7th"><li value="">Sunday7th</li></option>
   </ul>
   <!-- <select> -->
 </div>
