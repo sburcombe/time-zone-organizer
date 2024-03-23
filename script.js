@@ -114,8 +114,8 @@ window.addEventListener('load', function (event) {
 //Display employee Details
 
   for (let i = 0; i < employees['employees'].length; i++) {
-    console.log("employees names over here: " , employees['employees'][i]['name']);
-    console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
+    // console.log("employees names over here: " , employees['employees'][i]['name']);
+    // console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
 
 
     if (employees['employees'][i] && document.querySelector("#employee-name-" + employees['employees'][i]['id'])) {
@@ -224,6 +224,8 @@ window.addEventListener('load', function (event) {
         $('.calendar li').removeClass('red');
         $(this).addClass('red');
         min = $(this).text();
+        console.log("this: ", $(this.text()));
+
       } else {
         clicker = 0;
         $(this).addClass('red');
