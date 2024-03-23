@@ -224,8 +224,8 @@ window.addEventListener('load', function (event) {
         $('.calendar li').removeClass('red');
         $(this).addClass('red');
         min = $(this).text();
-        console.log("this: ", $(this.text()));
-
+        console.log("this: ", $(this).text());
+        $(this).attr('value', $(this).text());
       } else {
         clicker = 0;
         $(this).addClass('red');
