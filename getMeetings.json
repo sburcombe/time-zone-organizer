@@ -72,6 +72,14 @@
             "attendeees": "Name 1",
             "description": "Testing description 3",
             "location": "Testing location 3"
+        },
+        {
+            "id": 10,
+            "title": "Testing values for date",
+            "datetime": null,
+            "attendeees": "Name 1",
+            "description": "Testing description date",
+            "location": "Testing location date"
         }
     ]
 }
