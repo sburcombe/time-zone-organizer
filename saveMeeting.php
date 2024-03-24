@@ -5,7 +5,9 @@
 $employeefiletxt = 'getEmployees.json';
 $meetingfiletxt = "getMeetings.json";
 
-var_dump($_POST);
+// var_dump($_POST);
+// die();
+
 //update these with new form fields
 // check if all form data are submited, else output error
 //&& isset($_POST['date-time']) && isset($_POST['meeting-attendees']) for when I have these forms correctly connected
@@ -73,7 +75,7 @@ if (isset($_POST['meeting-title']) &&  isset($_POST['description']) && isset($_P
           $formdata = array(
             'id' => count($meeting_arr_data['meetings']) + 1,
               'title' => $_POST['meeting-title'],
-              'datetime' => $_POST['date'],
+              'datetime' => $_POST['datetime'],
               'attendeees' => $_POST['meeting-attendees'],
               'description' => $_POST['description'],
               'location' => $_POST['location']
