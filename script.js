@@ -203,7 +203,7 @@ window.addEventListener('load', function (event) {
     }
 
     for (var i = 1; i <= days; i++) { // write out the days
-      $('<li>' + i + '</li>').appendTo('.calendar ul');
+      $('<input name="datetime" id="datetime" value=' + i + '><li>' + i + '</li></input>').appendTo('.calendar ul');
     }
 
     function firstDay(month, year) {
