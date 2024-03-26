@@ -35,6 +35,7 @@
   <!-- <select name="date"> -->
   <ul name="date" id="date" class="group">
   </ul>
+  <input name="datetime" id="datetime" class="form-control" value="" type="hidden"></input>
   <!-- <select> -->
 </div>
 
