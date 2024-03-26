@@ -203,7 +203,7 @@ window.addEventListener('load', function (event) {
     }
 
     for (var i = 1; i <= days; i++) { // write out the days
-      $('<input name="datetime" id="datetime" value=' + i + '><li>' + i + '</li></input>').appendTo('.calendar ul');
+      $('<li>' + i + '</li>').appendTo('.calendar ul');
     }
 
     function firstDay(month, year) {
@@ -226,6 +226,8 @@ window.addEventListener('load', function (event) {
         min = $(this).text();
         console.log("this: ", $(this).text());
         $(this).attr('value', $(this).text());
+        //update the input value for the date time field to include the date
+        $('#datetime').attr('value', $(this).text());
       } else {
         clicker = 0;
         $(this).addClass('red');
