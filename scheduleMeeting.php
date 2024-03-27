@@ -29,7 +29,10 @@
 <div class="calendar">
   <div class="group">
     <p class="left pointer minusmonth">&laquo;</p>
+    <div class="monthyear">
     <p class="left monthname center pointer"></p>
+    <p class="left yearname center pointer"></p>
+</div>
     <p class="right pointer addmonth">&raquo;</p>
   </div>
   <!-- <select name="date"> -->
