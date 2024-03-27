@@ -192,11 +192,13 @@ window.addEventListener('load', function (event) {
     $('.calendar ul').append('<li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li> <li>Su</li>');
     var d = new Date(),
       currentMonth = d.getMonth() + themonth, // get this month
+      currentYear = d.getFullYear();
       days = numDays(currentMonth, d.getYear()), // get number of days in the month
       fDay = firstDay(currentMonth, d.getYear()) - 1, // find what day of the week the 1st lands on
       months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // month names
 
     $('.calendar p.monthname').text(months[currentMonth - 1]); // add month name to calendar
+    $('.calendar p.yearname').text(currentYear); // add month name to calendar
 
     for (var i = 0; i < fDay - 1; i++) { // place the first day of the month in the correct position
       $('<li>&nbsp;</li>').appendTo('.calendar ul');
@@ -228,6 +230,10 @@ window.addEventListener('load', function (event) {
         $(this).attr('value', $(this).text());
         //update the input value for the date time field to include the date
         $('#datetime').attr('value', $(this).text());
+
+        // get month value
+
+        //get year value
       } else {
         clicker = 0;
         $(this).addClass('red');

@@ -353,3 +353,11 @@ body {
 .center {
 	text-align: center;
 }
+
+.monthyear {
+  margin-left: 104px;
+}
+.yearname, .monthname {
+  display: inline-block;
+  width: 50px;
+}
