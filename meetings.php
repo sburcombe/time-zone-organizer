@@ -20,7 +20,7 @@
             <!-- NEED TO ADJUST FOR MEETING DATASETS -->
             <div class="col-4">
               <!-- <section class="mx-auto my-5" style="max-width: 35rem;"> -->
-              <div id="employee-<?php echo $employee['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
+              <div id="meeting-<?php echo $meeting['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
                 <div class="card-up day-to-night-gradient">
                   <div class="day-to-night-icon-container-list">
                     <i class="fa-solid fa-mug-saucer early-morning"></i>
@@ -30,24 +30,15 @@
                     <i class="fa-regular fa-moon night"></i>
                   </div>
                 </div>
-                <div class="avatar mx-auto white">
-                  <img id="employee-image-<?php echo $employee['id']; ?>" class="img-fluid rounded-circle"
-                    src="<?php echo $employee['image'] ? $employee['image'] : '/_assets/default_avatar.png'; ?>"
-                    alt="Card image cap">
-                </div>
                 <div class="card-body">
-                  <h5 id="employee-name-<?php echo $employee['id']; ?>" class="card-title text-center"></h5>
+                  <h5 id="meeting-title-<?php echo $meeting['id']; ?>" class="card-title text-center"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li id="time-zone-<?php echo $employee['id']; ?>" class="list-group-item">Time Zone: </li>
-                  <li id="current-time-<?php echo $employee['id']; ?>" class="list-group-item">Current Time:</li>
-                  <li id="working-hours-<?php echo $employee['id']; ?>" class="list-group-item">Typical Working Hours:</li>
+                  <li id="meeting-datetime-<?php echo $meeting['id']; ?>" class="list-group-item">Date/Time: </li>
+                  <li id="meeting-attendees-<?php echo $meeting['id']; ?>" class="list-group-item">Attendees:</li>
+                  <li id="meeting-location-<?php echo $meeting['id']; ?>" class="list-group-item">Location:</li>
+                  <!--Add description but with a hover/popup for full description details -->
                 </ul>
-                <div class="card-body">
-                  <a href="/editEmployee.php" id="<?php echo $employee['id']; ?>" class="card-link"
-                    onClick="send_user_id(this.id)">Edit User Information</a>
-                  <a href="" class="card-link" id="email1">Message User</a>
-                </div>
               </div>
               <!-- </section> -->
             </div>
