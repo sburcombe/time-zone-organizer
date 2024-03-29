@@ -9,6 +9,8 @@
   $decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
   $meetings = $decoded_json_data['meetings'];
 
+  var_dump($meetings);
+
   ?>
 
   <main>

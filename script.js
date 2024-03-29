@@ -41,6 +41,21 @@ function send_user_id(clicked_id) {
   localStorage.setItem('clickedId', clicked_id)
 
 }
+
+getMeetings();
+
+var meetings;
+//NEED TO KEEP ADDING SCRIPT FOR ADDING MEETING INFORMATION
+function getMeetings(){
+  fetch("./getMeetings.json")
+    .then((res) => {
+      return res.json();
+    })
+
+    .then((data) => meetings = data);
+
+}
+
 getEmployees();
 
 var employees;
@@ -55,6 +70,7 @@ function getEmployees() {
     .then((data) => employees = data);
 
 }
+
 
 
 
