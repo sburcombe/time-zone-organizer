@@ -76,7 +76,7 @@ if (isset($_POST['meeting-title']) &&  isset($_POST['description']) && isset($_P
             'id' => count($meeting_arr_data['meetings']) + 1,
               'title' => $_POST['meeting-title'],
               'datetime' => $_POST['datetime'],
-              'attendeees' => $_POST['meeting-attendees'],
+              'attendees' => $_POST['meeting-attendees'],
               'description' => $_POST['description'],
               'location' => $_POST['location']
           );
