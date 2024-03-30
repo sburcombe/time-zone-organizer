@@ -96,11 +96,11 @@ window.addEventListener('load', function (event) {
       meetingTitle.innerHTML = meetings['meetings'][i]['title'];
 
       //Display Employee TimeZones
-      var employeeTimeZone = document.querySelector("#time-zone-" + employees['employees'][i]['id']);
-      employeeTimeZone.innerHTML = "Time Zone: " + employees['employees'][i]["timezone"];
+      var meetingDateTime = document.querySelector("#meeting-datetime-" + meetings['meetings'][i]['id']);
+      meetingDateTime.innerHTML = "Date/Time: " + meetings['meetings'][i]["datetime"];
 
       //Display Employee Current Times
-      getCurrentTimes();
+      // getCurrentTimes();
 
       var employeeCurrentTime = document.querySelector("#current-time-" + employees['employees'][i]['id']);
       employeeCurrentTime.innerHTML = "Current Time: " + employees['employees'][i]["currenttime"];

@@ -1,15 +1,6 @@
 {
     "meetings": [
         {
-            "id": 1,
-            "title": "S Burcombe",
-            "datetime": "",
-            "attendees": "",
-            "description": "",
-            "location": "",
-            "attachedfiles": ""
-        },
-        {
             "id": 2,
             "title": "Testing Meeting",
             "datetime": "3:00",
