@@ -90,29 +90,25 @@ window.addEventListener('load', function (event) {
 
 
     if (meetings['meetings'][i] && document.querySelector("#meeting-title-" + meetings['meetings'][i]['id'])) {
-      //Display Employee names
+      //Display Meeting Title
       console.log("this is the title: ", meetings['meetings'][i]['title']);
       var meetingTitle = document.querySelector("#meeting-title-" + meetings['meetings'][i]['id']);
       meetingTitle.innerHTML = meetings['meetings'][i]['title'];
 
-      //Display Employee TimeZones
+      //Display Meeting Date/Time
       var meetingDateTime = document.querySelector("#meeting-datetime-" + meetings['meetings'][i]['id']);
       meetingDateTime.innerHTML = "Date/Time: " + meetings['meetings'][i]["datetime"];
 
-      //Display Employee Current Times
-      // getCurrentTimes();
 
       var meetingAttendees = document.querySelector("#meeting-attendees-" + meetings['meetings'][i]['id']);
       meetingAttendees.innerHTML = "Attendees: " + meetings['meetings'][i]["attendees"];
 
-      //Display Employee Working Hours
-      var employeeWorkingHours = document.querySelector("#working-hours-" + employees['employees'][i]['id']);
-      employeeWorkingHours.innerHTML = "Working Hours: " + employees['employees'][i]["workinghours"];
+      //Display Meeting Location
+      var meetingLocation = document.querySelector("#meeting-location-" + meetings['meetings'][i]['id']);
+      meetingLocation.innerHTML = "Working Hours: " + meetings['meetings'][i]["location"];
 
-      //Connect Email Addresses to Message Button
-      var employeeEmailElement = document.querySelector("#email" + employees['employees'][i]['id']);
-      var employeeEmail = "mailto:" + employees['employees'][i]['email'];
-      $(employeeEmailElement).attr("href", employeeEmail);
+      //Display abbreviated description with hover for more
+
 
     }
   }
