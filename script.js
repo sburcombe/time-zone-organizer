@@ -81,6 +81,41 @@ function getEmployees() {
 
 
 window.addEventListener('load', function (event) {
+
+
+
+  for (let i = 0; i < meetings['meetings'].length; i++) {
+    // console.log("employees names over here: " , employees['employees'][i]['name']);
+    // console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
+
+
+    if (meetings['meetings'][i] && document.querySelector("#meeting-title-" + meetings['meetings'][i]['id'])) {
+      //Display Employee names
+      console.log("this is the title: ", meetings['meetings'][i]['title']);
+      var meetingTitle = document.querySelector("#meeting-title-" + meetings['meetings'][i]['id']);
+      meetingTitle.innerHTML = meetings['meetings'][i]['title'];
+
+      //Display Employee TimeZones
+      var employeeTimeZone = document.querySelector("#time-zone-" + employees['employees'][i]['id']);
+      employeeTimeZone.innerHTML = "Time Zone: " + employees['employees'][i]["timezone"];
+
+      //Display Employee Current Times
+      getCurrentTimes();
+
+      var employeeCurrentTime = document.querySelector("#current-time-" + employees['employees'][i]['id']);
+      employeeCurrentTime.innerHTML = "Current Time: " + employees['employees'][i]["currenttime"];
+
+      //Display Employee Working Hours
+      var employeeWorkingHours = document.querySelector("#working-hours-" + employees['employees'][i]['id']);
+      employeeWorkingHours.innerHTML = "Working Hours: " + employees['employees'][i]["workinghours"];
+
+      //Connect Email Addresses to Message Button
+      var employeeEmailElement = document.querySelector("#email" + employees['employees'][i]['id']);
+      var employeeEmail = "mailto:" + employees['employees'][i]['email'];
+      $(employeeEmailElement).attr("href", employeeEmail);
+
+    }
+  }
   //makes the call to display the currentTimes for the timezone clocks;
   getCurrentTimes();
   console.log("employees 91: ", employees);
