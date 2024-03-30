@@ -102,8 +102,8 @@ window.addEventListener('load', function (event) {
       //Display Employee Current Times
       // getCurrentTimes();
 
-      var employeeCurrentTime = document.querySelector("#current-time-" + employees['employees'][i]['id']);
-      employeeCurrentTime.innerHTML = "Current Time: " + employees['employees'][i]["currenttime"];
+      var meetingAttendees = document.querySelector("#meeting-attendees-" + meetings['meetings'][i]['id']);
+      meetingAttendees.innerHTML = "Attendees: " + meetings['meetings'][i]["attendees"];
 
       //Display Employee Working Hours
       var employeeWorkingHours = document.querySelector("#working-hours-" + employees['employees'][i]['id']);
