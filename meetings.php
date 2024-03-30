@@ -8,9 +8,6 @@
   $json_data = file_get_contents("getMeetings.json");
   $decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
   $meetings = $decoded_json_data['meetings'];
-
-  var_dump($meetings);
-
   ?>
 
   <main>
@@ -24,13 +21,13 @@
               <!-- <section class="mx-auto my-5" style="max-width: 35rem;"> -->
               <div id="meeting-<?php echo $meeting['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
                 <div class="card-up day-to-night-gradient">
-                  <div class="day-to-night-icon-container-list">
+                  <!-- <div class="day-to-night-icon-container-list">
                     <i class="fa-solid fa-mug-saucer early-morning"></i>
                     <i class="fa-regular fa-sun mid-morning"></i>
                     <i class="fa-solid fa-sun afternoon"></i>
                     <i class="fa-solid fa-martini-glass evening"></i>
-                    <i class="fa-regular fa-moon night"></i>
-                  </div>
+                    <i class="fa-regular fa-moon night"></i> -->
+                  <!-- </div> -->
                 </div>
                 <div class="card-body">
                   <h5 id="meeting-title-<?php echo $meeting['id']; ?>" class="card-title text-center"></h5>
