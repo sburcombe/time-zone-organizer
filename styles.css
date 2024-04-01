@@ -361,3 +361,7 @@ body {
   display: inline-block;
   width: 50px;
 }
+
+.night-to-day-gradient{
+background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
+}

@@ -51,11 +51,11 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Attendees
   </button>
-  <select name="meeting-attendees" id="meeting-attendees" class="dropdown-menu form-control" aria-labelledby="dropdownMenuButton">
-    <option class="dropdown-item" value="Name 1" href="#">Name 1</option>
-    <option class="dropdown-item" value="Name 2" href="#">Name 2</option>
-    <option class="dropdown-item" value="Name 3" href="#">Name 3</option>
-</select>
+  <ul  class="dropdown-menu form-control" aria-labelledby="dropdownMenuButton">
+    <li class="dropdown-item"  href="#"> <input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 1">Name 1</input></li>
+    <li class="dropdown-item" value="Name 2" href="#"><input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 2">Name 2</input></li>
+    <li class="dropdown-item" value="Name 3" href="#">Name 3</li>
+</ul>
 </div>
       </input>
         <label> Description: </label>

@@ -91,7 +91,6 @@ window.addEventListener('load', function (event) {
 
     if (meetings['meetings'][i] && document.querySelector("#meeting-title-" + meetings['meetings'][i]['id'])) {
       //Display Meeting Title
-      console.log("this is the title: ", meetings['meetings'][i]['title']);
       var meetingTitle = document.querySelector("#meeting-title-" + meetings['meetings'][i]['id']);
       meetingTitle.innerHTML = meetings['meetings'][i]['title'];
 
