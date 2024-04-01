@@ -20,7 +20,7 @@
             <div class="col-4">
               <!-- <section class="mx-auto my-5" style="max-width: 35rem;"> -->
               <div id="meeting-<?php echo $meeting['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
-                <div class="card-up day-to-night-gradient">
+                <div class="card-up night-to-day-gradient">
                   <!-- <div class="day-to-night-icon-container-list">
                     <i class="fa-solid fa-mug-saucer early-morning"></i>
                     <i class="fa-regular fa-sun mid-morning"></i>
