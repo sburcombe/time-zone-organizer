@@ -6,6 +6,13 @@
 
 <?php include 'header.php'; ?>
 
+<?php
+
+$json_data = file_get_contents("getEmployees.json");
+$decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
+$employees = $decoded_json_data['employees'];
+
+?>
 <div class="container">
   <div class="card-body ">
     <h4 class="card-title text-center">Schedule Meeting</h4>
@@ -52,6 +59,18 @@
     Attendees
   </button>
   <ul  class="dropdown-menu form-control" aria-labelledby="dropdownMenuButton">
+    <?php
+    if(count($employees) != 0){
+            foreach ($employees as $employee) {
+
+
+    echo "<li class='dropdown-item' href='#' value=".$employee['name'].">".$employee['name']."</li>";
+
+            }
+          }
+
+
+?>
     <li class="dropdown-item"  href="#"> <input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 1">Name 1</input></li>
     <li class="dropdown-item" value="Name 2" href="#"><input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 2">Name 2</input></li>
     <li class="dropdown-item" value="Name 3" href="#">Name 3</li>
