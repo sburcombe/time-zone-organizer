@@ -58,7 +58,7 @@
 </ul>
 </div>
       </input>
-        <label> Description: </label>
+        <label class="description-label"> Description: </label>
         <input name="description" id="description" class="form-control"></input>
          <label> Location: </label>
         <input name="location" id="location" class="form-control"></input>

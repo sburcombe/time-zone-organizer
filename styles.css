@@ -365,3 +365,12 @@ body {
 .night-to-day-gradient{
 background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
 }
+
+/*description label on scheduling meetings form*/
+.description-label {
+  margin-top: 30px;
+}
+
+.dropdown-item {
+  background-color: white !important;
+}
