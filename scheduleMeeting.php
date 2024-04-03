@@ -71,9 +71,8 @@ $employees = $decoded_json_data['employees'];
 
 
 ?>
-    <li class="dropdown-item"  href="#"> <input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 1">Name 1</input></li>
-    <li class="dropdown-item" value="Name 2" href="#"><input name="meeting-attendees" id="meeting-attendees" type="hidden" value="name 2">Name 2</input></li>
-    <li class="dropdown-item" value="Name 3" href="#">Name 3</li>
+<!-- need to add the code in JS to change this input value upon click of the employee/attendee name-->
+    <input name="meeting-attendees" id="meeting-attendees" type="hidden" value=""></input>
 </ul>
 </div>
       </input>
