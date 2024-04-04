@@ -64,7 +64,7 @@ $employees = $decoded_json_data['employees'];
             foreach ($employees as $employee) {
 
 
-    echo "<li class='dropdown-item' href='#' value=".$employee['name'].">".$employee['name']."</li>";
+    echo "<li class='dropdown-item attendee-name' id=".$employee['id']." onClick='send_user_id(this.id)'  href='#' value=".$employee['name'].">".$employee['name']."</li>";
 
             }
           }

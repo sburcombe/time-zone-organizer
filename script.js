@@ -220,6 +220,17 @@ window.addEventListener('load', function (event) {
 
   //scheduling a meeting
 
+
+  //selecting an individual attendee to add to the meeting
+
+  $('.attendee-name').click(function () {
+    var clickedAttendeeId = localStorage.getItem('clickedId');
+   $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
+
+  });
+
+
+  //scheduling the date of the meeting on the calendar (this code builds the calendar)
   var themonth = 1;
   renderCal(themonth);
 
