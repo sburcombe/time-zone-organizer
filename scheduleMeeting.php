@@ -74,6 +74,7 @@ $employees = $decoded_json_data['employees'];
 <!-- need to add the code in JS to change this input value upon click of the employee/attendee name-->
     <input name="meeting-attendees" id="meeting-attendees" type="hidden" value=""></input>
 </ul>
+<div class="sched-meeting-selected-attendees" id="sched-meeting-selected-attendees"> This is the box where meeting attendees names who have been selected will populate </div>
 </div>
       </input>
         <label class="description-label"> Description: </label>
