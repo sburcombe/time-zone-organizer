@@ -374,3 +374,10 @@ background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
 .dropdown-item {
   background-color: white !important;
 }
+
+
+.sched-meeting-selected-attendees {
+  border-style: dashed;
+  border-color:  #355C7D;
+  border-width: 10px;
+}

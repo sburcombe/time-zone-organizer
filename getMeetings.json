@@ -127,6 +127,14 @@
             "attendees": "Dustin Burcombe",
             "description": "Testing description date 3",
             "location": "Testing location date 3"
+        },
+        {
+            "id": 17,
+            "title": "Testing Multiple Attendees",
+            "datetime": "11",
+            "attendees": "S Burcombe",
+            "description": "Testing Multiple attendees",
+            "location": "Testing location 2"
         }
     ]
 }
