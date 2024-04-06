@@ -226,6 +226,7 @@ window.addEventListener('load', function (event) {
   $('.attendee-name').click(function () {
     var clickedAttendeeId = localStorage.getItem('clickedId');
    $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
+    $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
 
   });
 
