@@ -223,6 +223,7 @@ window.addEventListener('load', function (event) {
 
   //selecting an individual attendee to add to the meeting
   var attendees = [];
+  var selectedAttendeesText = "";
   $('.attendee-name').click(function () {
 
     var clickedAttendeeId = localStorage.getItem('clickedId');
@@ -232,8 +233,11 @@ window.addEventListener('load', function (event) {
     console.log(attendees);
 
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
-    $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
+    for (let i = 0; i < attendees.length; i++) {
+      selectedAttendeesText += attendees[i];
+    }
 
+    $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
   });
 
 
