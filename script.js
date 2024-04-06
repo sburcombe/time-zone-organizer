@@ -222,10 +222,16 @@ window.addEventListener('load', function (event) {
 
 
   //selecting an individual attendee to add to the meeting
-
+  var attendees = [];
   $('.attendee-name').click(function () {
+
     var clickedAttendeeId = localStorage.getItem('clickedId');
    $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
+
+    attendees.push($('.attendee-name#' + clickedAttendeeId).text());
+    console.log(attendees);
+
+    // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
     $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
 
   });
