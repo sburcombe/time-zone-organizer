@@ -224,17 +224,27 @@ window.addEventListener('load', function (event) {
   //selecting an individual attendee to add to the meeting
   var attendees = [];
   var selectedAttendeesText = "";
+  var clickedAttendees = [];
   $('.attendee-name').click(function () {
 
     var clickedAttendeeId = localStorage.getItem('clickedId');
+
+    if (!clickedAttendees.includes(clickedAttendeeId)){
+    clickedAttendees.push(clickedAttendeeId);
+    }
+
+    console.log(clickedAttendees);
    $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
 
     attendees.push($('.attendee-name#' + clickedAttendeeId).text());
     console.log(attendees);
+    console.log("selectedAttendeesText: ", selectedAttendeesText);
 
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
     for (let i = 0; i < attendees.length; i++) {
+
       selectedAttendeesText += attendees[i];
+
     }
 
     $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
