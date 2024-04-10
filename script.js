@@ -236,15 +236,21 @@ window.addEventListener('load', function (event) {
     console.log(clickedAttendees);
    $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
 
+   //check to see if name already exists in attendees array before pushing the name in
+   //SHOULD check by id somehow instead in future, so duplicate names are not removed of different people
+    if (!attendees.includes($('.attendee-name#' + clickedAttendeeId).text())){
     attendees.push($('.attendee-name#' + clickedAttendeeId).text());
+    }
+
     console.log(attendees);
     console.log("selectedAttendeesText: ", selectedAttendeesText);
 
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
     for (let i = 0; i < attendees.length; i++) {
-
-      selectedAttendeesText += attendees[i];
-
+      if (!selectedAttendeesText.includes(attendees[i])){
+        //need to remove final comma from list
+      selectedAttendeesText += attendees[i]+", ";
+      }
     }
 
     $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
