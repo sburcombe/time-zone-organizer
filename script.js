@@ -249,7 +249,12 @@ window.addEventListener('load', function (event) {
     for (let i = 0; i < attendees.length; i++) {
       if (!selectedAttendeesText.includes(attendees[i])){
         //need to remove final comma from list
+// debugger;
+
       selectedAttendeesText += attendees[i]+", ";
+        if (selectedAttendeesText.lastIndexOf(",") && ((selectedAttendeesText.length -1) > 0)) {
+          selectedAttendeesText = selectedAttendeesText.slice(0, -1);
+        }
       }
     }
 
