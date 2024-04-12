@@ -248,13 +248,15 @@ window.addEventListener('load', function (event) {
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
     for (let i = 0; i < attendees.length; i++) {
       if (!selectedAttendeesText.includes(attendees[i])){
-        //need to remove final comma from list
-// debugger;
 
-      selectedAttendeesText += attendees[i]+", ";
-        if (selectedAttendeesText.lastIndexOf(",") && ((selectedAttendeesText.length -1) > 0)) {
-          selectedAttendeesText = selectedAttendeesText.slice(0, -1);
-        }
+
+
+if (attendees.length == 1) {
+  selectedAttendeesText += attendees[i];
+} else {
+  selectedAttendeesText += ", "+attendees[i];
+}
+
       }
     }
 
