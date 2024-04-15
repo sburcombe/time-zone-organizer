@@ -234,7 +234,7 @@ window.addEventListener('load', function (event) {
     }
 
     console.log(clickedAttendees);
-   $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
+  //  $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
 
    //check to see if name already exists in attendees array before pushing the name in
    //SHOULD check by id somehow instead in future, so duplicate names are not removed of different people
@@ -259,8 +259,10 @@ if (attendees.length == 1) {
 
       }
     }
-
+console.log("what is happening: ", selectedAttendeesText);
     $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
+    //need to figure out why the selectedattendees text is not updating after the initial click
+    $('#meeting-attendees').attr('value', selectedAttendeesText);
   });
 
 
