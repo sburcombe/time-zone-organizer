@@ -36,11 +36,12 @@
                   <li id="meeting-datetime-<?php echo $meeting['id']; ?>" class="list-group-item">Date/Time: </li>
                   <li id="meeting-attendees-<?php echo $meeting['id']; ?>" class="list-group-item">Attendees:</li>
                   <li id="meeting-location-<?php echo $meeting['id']; ?>" class="list-group-item">Location:</li>
-                  <!--Add description but with a hover/popup for full description details -->
-                </ul>
-              </div>
-              <!-- </section> -->
-            </div>
+                  <li id="meeting-id-<?php echo $meeting['id']; ?>" class="list-group-item">Meeting Id:</li>
+                      <!--Add description but with a hover/popup for full description details -->
+                    </ul>
+                  </div>
+                  <!-- </section> -->
+                </div>
             <?php
           }
         }

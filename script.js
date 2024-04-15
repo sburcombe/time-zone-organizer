@@ -106,6 +106,11 @@ window.addEventListener('load', function (event) {
       var meetingLocation = document.querySelector("#meeting-location-" + meetings['meetings'][i]['id']);
       meetingLocation.innerHTML = "Working Hours: " + meetings['meetings'][i]["location"];
 
+      //Display Id Location
+      var meetingId = document.querySelector("#meeting-id-" + meetings['meetings'][i]['id']);
+      meetingId.innerHTML = "Meeting Id: " + meetings['meetings'][i]["id"];
+
+      console.log("meetings id: ", meetings['meetings'][i]["id"]);
       //Display abbreviated description with hover for more
 
 
