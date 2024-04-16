@@ -70,10 +70,11 @@ if (isset($_POST['meeting-title']) &&  isset($_POST['description']) && isset($_P
 
           // converts json string into array
           $meeting_arr_data = json_decode($meetingjsondata, true);
-
+          $last_meeting = end($meeting_arr_data['meetings']);
           //gets and adds form data into an array
           $formdata = array(
-            'id' => count($meeting_arr_data['meetings']) + 1,
+            // 'id' => count($meeting_arr_data['meetings']) + 1,
+              'id' => $last_meeting['id'] + 1,
               'title' => $_POST['meeting-title'],
               'datetime' => $_POST['datetime'],
               'attendees' => $_POST['meeting-attendees'],
