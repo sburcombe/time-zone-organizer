@@ -252,10 +252,11 @@ window.addEventListener('load', function (event) {
 
 
     ////create a div for each attenddee name so that I can delete them individually instead of just by text
-    attendees.forEach(createAttendeeBox);
+    attendees.forEach(createAttendeeBox(attendees));
 
-    function createAttendeeBox() {
-///create a div for each attendee name selected
+    function createAttendeeBox(item) {
+///create a div for each attendee name selected (need to only have one item per div)
+$('#sched-meeting-selected-attendees').append("<div class='selected-attendees'>" + item+ "</div>");
     }
 
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
