@@ -230,7 +230,7 @@ window.addEventListener('load', function (event) {
   var attendees = [];
   var selectedAttendeesText = "";
   var clickedAttendees = [];
-  $('.attendee-name').click(function () {
+  $('.attendee-name').unbind('click').click(function () {
 
     var clickedAttendeeId = localStorage.getItem('clickedId');
 
@@ -247,16 +247,21 @@ window.addEventListener('load', function (event) {
     attendees.push($('.attendee-name#' + clickedAttendeeId).text());
     }
 
+
     console.log(attendees);
     console.log("selectedAttendeesText: ", selectedAttendeesText);
 
 
-    ////create a div for each attenddee name so that I can delete them individually instead of just by text
-    attendees.forEach(createAttendeeBox(attendees));
 
-    function createAttendeeBox(item) {
+
+    function createAttendeeBox(attendees) {
 ///create a div for each attendee name selected (need to only have one item per div)
-$('#sched-meeting-selected-attendees').append("<div class='selected-attendees'>" + item+ "</div>");
+for (i = 0; i < attendees.length; i ++ ){
+
+if (!document.getElementById("selected-attendee-"+i)){
+$('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-"+i+"'>" + attendees[i] + "</div>");
+}
+}
     }
 
     // $('#sched-meeting-selected-attendees').text($('.attendee-name#' + clickedAttendeeId).text());
@@ -273,8 +278,10 @@ if (attendees.length == 1) {
 
       }
     }
-console.log("what is happening: ", selectedAttendeesText);
-    $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
+
+    // $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
+    ////create a div for each attenddee name so that I can delete them individually instead of just by text
+    createAttendeeBox(attendees);
     //need to figure out why the selectedattendees text is not updating after the initial click
     $('#meeting-attendees').attr('value', selectedAttendeesText);
   });
