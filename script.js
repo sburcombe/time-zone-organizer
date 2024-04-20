@@ -255,7 +255,8 @@ window.addEventListener('load', function (event) {
 function removeAttendee(selectedAttendeeDivId){
   //#selected-attendee-1 is the format for selectedAttendeeDivId
   //removing the div from the selected attendees box
-  $("'"+selectedAttendeeDivId+"'").remove();
+  const element = document.getElementById(selectedAttendeeDivId);
+  element.remove();
   //also need to remove the attendee from the array
 
 }
