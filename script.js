@@ -252,6 +252,14 @@ window.addEventListener('load', function (event) {
     console.log("selectedAttendeesText: ", selectedAttendeesText);
 
 
+function removeAttendee(selectedAttendeeDivId){
+  //#selected-attendee-1 is the format for selectedAttendeeDivId
+  //removing the div from the selected attendees box
+  $("'"+selectedAttendeeDivId+"'").remove();
+  //also need to remove the attendee from the array
+
+}
+
 
 
     function createAttendeeBox(attendees) {
@@ -259,7 +267,13 @@ window.addEventListener('load', function (event) {
 for (i = 0; i < attendees.length; i ++ ){
 
 if (!document.getElementById("selected-attendee-"+i)){
-$('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-"+i+"'>" + attendees[i] + "</div>");
+  $('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-" + i + "'> <span id='close'>x</span>" + attendees[i] + "</div>");
+
+  document.getElementById('close').addEventListener('click', function (e) {
+    var parentId = $(this).parent().attr('id');
+    console.log("parent Id: ", parentId);
+    removeAttendee(parentId);
+  });
 }
 }
     }
@@ -279,12 +293,14 @@ if (attendees.length == 1) {
       }
     }
 
+
     // $('#sched-meeting-selected-attendees').text(selectedAttendeesText);
     ////create a div for each attenddee name so that I can delete them individually instead of just by text
     createAttendeeBox(attendees);
     //need to figure out why the selectedattendees text is not updating after the initial click
     $('#meeting-attendees').attr('value', selectedAttendeesText);
   });
+
 
 
   //scheduling the date of the meeting on the calendar (this code builds the calendar)

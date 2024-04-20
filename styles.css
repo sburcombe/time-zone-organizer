@@ -382,4 +382,21 @@ background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
   border-style: dashed;
   border-color:  #355C7D;
   border-width: 10px;
+  display: flex;
+  padding: 5px;
+}
+
+.selected-attendees {
+  background-color: #d3d3d3;
+  opacity: .80;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
 }
