@@ -268,9 +268,9 @@ function removeAttendee(selectedAttendeeDivId){
 for (i = 0; i < attendees.length; i ++ ){
 
 if (!document.getElementById("selected-attendee-"+i)){
-  $('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-" + i + "'> <span id='close'>x</span>" + attendees[i] + "</div>");
+  $('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-" + i + "'> <span id='close-" + i + "'>x</span>" + attendees[i] + "</div>");
 
-  document.getElementById('close').addEventListener('click', function (e) {
+  document.getElementById("close-" + i + "").addEventListener('click', function (e) {
     var parentId = $(this).parent().attr('id');
     console.log("parent Id: ", parentId);
     removeAttendee(parentId);

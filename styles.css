@@ -379,9 +379,9 @@ background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
 
 
 .sched-meeting-selected-attendees {
-  border-style: dashed;
+  /* border-style: dashed;
   border-color:  #355C7D;
-  border-width: 10px;
+  border-width: 10px; */
   display: flex;
   padding: 5px;
 }
