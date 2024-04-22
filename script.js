@@ -252,11 +252,20 @@ window.addEventListener('load', function (event) {
     console.log("selectedAttendeesText: ", selectedAttendeesText);
 
 
-function removeAttendee(selectedAttendeeDivId){
+function removeAttendee(selectedAttendeeDivId, attendeeName){
   //#selected-attendee-1 is the format for selectedAttendeeDivId
   //removing the div from the selected attendees box
   const element = document.getElementById(selectedAttendeeDivId);
   element.remove();
+console.log("attendees in remove: ", attendees);
+  const attendeeNameDecoded = decodeURIComponent(attendeeName);
+  console.log("attendees decoded: ", attendeeNameDecoded);
+
+  const attendeeNameIndex = attendees.indexOf(attendeeName);
+  attendees.splice(attendeeNameIndex, 1);
+
+  console.log("attendeesAfterSplice: ", attendees);
+
   //also need to remove the attendee from the array
 
 }
@@ -268,12 +277,14 @@ function removeAttendee(selectedAttendeeDivId){
 for (i = 0; i < attendees.length; i ++ ){
 
 if (!document.getElementById("selected-attendee-"+i)){
-  $('#sched-meeting-selected-attendees').append("<div class='selected-attendees' id='selected-attendee-" + i + "'> <span id='close-" + i + "'>x</span>" + attendees[i] + "</div>");
+  $('#sched-meeting-selected-attendees').append("<div class='selected-attendees' data-attendee-name=" +  encodeURIComponent(attendees[i]) + " id='selected-attendee-" + i + "'> <span id='close-" + i + "'>x</span>" + attendees[i] + "</div>");
 
   document.getElementById("close-" + i + "").addEventListener('click', function (e) {
     var parentId = $(this).parent().attr('id');
+    var attendeeName = $(this).parent().attr('data-attendee-name');
     console.log("parent Id: ", parentId);
-    removeAttendee(parentId);
+    console.log("this oarebt: ", $(this).parent().attr('data-attendee-name'));
+    removeAttendee(parentId, attendeeName);
   });
 }
 }
