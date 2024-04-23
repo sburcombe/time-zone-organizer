@@ -37,8 +37,8 @@ $employees = $decoded_json_data['employees'];
   <div class="group">
     <p class="left pointer minusmonth">&laquo;</p>
     <div class="monthyear">
-    <p class="left monthname center pointer"></p>
-    <p class="left yearname center pointer"></p>
+    <p id="monthname"class="left monthname center pointer"></p>
+    <p id="yearname" class="left yearname center pointer"></p>
 </div>
     <p class="right pointer addmonth">&raquo;</p>
   </div>

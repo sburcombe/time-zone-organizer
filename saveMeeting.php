@@ -71,12 +71,14 @@ if (isset($_POST['meeting-title']) &&  isset($_POST['description']) && isset($_P
           // converts json string into array
           $meeting_arr_data = json_decode($meetingjsondata, true);
           $last_meeting = end($meeting_arr_data['meetings']);
+
+          $decodedDate = urldecode($_POST['datetime']);
           //gets and adds form data into an array
           $formdata = array(
             // 'id' => count($meeting_arr_data['meetings']) + 1,
               'id' => $last_meeting['id'] + 1,
               'title' => $_POST['meeting-title'],
-              'datetime' => $_POST['datetime'],
+              'datetime' => $decodedDate,
               'attendees' => $_POST['meeting-attendees'],
               'description' => $_POST['description'],
               'location' => $_POST['location']
@@ -92,7 +94,7 @@ if (isset($_POST['meeting-title']) &&  isset($_POST['description']) && isset($_P
         // outputs error message if data cannot be saved
         if (file_put_contents('getMeetings.json', $meetingjsondata)) {
           echo 'Data successfully saved';
-          header("Location:http://localhost:8888/index.php");
+          header("Location:http://localhost:8888/meetings.php");
         } else{
           echo 'Unable to save data in "getMeetings.json"';
       }
