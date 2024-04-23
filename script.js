@@ -238,7 +238,7 @@ window.addEventListener('load', function (event) {
     clickedAttendees.push(clickedAttendeeId);
     }
 
-    console.log(clickedAttendees);
+
   //  $('#meeting-attendees').attr('value', $('.attendee-name#' + clickedAttendeeId).text());
 
    //check to see if name already exists in attendees array before pushing the name in
@@ -248,7 +248,7 @@ window.addEventListener('load', function (event) {
     }
 
 
-    console.log(attendees);
+
     console.log("selectedAttendeesText: ", selectedAttendeesText);
 
 
@@ -257,16 +257,15 @@ function removeAttendee(selectedAttendeeDivId, attendeeName){
   //removing the div from the selected attendees box
   const element = document.getElementById(selectedAttendeeDivId);
   element.remove();
-console.log("attendees in remove: ", attendees);
-  const attendeeNameDecoded = decodeURIComponent(attendeeName);
-  console.log("attendees decoded: ", attendeeNameDecoded);
 
+  const attendeeNameDecoded = decodeURIComponent(attendeeName);
+
+
+  //remove attendee from array
   const attendeeNameIndex = attendees.indexOf(attendeeName);
   attendees.splice(attendeeNameIndex, 1);
 
-  console.log("attendeesAfterSplice: ", attendees);
 
-  //also need to remove the attendee from the array
 
 }
 
@@ -282,8 +281,7 @@ if (!document.getElementById("selected-attendee-"+i)){
   document.getElementById("close-" + i + "").addEventListener('click', function (e) {
     var parentId = $(this).parent().attr('id');
     var attendeeName = $(this).parent().attr('data-attendee-name');
-    console.log("parent Id: ", parentId);
-    console.log("this oarebt: ", $(this).parent().attr('data-attendee-name'));
+
     removeAttendee(parentId, attendeeName);
   });
 }
@@ -368,10 +366,18 @@ if (attendees.length == 1) {
         $('.calendar li').removeClass('red');
         $(this).addClass('red');
         min = $(this).text();
-        console.log("this: ", $(this).text());
+        console.log("this grandparent: ", $(this));
         $(this).attr('value', $(this).text());
         //update the input value for the date time field to include the date
-        $('#datetime').attr('value', $(this).text());
+
+        var month = $('#monthname').text();
+        var year = $('#yearname').text();
+        var dayDate = $(this).text();
+console.log("dayDate: ", dayDate);
+        var fullMeetingDate = encodeURIComponent(month + " " + dayDate + ", " + year);
+console.log("full meeting date: ", fullMeetingDate);
+        $('#datetime').attr('value', fullMeetingDate);
+        // $('#datetime').attr('value', $(this).text());
 
         // get month value
 
