@@ -39,6 +39,7 @@
                   <li id="meeting-id-<?php echo $meeting['id']; ?>" class="list-group-item">Meeting Id:</li>
                       <!--Add description but with a hover/popup for full description details -->
                     </ul>
+                    <button class="btn">Delete</button
                   </div>
                   <!-- </section> -->
                 </div>
