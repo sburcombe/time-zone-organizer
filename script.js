@@ -84,6 +84,8 @@ window.addEventListener('load', function (event) {
 
 
 
+
+
   for (let i = 0; i < meetings['meetings'].length; i++) {
     // console.log("employees names over here: " , employees['employees'][i]['name']);
     // console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
@@ -223,6 +225,8 @@ window.addEventListener('load', function (event) {
 
 // }
 
+///MEETINGS///
+
   //scheduling a meeting
 
 
@@ -312,6 +316,27 @@ if (attendees.length == 1) {
   });
 
 
+  //deleting a meeting
+
+  $('.delete').on('click', function () {
+    var id = $(this).data('id');
+
+    if (confirm("Are you sure you want to delete this data?")) {
+      $.ajax({
+        url: "deleteMeetings.php",
+        method: "POST",
+        data: { action: 'delete', id: id },
+        dataType: "JSON",
+        success: function (data) {
+          $('#message').html('<div class="alert alert-success">' + data.success + '</div>');
+        }
+      });
+    }
+  });
+
+
+
+
 
   //scheduling the date of the meeting on the calendar (this code builds the calendar)
   var themonth = 1;
@@ -398,6 +423,9 @@ console.log("full meeting date: ", fullMeetingDate);
   }
 
 });
+
+
+
 
 function getCurrentTimes() {
   //get Date time and save in specific time zones
