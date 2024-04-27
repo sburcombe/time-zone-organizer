@@ -323,7 +323,7 @@ if (attendees.length == 1) {
 
     if (confirm("Are you sure you want to delete this data?")) {
       $.ajax({
-        url: "deleteMeetings.php",
+        url: "deleteMeeting.php",
         method: "POST",
         data: { action: 'delete', id: id },
         dataType: "JSON",

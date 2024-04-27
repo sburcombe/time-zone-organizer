@@ -39,7 +39,14 @@
                   <li id="meeting-id-<?php echo $meeting['id']; ?>" class="list-group-item">Meeting Id:</li>
                       <!--Add description but with a hover/popup for full description details -->
                     </ul>
-                    <button class="btn btn-danger btn-sm delete" data-id="<?php echo $meeting['id'];?>">Delete</button>
+                    <form action="deleteMeeting.php" method="post">
+
+<input type="hidden" name="id" value="<?php echo $id; ?>">
+
+                          <input type="submit" name="delete" value="Delete">
+
+                        </form>
+                        <button class="btn btn-danger btn-sm delete" data-id="<?php echo $meeting['id'];?>">Delete</button>
                       </div>
                       <!-- </section> -->
                     </div>
