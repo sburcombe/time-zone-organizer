@@ -41,7 +41,7 @@
                     </ul>
                     <form action="deleteMeeting.php" method="post">
 
-<input type="hidden" name="id" value="<?php echo $id; ?>">
+<input type="hidden" name="id" value="<?php echo $meeting['id'] ?>">
 
                           <input type="submit" name="delete" value="Delete">
 
