@@ -43,10 +43,10 @@
 
 <input type="hidden" name="id" value="<?php echo $meeting['id'] ?>">
 
-                          <input type="submit" name="delete" value="Delete">
+                          <input class="btn btn-danger btn-sm delete" type="submit" name="delete" value="Delete">
 
                         </form>
-                        <button class="btn btn-danger btn-sm delete" data-id="<?php echo $meeting['id'];?>">Delete</button>
+                        <!-- <button class="btn btn-danger btn-sm delete" data-id="<?php echo $meeting['id'];?>">Delete</button> -->
                       </div>
                       <!-- </section> -->
                     </div>
