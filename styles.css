@@ -400,3 +400,11 @@ background: linear-gradient(40deg, #355C7D, #f67280, #f8B195);
     padding:2px 5px;
     background:#ccc;
 }
+
+.meeting-delete {
+  margin-left: 12rem !important;
+}
+
+#delete-meeting {
+  display: flex;
+}
