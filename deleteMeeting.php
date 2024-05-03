@@ -15,15 +15,18 @@ if(file_exists($meetingfiletxt) && isset($_POST['delete'])) {
           $meeting_arr_data = json_decode($meetingjsondata, true);
           // var_dump(['Meeting Array before: ', $meeting_arr_data]);
           $meetings = $meeting_arr_data['meetings'];
-          foreach ($meetings as $meeting){
+          foreach ($meetings as $key => $meeting){
             if ($_POST['id'] == $meeting['id']){
-              unset($meeting);
+              // var_dump($meeting);
+              // die();
+              unset($meetings[$key]);
             }
           }
 
           $meeting_arr_data['meetings'] = $meetings;
 
-          var_dump($meetings);
+          // var_dump($meetings);
+          // die();
 //need to update meetings at this point.....
           $updated_meeting_data = $meeting_arr_data;
 
