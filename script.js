@@ -89,7 +89,7 @@ window.addEventListener('load', function (event) {
   for (let i = 0; i < meetings['meetings'].length; i++) {
     // console.log("employees names over here: " , employees['employees'][i]['name']);
     // console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
-
+console.log(meetings['meetings']);
 
     if (meetings['meetings'][i] && document.querySelector("#meeting-title-" + meetings['meetings'][i]['id'])) {
       //Display Meeting Title
