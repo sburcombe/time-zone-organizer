@@ -8,13 +8,15 @@
   $json_data = file_get_contents("getMeetings.json");
   $decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
   $meetings = $decoded_json_data['meetings'];
+  var_dump($meetings);
+  // die();
   ?>
 
   <main>
     <div class="container">
       <div class="row">
         <?php if (count($meetings) != 0) {
-          foreach ($meetings as $meeting) {
+          foreach ($meetings as $key => $meeting) {
             ?>
             <!-- NEED TO ADJUST FOR MEETING DATASETS -->
             <div class="col-4">
@@ -30,10 +32,10 @@
                   <!-- </div> -->
                 </div>
                 <div class="card-body">
-                  <h5 id="meeting-title-<?php echo $meeting['id']; ?>" class="card-title text-center"></h5>
+                  <h5 id="meeting-title-<?php echo $meeting['2']['id']; ?>" class="card-title text-center"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li id="meeting-datetime-<?php echo $meeting['id']; ?>" class="list-group-item">Date/Time: </li>
+                  <li id="meeting-datetime-<?php echo $meeting['2']['id']; ?>" class="list-group-item">Date/Time: </li>
                   <li id="meeting-attendees-<?php echo $meeting['id']; ?>" class="list-group-item">Attendees:</li>
                   <li id="meeting-location-<?php echo $meeting['id']; ?>" class="list-group-item">Location:</li>
                   <li id="meeting-id-<?php echo $meeting['id']; ?>" class="list-group-item">Meeting Id:</li>

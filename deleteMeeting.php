@@ -21,6 +21,9 @@ if(file_exists($meetingfiletxt) && isset($_POST['delete'])) {
               // die();
               unset($meetings[$key]);
             }
+
+            // var_dump($key);
+            // die();
           }
 
           $meeting_arr_data['meetings'] = $meetings;
