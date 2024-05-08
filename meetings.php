@@ -8,7 +8,7 @@
   $json_data = file_get_contents("getMeetings.json");
   $decoded_json_data = json_decode($json_data, true); //true returns the decoded data as an array, default will retrun an object
   $meetings = $decoded_json_data['meetings'];
-  var_dump($meetings);
+  // var_dump($meetings[2]);
   // die();
   ?>
 
@@ -17,11 +17,12 @@
       <div class="row">
         <?php if (count($meetings) != 0) {
           foreach ($meetings as $key => $meeting) {
+
             ?>
             <!-- NEED TO ADJUST FOR MEETING DATASETS -->
             <div class="col-4">
               <!-- <section class="mx-auto my-5" style="max-width: 35rem;"> -->
-              <div id="meeting-<?php echo $meeting['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
+              <div id="meeting-<?php echo $meetings[$key]['id']; ?>" class="card testimonial-card mt-2 mb-3 ">
                 <div class="card-up night-to-day-gradient">
                   <!-- <div class="day-to-night-icon-container-list">
                     <i class="fa-solid fa-mug-saucer early-morning"></i>
@@ -32,13 +33,13 @@
                   <!-- </div> -->
                 </div>
                 <div class="card-body">
-                  <h5 id="meeting-title-<?php echo $meeting['2']['id']; ?>" class="card-title text-center"></h5>
+                  <h5 id="meeting-title-<?php echo $meetings[$key]['id']; ?>" class="card-title text-center"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li id="meeting-datetime-<?php echo $meeting['2']['id']; ?>" class="list-group-item">Date/Time: </li>
-                  <li id="meeting-attendees-<?php echo $meeting['id']; ?>" class="list-group-item">Attendees:</li>
-                  <li id="meeting-location-<?php echo $meeting['id']; ?>" class="list-group-item">Location:</li>
-                  <li id="meeting-id-<?php echo $meeting['id']; ?>" class="list-group-item">Meeting Id:</li>
+                  <li id="meeting-datetime-<?php echo $meetings[$key]['id']; ?>" class="list-group-item">Date/Time: </li>
+                  <li id="meeting-attendees-<?php echo $meetings[$key]['id']; ?>" class="list-group-item">Attendees:</li>
+                  <li id="meeting-location-<?php echo $meetings[$key]['id']; ?>" class="list-group-item">Location:</li>
+                  <li id="meeting-id-<?php echo $meetings[$key]['id']; ?>" class="list-group-item">Meeting Id:</li>
                       <!--Add description but with a hover/popup for full description details -->
                     </ul>
                     <form id="delete-meeting" action="deleteMeeting.php" method="post">
