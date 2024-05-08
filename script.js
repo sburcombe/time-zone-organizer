@@ -83,13 +83,14 @@ function getEmployees() {
 window.addEventListener('load', function (event) {
 
 
+  console.log(Object.keys(meetings['meetings']).length);
 
+//need to figure out how to get this correct with ids, since the length does not equate with the ids...
+  for (let i = 0; i < Object.keys(meetings['meetings']).length; i++) {
 
-
-  for (let i = 0; i < meetings['meetings'].length; i++) {
     // console.log("employees names over here: " , employees['employees'][i]['name']);
     // console.log("class names: ", document.querySelector("#employee-name-" + employees['employees'][i]['id']));
-console.log(meetings['meetings']);
+// console.log(meetings['meetings']);
 
     if (meetings['meetings'][i] && document.querySelector("#meeting-title-" + meetings['meetings'][i]['id'])) {
       //Display Meeting Title
