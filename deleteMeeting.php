@@ -29,8 +29,7 @@ if(file_exists($meetingfiletxt) && isset($_POST['delete'])) {
 
           $meeting_arr_data['meetings'] = $meetings;
 
-          // var_dump($meetings);
-          // die();
+
 //need to update meetings at this point.....
           $updated_meeting_data = $meeting_arr_data;
 
