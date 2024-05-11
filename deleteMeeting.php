@@ -33,7 +33,7 @@ if(file_exists($meetingfiletxt) && isset($_POST['delete'])) {
 //need to update meetings at this point.....
           $updated_meeting_data = $meeting_arr_data;
 
-          var_dump($updated_meeting_data);
+
 
   // rebase array
   // $updated_meeting_data = array_values($updated_meeting_data);

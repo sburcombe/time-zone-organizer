@@ -18,6 +18,7 @@
         <?php if (count($meetings) != 0) {
           foreach ($meetings as $key => $meeting) {
 
+
             ?>
             <!-- NEED TO ADJUST FOR MEETING DATASETS -->
             <div class="col-4">
